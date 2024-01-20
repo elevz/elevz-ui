@@ -24,6 +24,14 @@ body {
 
 .row {
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: 10px;
+}
+
+.box {
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 2px #00000020;
+  border-radius: 12px;
+  padding: 10px;
 }

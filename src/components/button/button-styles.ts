@@ -1,14 +1,25 @@
 import theme from "../../theme";
-import { CustomProps, SizePropsType, SizeType } from "./button-types";
+import {
+  CustomProps,
+  SizePropsType,
+  SizeType
+} from "./button-types";
+
+export function getColors(props: CustomProps) {
+  const scheme = theme.colors[props.scheme!];
+
+  return {
+    background: typeof scheme === 'object' ? scheme.background : scheme,
+    text: typeof scheme === 'object' ? scheme.text : theme.colors.text_primary_contrast
+  }
+}
 
 export function getApperance(props: CustomProps) {
-  const scheme = theme.colors[props.scheme!];
-  const background = typeof scheme === 'object' ? scheme.background : scheme;
-  const text = typeof scheme === 'object' ? scheme.text : theme.colors.text_primary_contrast;
+  const { background, text } = getColors(props);
   const border = `border: 1px solid ${background};`
 
   if (props.variant === 'solid') {
-  return `
+    return `
       background-color: ${background};
       ${border}
       color: ${text};
@@ -21,7 +32,7 @@ export function getApperance(props: CustomProps) {
     return `
       background-color: transparent;
       border: transparent;
-      color: ${scheme};
+      color: ${background};
       &:hover {
         background-color: color-mix(in srgb, ${background} 25%, transparent);
       }
@@ -29,9 +40,9 @@ export function getApperance(props: CustomProps) {
   }
   if (props.variant === 'highlight') {
     return `
-      background-color: ${theme.colors.surface};
+      background-color: transparent;
       ${border}
-      color: ${scheme};
+      color: ${background};
       &:hover {
         background-color: ${background};
         color: ${text};
@@ -41,7 +52,7 @@ export function getApperance(props: CustomProps) {
   return `
     ${border}
     background-color: transparent;
-    color: ${scheme};
+    color: ${background};
   `;
 }
 

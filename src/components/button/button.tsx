@@ -6,11 +6,15 @@ import {
   CustomProps
 } from "./button-types";
 import { getApperance, getSize } from "./button-styles";
+import { Loader } from "../loading";
 
 const StyledButton = styled.button<CustomProps>`
+  display: flex;
+  align-items: center;
   border-radius: ${theme.sizes.border_radius};
   box-sizing: border-box;
   cursor: pointer;
+  gap: ${theme.sizes.space_xs};
   font-weight: 500;
   font-size: 1rem;
   padding-inline: ${theme.sizes.space_md};
@@ -21,6 +25,8 @@ const StyledButton = styled.button<CustomProps>`
 
 const Button: React.FC<ButtonProps> = ({
   children,
+  loading,
+  loadingText,
   scheme = 'primary',
   size = 'md',
   variant = 'solid',
@@ -33,7 +39,14 @@ const Button: React.FC<ButtonProps> = ({
       size={size}
       variant={variant}
     >
-      {children}
+      {loading ?
+        <>
+          <Loader />
+          {loadingText ? (typeof loadingText === 'string' ? loadingText : children) : ''}
+        </>
+        :
+        children
+      }
     </StyledButton>
   )
 }
