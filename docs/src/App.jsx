@@ -1,7 +1,8 @@
+import ButtonPage from "./pages/ButtonPage"
+
 function App() {
   return (
-    <>
-    </>
+    <ButtonPage />
   )
 }
 
