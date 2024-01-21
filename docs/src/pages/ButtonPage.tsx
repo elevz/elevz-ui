@@ -50,7 +50,7 @@ export default function ButtonPage() {
           <Button scheme="danger" variant="outline">
             danger
           </Button>
-          <Button scheme="info" variant="outline" loading>
+          <Button scheme="info" variant="outline">
             info
           </Button>
           <Button scheme="primary" variant="outline">
@@ -71,7 +71,7 @@ export default function ButtonPage() {
       <div className="col">
         Ghost
         <div className="row">
-          <Button scheme="danger" variant="ghost" loading>
+          <Button scheme="danger" variant="ghost">
             danger
           </Button>
           <Button scheme="info" variant="ghost">
@@ -95,7 +95,7 @@ export default function ButtonPage() {
       <div className="col">
         Highlight
         <div className="row">
-          <Button scheme="danger" variant="highlight" loading>
+          <Button scheme="danger" variant="highlight">
             danger
           </Button>
           <Button scheme="info" variant="highlight">
@@ -113,14 +113,6 @@ export default function ButtonPage() {
           <Button scheme="warning" variant="highlight">
             warning
           </Button>
-        </div>
-      </div>
-
-      <div className="col">
-        <div className="row">
-          <Loader type="dots" />
-
-          <Loader type="dots-horizontal" />
         </div>
       </div>
     </div>
