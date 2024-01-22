@@ -2,7 +2,7 @@ import React, { SVGProps } from "react";
 import { IconName, IconSize } from "./icon-types";
 import icons from "./lib"
 
-interface IconProps extends SVGProps<SVGSVGElement> {
+export interface IconProps extends SVGProps<SVGSVGElement> {
   name: IconName;
   size?: IconSize;
 }

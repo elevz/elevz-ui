@@ -22,6 +22,6 @@ export type CompoundColor =
 export type CompoundColorScheme = {
   background: string;
   text?: string;
-} | string;
+};
 
-export type ColorType = Record<SimpleColor, SimpleColorScheme> & Record<CompoundColor, CompoundColorScheme>;
+export type ColorType = Record<SimpleColor, SimpleColorScheme> & Record<CompoundColor, SimpleColorScheme | CompoundColorScheme>;

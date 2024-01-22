@@ -2,6 +2,7 @@ import Layout from "./layout/Layout";
 import ButtonPage from "./pages/ButtonPage"
 import IconPage from "./pages/IconPage"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import InputPage from "./pages/InputPage";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<ButtonPage />} />
           <Route path="/icon" element={<IconPage />} />
+          <Route path="/input" element={<InputPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
