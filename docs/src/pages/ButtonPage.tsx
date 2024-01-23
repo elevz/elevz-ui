@@ -1,19 +1,25 @@
 import React, { useState } from "react"
-import { Button, Loader} from "elevz-ui";
+import { Button, Flex } from "elevz-ui";
 
 export default function ButtonPage() {
   const [loading, setLoading] = useState(false);
 
   return (
     <div className="page">
-      <div>
+      <Flex direction="column" gap={10}>
         Sizes
-        <div className="row">
-          <Button size="xs">Button</Button>
-          <Button size="sm">Button</Button>
-          <Button size="md">Button</Button>
-        </div>
-      </div>
+        <Flex gap={10}>
+          <Button size="xs">
+            Button
+          </Button>
+          <Button size="sm">
+            Button
+          </Button>
+          <Button size="md">
+            Button
+          </Button>
+        </Flex>
+      </Flex>
 
       <div className="col">
         Solid
