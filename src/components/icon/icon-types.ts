@@ -5,6 +5,8 @@ export type IconComponent = (props: SVGProps<SVGSVGElement>) => React.JSX.Elemen
 export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | number;
 
 export type IconName =
+  | 'android'
+  | 'apple'
   | 'arrow-left'
   | 'arrow-right'
   | 'chevron-down'
@@ -22,10 +24,19 @@ export type IconName =
   | 'chevron-up-left'
   | 'chevron-up-right'
   | 'copy'
+  | 'discord'
+  | 'facebook'
   | 'filter'
   | 'filter-close'
+  | 'github'
+  | 'google'
   | 'home'
+  | 'linkedin'
   | 'moon'
+  | 'reddit'
   | 'sun'
   | 'trash'
+  | 'twitter'
   | 'wallet'
+  | 'whatsapp'
+  | 'youtube';

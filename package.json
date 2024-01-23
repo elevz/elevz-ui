@@ -1,5 +1,5 @@
 {
-  "name": "elevz-ui",
+  "name": "@elevz/elevz-ui",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/cjs/index.js",

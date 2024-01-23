@@ -19,12 +19,25 @@ import Copy from "./Copy";
 import Filter from "./filter/Filter";
 import FilterClose from "./filter/FilterClose";
 import Home from "./Home";
+import Android from "./logos/Android";
+import Apple from "./logos/Apple";
+import Discord from "./logos/Discord";
+import Facebook from "./logos/Facebook";
+import Github from "./logos/Github";
+import Google from "./logos/Google";
+import Linkedin from "./logos/Linkedin";
+import Reddit from "./logos/Reddit";
+import Twitter from "./logos/Twitter";
+import Whatsapp from "./logos/Whatsapp";
+import Youtube from "./logos/Youtube";
 import Moon from "./Moon";
 import Sun from "./Sun";
 import Trash from "./Trash";
 import Wallet from "./Wallet";
 
 const icons: Record<IconName, IconComponent> = {
+  'android': Android,
+  'apple': Apple,
   'arrow-left': ArrowLeft,
   'arrow-right': ArrowRight,
   'chevron-down': ChevronDown,
@@ -42,13 +55,22 @@ const icons: Record<IconName, IconComponent> = {
   'chevron-up-left': ChevronUpLeft,
   'chevron-up-right': ChevronUpRight,
   'copy': Copy,
+  'discord': Discord,
+  'facebook': Facebook,
   'filter': Filter,
   'filter-close': FilterClose,
   'home': Home,
+  'github': Github,
+  'google': Google,
+  'linkedin': Linkedin,
   'moon': Moon,
+  'reddit': Reddit,
   'sun': Sun,
   'trash': Trash,
-  'wallet': Wallet
+  'twitter': Twitter,
+  'wallet': Wallet,
+  'whatsapp': Whatsapp,
+  'youtube': Youtube
 }
 
 export default icons;
