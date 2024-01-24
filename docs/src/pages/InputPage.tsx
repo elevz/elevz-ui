@@ -11,7 +11,7 @@ export default function InputPage() {
         }}
 
         rightIcon={{
-          name: "arrow-left"
+          name: "arrow-right"
         }}
       />
       <Input

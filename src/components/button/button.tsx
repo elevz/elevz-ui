@@ -8,7 +8,9 @@ import {
 import { getApperance, getSize } from "./button-styles";
 import { Loader } from "../loading";
 
-const StyledButton = styled.button<CustomProps>`
+const StyledButton = styled.button.withConfig({
+  shouldForwardProp: (prop) => !['scheme', 'variant'].includes(prop)
+})<CustomProps>`
   display: flex;
   align-items: center;
   border-radius: ${theme.sizes.border_radius};

@@ -8,7 +8,7 @@ export default function ButtonPage() {
     <div className="page">
       <Flex direction="column" gap={10}>
         Sizes
-        <Flex gap={10}>
+        <Flex align="center" gap={10}>
           <Button size="xs">
             Button
           </Button>

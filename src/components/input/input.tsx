@@ -7,6 +7,7 @@ import {
   IconName,
   IconProps
 } from "../icon";
+import { Flex } from "../layout";
 
 type SizeType = 'sm' | 'md';
 
@@ -34,7 +35,6 @@ interface CustomProps {
     name: IconName;
     onClick?: React.MouseEventHandler<HTMLDivElement>;
   };
-
   rightIcon?: {
     name: IconName;
     onClick?: React.MouseEventHandler<HTMLDivElement>;
@@ -46,9 +46,9 @@ interface CustomProps {
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> & CustomProps;
 
-const Container = styled.div<CustomProps>`
-  display: flex;
-  flex-direction: column;
+const Container = styled(Flex).withConfig({
+  shouldForwardProp: (prop) => !['leftIcon', 'rightIcon', 'invalid', 'invalidText'].includes(prop)
+}) <CustomProps>`
   margin-block: ${theme.sizes.space_sm};
 
   & > label {
@@ -58,9 +58,6 @@ const Container = styled.div<CustomProps>`
   }
 
   & > div  {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
     border-width: 1px;
     border-style: solid;
     border-color: ${(props) => props.invalid ? getBgColor(theme.colors.danger) : theme.colors.border};
@@ -94,38 +91,44 @@ const Container = styled.div<CustomProps>`
   }
 `;
 
-const Input: React.FC<InputProps> = (props) => {
+const Input: React.FC<InputProps> = ({
+  leftIcon,
+  rightIcon,
+  invalid,
+  invalidText,
+  ...props
+}) => {
   return (
-    <Container>
+    <Container direction="column">
       {props.label &&
         <label>
           {props.label}
         </label>
       }
 
-      <div>
-        {props.leftIcon &&
-          <div onClick={props.leftIcon.onClick}>
+      <Flex align="center" direction="row">
+        {leftIcon &&
+          <Flex onClick={leftIcon.onClick}>
             <Icon
-              name={props.leftIcon.name}
+              name={leftIcon.name}
             />
-          </div>
+          </Flex>
         }
 
         <input {...props} />
 
-        {props.rightIcon &&
-          <div onClick={props.rightIcon.onClick}>
+        {rightIcon &&
+          <Flex onClick={rightIcon.onClick}>
             <Icon
-              name={props.rightIcon.name}
+              name={rightIcon.name}
             />
-          </div>
+          </Flex>
         }
-      </div>
+      </Flex>
 
-      {(props.invalid && props.invalidText) ?
+      {(invalid && invalidText) ?
         <span>
-          {props.invalidText}
+          {invalidText}
         </span>
         :
         props.helper &&

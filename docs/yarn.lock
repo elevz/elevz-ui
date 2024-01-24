@@ -213,13 +213,6 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@elevz/elevz-ui@file:..":
-  version "0.0.1"
-  resolved "file:.."
-  dependencies:
-    react "^18.2.0"
-    styled-components "^6.1.8"
-
 "@esbuild/darwin-arm64@0.19.11":
   version "0.19.11"
   resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.19.11.tgz"
@@ -693,6 +686,13 @@ electron-to-chromium@^1.4.601:
   version "1.4.639"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.639.tgz"
   integrity sha512-CkKf3ZUVZchr+zDpAlNLEEy2NJJ9T64ULWaDgy3THXXlPVPkLu3VOs9Bac44nebVtdwl2geSj6AxTtGDOxoXhg==
+
+"elevz-ui@file:..":
+  version "0.0.1"
+  resolved "file:.."
+  dependencies:
+    react "^18.2.0"
+    styled-components "^6.1.8"
 
 es-abstract@^1.22.1:
   version "1.22.3"
