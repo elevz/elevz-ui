@@ -10,7 +10,8 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "dev": "tsc -w",
-    "docs": "cd docs && npm link elevz-ui && yarn dev"
+    "docs:dev": "cd docs && npm link elevz-ui && yarn dev",
+    "docs:build": "cd docs && yarn build"
   },
   "repository": {
     "type": "git",

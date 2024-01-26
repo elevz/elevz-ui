@@ -1,0 +1,16 @@
+export { default as Bell } from "./Bell";
+export { default as BellSlash } from "./BellSlash";
+export { default as Copy } from "./Copy";
+export { default as FormatAlignCenter } from "./FormatAlignCenter";
+export { default as FormatAlignJustify } from "./FormatAlignJustify";
+export { default as FormatAlignLeft } from "./FormatAlignLeft";
+export { default as FormatAlignRight } from "./FormatAlignRight";
+export { default as Home } from "./Home";
+export { default as Lock } from "./Lock";
+export { default as LockOpen } from "./LockOpen";
+export { default as Menu } from "./Menu";
+export { default as Moon } from "./Moon";
+export { default as MoreVertical } from "./MoreVertical";
+export { default as Send } from "./Send";
+export { default as Sun } from "./Sun";
+export { default as Trash } from "./Trash";

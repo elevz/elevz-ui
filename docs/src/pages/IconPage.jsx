@@ -7,7 +7,7 @@ export default function IconPage() {
   return (
     <div className="page">
       <div className="row">
-        {Object.keys(icons).map((key) =>
+        {Object.keys(icons).sort().map((key) =>
           <div key={key} className={styles.icon}>
             <Icon name={key} size={40} />
             <span>{key}</span>

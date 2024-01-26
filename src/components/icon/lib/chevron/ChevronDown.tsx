@@ -1,3 +1,4 @@
+// https://www.svgrepo.com/svg/533653/chevron-down
 import React, { SVGProps } from "react";
 
 export default (props: SVGProps<SVGSVGElement>) => {
@@ -7,4 +8,3 @@ export default (props: SVGProps<SVGSVGElement>) => {
     </svg>
   )
 }
-

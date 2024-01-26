@@ -1,3 +1,4 @@
+// https://www.svgrepo.com/svg/506383/apple
 import React, { SVGProps } from "react";
 
 export default (props: SVGProps<SVGSVGElement>) => {

@@ -1,0 +1,15 @@
+export { default as Android } from "./Android";
+export { default as Apple } from "./Apple";
+export { default as Discord } from "./Discord";
+export { default as Facebook } from "./Facebook";
+export { default as Github } from "./Github";
+export { default as Google } from "./Google";
+export { default as Linkedin } from "./Linkedin";
+export { default as Microsoft } from "./Microsoft";
+export { default as Paypal } from "./Paypal";
+export { default as Reddit } from "./Reddit";
+export { default as Telegram } from "./Telegram";
+export { default as Twitter } from "./Twitter";
+export { default as Vimeo } from "./Vimeo";
+export { default as Whatsapp } from "./Whatsapp";
+export { default as Youtube } from "./Youtube";

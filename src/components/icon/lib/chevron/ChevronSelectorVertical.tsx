@@ -1,3 +1,4 @@
+// https://www.svgrepo.com/svg/533667/chevron-selector-vertical
 import React, { SVGProps } from "react";
 
 export default (props: SVGProps<SVGSVGElement>) => {
