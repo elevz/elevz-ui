@@ -2,209 +2,182 @@ import { PropsObject } from "../types";
 import { BaseProps } from "./base-types";
 
 export const baseProps: PropsObject<BaseProps> = {
+  alignContent: {
+    attribute: 'align-content'
+  },
+  alignItems: {
+    attribute: 'align-items'
+  },
+  alignSelf: {
+    attribute: 'align-self'
+  },
+  alignTracks: {
+    attribute: 'align-tracks'
+  },
   border: {
-    attribute: 'border',
+    attribute: 'border'
   },
   borderBlock: {
-    attribute: 'border-block',
+    attribute: 'border-block'
   },
   borderBlockColor: {
-    attribute: 'border-block-color',
-  },
-  borderBlockEnd: {
-    attribute: 'border-block-end',
-  },
-  borderBlockEndColor: {
-    attribute: 'border-block-end-color',
-  },
-  borderBlockEndStyle: {
-    attribute: 'border-block-end-style',
-  },
-  borderBlockEndWidth: {
-    attribute: 'border-block-end-width',
-    type: 'px'
-  },
-  borderBlockStart: {
-    attribute: 'border-block-start',
-  },
-  borderBlockStartColor: {
-    attribute: 'border-block-start-color',
-  },
-  borderBlockStartStyle: {
-    attribute: 'border-block-start-style',
-  },
-  borderBlockStartWidth: {
-    attribute: 'border-block-start-width',
-    type: 'px'
+    attribute: 'border-block-color'
   },
   borderBlockStyle: {
-    attribute: 'border-block-style',
+    attribute: 'border-block-style'
   },
   borderBlockWidth: {
-    attribute: 'border-block-width',
-    type: 'px'
+    attribute: 'border-block-width'
   },
   borderBottom: {
-    attribute: 'border-bottom',
+    attribute: 'border-bottom'
   },
   borderBottomColor: {
-    attribute: 'border-bottom-color',
-  },
-  borderBottomLeftRadius: {
-    attribute: 'border-bottom-left-radius',
-  },
-  borderBottomRightRadius: {
-    attribute: 'border-bottom-right-radius',
+    attribute: 'border-bottom-color'
   },
   borderBottomStyle: {
-    attribute: 'border-bottom-style',
+    attribute: 'border-bottom-style'
   },
   borderBottomWidth: {
-    attribute: 'border-bottom-width',
-    type: 'px'
-  },
-  borderCollapse: {
-    attribute: 'border-collapse',
+    attribute: 'border-bottom-width'
   },
   borderColor: {
-    attribute: 'border-color',
-  },
-  borderEndEndRadius: {
-    attribute: 'border-end-end-radius',
-  },
-  borderEndStartRadius: {
-    attribute: 'border-end-start-radius',
-  },
-  borderImage: {
-    attribute: 'border-image',
-  },
-  borderImageOutset: {
-    attribute: 'border-image-outset',
-  },
-  borderImageRepeat: {
-    attribute: 'border-image-repeat',
-  },
-  borderImageSlice: {
-    attribute: 'border-image-slice',
-  },
-  borderImageSource: {
-    attribute: 'border-image-source',
-  },
-  borderImageWidth: {
-    attribute: 'border-image-width',
-    type: 'px'
+    attribute: 'border-color'
   },
   borderInline: {
-    attribute: 'border-inline',
+    attribute: 'border-inline'
   },
   borderInlineColor: {
-    attribute: 'border-inline-color',
-  },
-  borderInlineEnd: {
-    attribute: 'border-inline-end',
-  },
-  borderInlineEndColor: {
-    attribute: 'border-inline-end-color',
-  },
-  borderInlineEndStyle: {
-    attribute: 'border-inline-end-style',
-  },
-  borderInlineEndWidth: {
-    attribute: 'border-inline-end-width',
-    type: 'px'
-  },
-  borderInlineStart: {
-    attribute: 'border-inline-start',
-  },
-  borderInlineStartColor: {
-    attribute: 'border-inline-start-color',
-  },
-  borderInlineStartStyle: {
-    attribute: 'border-inline-start-style',
-  },
-  borderInlineStartWidth: {
-    attribute: 'border-inline-start-width',
-    type: 'px'
+    attribute: 'border-inline-color'
   },
   borderInlineStyle: {
-    attribute: 'border-inline-style',
+    attribute: 'border-inline-style'
   },
   borderInlineWidth: {
-    attribute: 'border-inline-width',
-    type: 'px'
+    attribute: 'border-inline-width'
   },
   borderLeft: {
-    attribute: 'border-left',
+    attribute: 'border-left'
   },
   borderLeftColor: {
-    attribute: 'border-left-color',
+    attribute: 'border-left-color'
   },
   borderLeftStyle: {
-    attribute: 'border-left-style',
+    attribute: 'border-left-style'
   },
   borderLeftWidth: {
-    attribute: 'border-left-width',
-    type: 'px'
+    attribute: 'border-left-width'
   },
   borderRadius: {
-    attribute: 'border-radius',
-  },
-  borderRight: {
-    attribute: 'border-right',
-  },
-  borderRightColor: {
-    attribute: 'border-right-color',
-  },
-  borderRightStyle: {
-    attribute: 'border-right-style',
-  },
-  borderRightWidth: {
-    attribute: 'border-right-width',
-    type: 'px'
-  },
-  borderSpacing: {
-    attribute: 'border-spacing',
-  },
-  borderStartEndRadius: {
-    attribute: 'border-start-end-radius',
-  },
-  borderStartStartRadius: {
-    attribute: 'border-start-start-radius',
-  },
-  borderStyle: {
-    attribute: 'border-style',
+    attribute: 'border-radius'
   },
   borderTop: {
-    attribute: 'border-top',
+    attribute: 'border-top'
   },
   borderTopColor: {
-    attribute: 'border-top-color',
-  },
-  borderTopLeftRadius: {
-    attribute: 'border-top-left-radius',
-  },
-  borderTopRightRadius: {
-    attribute: 'border-top-right-radius',
+    attribute: 'border-top-color'
   },
   borderTopStyle: {
-    attribute: 'border-top-style',
+    attribute: 'border-top-style'
   },
   borderTopWidth: {
-    attribute: 'border-top-width',
-    type: 'px'
+    attribute: 'border-top-width'
+  },
+  borderStyle: {
+    attribute: 'border-style'
   },
   borderWidth: {
-    attribute: 'border-width',
+    attribute: 'border-width'
+  },
+  flex: {
+    attribute: 'flex',
+  },
+  flexBasis: {
+    attribute: 'flex-basis',
+  },
+  flexDirection: {
+    attribute: 'flex-direction',
+  },
+  flexFlow: {
+    attribute: 'flex-flow',
+  },
+  flexGrow: {
+    attribute: 'flex-grow',
+  },
+  flexShrink: {
+    attribute: 'flex-shrink',
+  },
+  flexWrap: {
+    attribute: 'flex-wrap',
+  },
+  gap: {
+    attribute: 'gap',
     type: 'px'
   },
-  height: {
-    attribute: 'height',
+  rowGap: {
+    attribute: 'row-gap',
+    type: 'px'
   },
-  maxHeight: {
-    attribute: 'max-height',
+  columnGap: {
+    attribute: 'column-gap',
+    type: 'px'
   },
-  minHeight: {
-    attribute: 'min-height',
+  grid: {
+    attribute: 'grid'
+  },
+  gridArea: {
+    attribute: 'grid-area'
+  },
+  gridAutoColumns: {
+    attribute: 'grid-auto-columns'
+  },
+  gridAutoFlow: {
+    attribute: 'grid-auto-flow'
+  },
+  gridAutoRows: {
+    attribute: 'grid-auto-rows'
+  },
+  gridColumn: {
+    attribute: 'grid-column'
+  },
+  gridColumnEnd: {
+    attribute: 'grid-column-end'
+  },
+  gridColumnStart: {
+    attribute: 'grid-column-start'
+  },
+  gridRow: {
+    attribute: 'grid-row'
+  },
+  gridRowEnd: {
+    attribute: 'grid-row-end'
+  },
+  gridRowStart: {
+    attribute: 'grid-row-start'
+  },
+  gridTemplate: {
+    attribute: 'grid-template'
+  },
+  gridTemplateAreas: {
+    attribute: 'grid-template-areas'
+  },
+  gridTemplateColumns: {
+    attribute: 'grid-template-columns'
+  },
+  gridTemplateRows: {
+    attribute: 'grid-template-rows'
+  },
+  justifyContent: {
+    attribute: 'justify-content'
+  },
+  justifyItems: {
+    attribute: 'justify-items'
+  },
+  justifySelf: {
+    attribute: 'justify-self'
+  },
+  justifyTracks: {
+    attribute: 'justify-tracks'
   },
   margin: {
     attribute: 'margin',
@@ -214,28 +187,12 @@ export const baseProps: PropsObject<BaseProps> = {
     attribute: 'margin-block',
     type: 'px'
   },
-  marginBlockEnd: {
-    attribute: 'margin-block-end',
-    type: 'px'
-  },
-  marginBlockStart: {
-    attribute: 'margin-block-start',
-    type: 'px'
-  },
   marginBottom: {
     attribute: 'margin-bottom',
     type: 'px'
   },
   marginInline: {
     attribute: 'margin-inline',
-    type: 'px'
-  },
-  marginInlineEnd: {
-    attribute: 'margin-inline-end',
-    type: 'px'
-  },
-  marginInlineStart: {
-    attribute: 'margin-inline-start',
     type: 'px'
   },
   marginLeft: {
@@ -250,10 +207,6 @@ export const baseProps: PropsObject<BaseProps> = {
     attribute: 'margin-top',
     type: 'px'
   },
-  marginTrim: {
-    attribute: 'margin-trim',
-    type: 'px'
-  },
   padding: {
     attribute: 'padding',
     type: 'px'
@@ -262,28 +215,12 @@ export const baseProps: PropsObject<BaseProps> = {
     attribute: 'padding-block',
     type: 'px'
   },
-  paddingBlockEnd: {
-    attribute: 'padding-block-end',
-    type: 'px'
-  },
-  paddingBlockStart: {
-    attribute: 'padding-block-start',
-    type: 'px'
-  },
   paddingBottom: {
     attribute: 'padding-bottom',
     type: 'px'
   },
   paddingInline: {
     attribute: 'padding-inline',
-    type: 'px'
-  },
-  paddingInlineEnd: {
-    attribute: 'padding-inline-rnd',
-    type: 'px'
-  },
-  paddingInlineStart: {
-    attribute: 'padding-inline-start',
     type: 'px'
   },
   paddingLeft: {
@@ -296,6 +233,30 @@ export const baseProps: PropsObject<BaseProps> = {
   },
   paddingTop: {
     attribute: 'padding-top',
+    type: 'px'
+  },
+  height: {
+    attribute: 'height',
+    type: 'px'
+  },
+  maxHeight: {
+    attribute: 'max-height',
+    type: 'px'
+  },
+  minHeight: {
+    attribute: 'min-height',
+    type: 'px'
+  },
+  width: {
+    attribute: 'width',
+    type: 'px'
+  },
+  maxWidth: {
+    attribute: 'max-width',
+    type: 'px'
+  },
+  minWidth: {
+    attribute: 'min-width',
     type: 'px'
   },
 }

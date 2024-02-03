@@ -1,11 +1,13 @@
 import colors from "./colors";
 import fontSizes from "./fontSizes";
 import sizes from "./sizes";
+import spaces from "./spaces";
 
-export type { ColorType, CompoundColor, CompoundColorScheme, SimpleColor, SimpleColorScheme } from "./color-type";
+export type * from "./color-type";
 
 export default {
   colors,
   fontSizes,
-  sizes
+  sizes,
+  spaces
 }

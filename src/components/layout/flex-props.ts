@@ -17,12 +17,11 @@ export const flexProps: PropsObject<FlexProps> = {
   flow: {
     attribute: 'flex-flow',
   },
-  gap: {
-    attribute: 'gap',
-    type: 'px'
-  },
   grow: {
     attribute: 'flex-grow',
+  },
+  justify: {
+    attribute: 'justify-content',
   },
   shrink: {
     attribute: 'flex-shrink',

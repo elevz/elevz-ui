@@ -22,13 +22,13 @@ export interface FlexProps {
    */
   flow?: CSSProperties['flexFlow'];
   /**
-   * gap
-   */
-  gap?: CSSProperties['gap'];
-  /**
    * flex-grow
    */
   grow?: CSSProperties['flexGrow'];
+  /**
+   * 
+   */
+  justify?: CSSProperties['justifyContent'];
   /**
    * flex-shrink
    */

@@ -1,6 +1,35 @@
 import { CSSProperties } from "react";
 
-export interface BaseProps {
+export interface BaseProps extends
+  AlignProps,
+  BorderProps,
+  FlexProps,
+  GridProps,
+  JustifyProps,
+  MarginProps,
+  PaddinProps,
+  SizeProps { }
+
+interface AlignProps {
+  /**
+   * alignContent
+   */
+  alignContent?: CSSProperties['alignContent'];
+  /**
+   * alignItems
+   */
+  alignItems?: CSSProperties['alignItems'];
+  /**
+   * alignSelf
+   */
+  alignSelf?: CSSProperties['alignSelf'];
+  /**
+   * alignTracks
+   */
+  alignTracks?: CSSProperties['alignTracks'];
+}
+
+interface BorderProps {
   /**
    * border
    */
@@ -13,38 +42,6 @@ export interface BaseProps {
    * border-block-color
    */
   borderBlockColor?: CSSProperties['borderBlockColor'];
-  /**
-   * border-block-end
-   */
-  borderBlockEnd?: CSSProperties['borderBlockEnd'];
-  /**
-   * border-block-end-color
-   */
-  borderBlockEndColor?: CSSProperties['borderBlockEndColor'];
-  /**
-   * border-block-end-style
-   */
-  borderBlockEndStyle?: CSSProperties['borderBlockEndStyle'];
-  /**
-   * border-block-end-width
-   */
-  borderBlockEndWidth?: CSSProperties['borderBlockEndWidth'];
-  /**
-   * border-block-start
-   */
-  borderBlockStart?: CSSProperties['borderBlockStart'];
-  /**
-   * border-block-start-color
-   */
-  borderBlockStartColor?: CSSProperties['borderBlockStartColor'];
-  /**
-   * border-block-start-style
-   */
-  borderBlockStartStyle?: CSSProperties['borderBlockStartStyle'];
-  /**
-   * border-block-start-width
-   */
-  borderBlockStartWidth?: CSSProperties['borderBlockStartWidth'];
   /**
    * border-block-style
    */
@@ -62,14 +59,6 @@ export interface BaseProps {
    */
   borderBottomColor?: CSSProperties['borderBottomColor'];
   /**
-   * border-bottom-left-radius
-   */
-  borderBottomLeftRadius?: CSSProperties['borderBottomLeftRadius'];
-  /**
-   * border-bottom-right-radius
-   */
-  borderBottomRightRadius?: CSSProperties['borderBottomRightRadius'];
-  /**
    * border-bottom-style
    */
   borderBottomStyle?: CSSProperties['borderBottomStyle'];
@@ -78,45 +67,9 @@ export interface BaseProps {
    */
   borderBottomWidth?: CSSProperties['borderBottomWidth'];
   /**
-   * border-collapse
-   */
-  borderCollapse?: CSSProperties['borderCollapse'];
-  /**
    * border-color
    */
   borderColor?: CSSProperties['borderColor'];
-  /**
-   * border-end-end-radius
-   */
-  borderEndEndRadius?: CSSProperties['borderEndEndRadius'];
-  /**
-   * border-end-start-radius
-   */
-  borderEndStartRadius?: CSSProperties['borderEndStartRadius'];
-  /**
-   * border-image
-   */
-  borderImage?: CSSProperties['borderImage'];
-  /**
-   * border-image-outset
-   */
-  borderImageOutset?: CSSProperties['borderImageOutset'];
-  /**
-   * border-image-repeat
-   */
-  borderImageRepeat?: CSSProperties['borderImageRepeat'];
-  /**
-   * border-image-slice
-   */
-  borderImageSlice?: CSSProperties['borderImageSlice'];
-  /**
-   * border-image-source
-   */
-  borderImageSource?: CSSProperties['borderImageSource'];
-  /**
-   * border-image-width
-   */
-  borderImageWidth?: CSSProperties['borderImageWidth'];
   /**
    * border-inline
    */
@@ -125,38 +78,6 @@ export interface BaseProps {
    * border-inline-color
    */
   borderInlineColor?: CSSProperties['borderInlineColor'];
-  /**
-   * border-inline-end
-   */
-  borderInlineEnd?: CSSProperties['borderInlineEnd'];
-  /**
-   * border-inline-end-color
-   */
-  borderInlineEndColor?: CSSProperties['borderInlineEndColor'];
-  /**
-   * border-inline-end-style
-   */
-  borderInlineEndStyle?: CSSProperties['borderInlineEndStyle'];
-  /**
-   * border-inline-end-width
-   */
-  borderInlineEndWidth?: CSSProperties['borderInlineEndWidth'];
-  /**
-   * border-inline-start
-   */
-  borderInlineStart?: CSSProperties['borderInlineStart'];
-  /**
-   * border-inline-start-color
-   */
-  borderInlineStartColor?: CSSProperties['borderInlineStartColor'];
-  /**
-   * border-inline-start-style
-   */
-  borderInlineStartStyle?: CSSProperties['borderInlineStartStyle'];
-  /**
-   * border-inline-start-width
-   */
-  borderInlineStartWidth?: CSSProperties['borderInlineStartWidth'];
   /**
    * border-inline-style
    */
@@ -186,38 +107,6 @@ export interface BaseProps {
    */
   borderRadius?: CSSProperties['borderRadius'];
   /**
-   * border-right
-   */
-  borderRight?: CSSProperties['borderRight'];
-  /**
-   * border-right-color
-   */
-  borderRightColor?: CSSProperties['borderRightColor'];
-  /**
-   * border-right-style
-   */
-  borderRightStyle?: CSSProperties['borderRightStyle'];
-  /**
-   * border-right-width
-   */
-  borderRightWidth?: CSSProperties['borderRightWidth'];
-  /**
-   * border-spacing
-   */
-  borderSpacing?: CSSProperties['borderSpacing'];
-  /**
-   * border-start-end-radius
-   */
-  borderStartEndRadius?: CSSProperties['borderStartEndRadius'];
-  /**
-   * border-start-start-radius
-   */
-  borderStartStartRadius?: CSSProperties['borderStartStartRadius'];
-  /**
-   * border-style
-   */
-  borderStyle?: CSSProperties['borderStyle'];
-  /**
    * border-top
    */
   borderTop?: CSSProperties['borderTop'];
@@ -225,14 +114,6 @@ export interface BaseProps {
    * border-top-color
    */
   borderTopColor?: CSSProperties['borderTopColor'];
-  /**
-   * border-top-left-radius
-   */
-  borderTopLeftRadius?: CSSProperties['borderTopLeftRadius'];
-  /**
-   * border-top-right-radius
-   */
-  borderTopRightRadius?: CSSProperties['borderTopRightRadius'];
   /**
    * border-top-style
    */
@@ -242,9 +123,191 @@ export interface BaseProps {
    */
   borderTopWidth?: CSSProperties['borderTopWidth'];
   /**
+   * border-style
+   */
+  borderStyle?: CSSProperties['borderStyle'];
+  /**
    * border-width
    */
   borderWidth?: CSSProperties['borderWidth'];
+}
+
+interface FlexProps {
+  /**
+   * flex
+   */
+  flex?: CSSProperties['flex'];
+  /**
+   * flex-basis
+   */
+  flexBasis?: CSSProperties['flexBasis'];
+  /**
+   * flex-direction
+   */
+  flexDirection?: CSSProperties['flexDirection'];
+  /**
+   * flex-flow
+   */
+  flexFlow?: CSSProperties['flexFlow'];
+  /**
+   * flex-grow
+   */
+  flexGrow?: CSSProperties['flexGrow'];
+  /**
+   * flex-shrink
+   */
+  flexShrink?: CSSProperties['flexShrink'];
+  /**
+   * flex-wrap
+   */
+  flexWrap?: CSSProperties['flexWrap'];
+}
+
+export interface GridProps {
+  /**
+   * grid
+   */
+  grid?: CSSProperties['grid'];
+  /**
+   * grid-area
+   */
+  gridArea?: CSSProperties['gridArea'];
+  /**
+   * grid-auto-columns
+   */
+  gridAutoColumns?: CSSProperties['gridAutoColumns'];
+  /**
+   * grid-auto-flow
+   */
+  gridAutoFlow?: CSSProperties['gridAutoFlow'];
+  /**
+   * grid-auto-rows
+   */
+  gridAutoRows?: CSSProperties['gridAutoRows'];
+  /**
+   * grid-column
+   */
+  gridColumn?: CSSProperties['gridColumn'];
+  /**
+   * grid-column-end
+   */
+  gridColumnEnd?: CSSProperties['gridColumnEnd'];
+  /**
+   * grid-column-start
+   */
+  gridColumnStart?: CSSProperties['gridColumnStart'];
+  /**
+   * grid-row
+   */
+  gridRow?: CSSProperties['gridRow'];
+  /**
+   * grid-row-end
+   */
+  gridRowEnd?: CSSProperties['gridRowEnd'];
+  /**
+   * grid-row-start
+   */
+  gridRowStart?: CSSProperties['gridRowStart'];
+  /**
+   * grid-template
+   */
+  gridTemplate?: CSSProperties['gridTemplate'];
+  /**
+   * grid-template-areas
+   */
+  gridTemplateAreas?: CSSProperties['gridTemplateAreas'];
+  /**
+   * grid-template-columns
+   */
+  gridTemplateColumns?: CSSProperties['gridTemplateColumns'];
+  /**
+   * grid-template-rows
+   */
+  gridTemplateRows?: CSSProperties['gridTemplateRows'];
+}
+
+interface JustifyProps {
+  /**
+  * justify-content
+  */
+  justifyContent?: CSSProperties['justifyContent'];
+  /**
+   * justify-items
+   */
+  justifyItems?: CSSProperties['justifyItems'];
+  /**
+   * justify-self
+   */
+  justifySelf?: CSSProperties['justifySelf'];
+  /**
+   * justify-tracks
+   */
+  justifyTracks?: CSSProperties['justifyTracks'];
+}
+
+interface MarginProps {
+  /**
+     * margin
+     */
+  margin?: CSSProperties['margin'];
+  /**
+   * margin-block
+   */
+  marginBlock?: CSSProperties['marginBlock'];
+  /**
+   * margin-bottom
+   */
+  marginBottom?: CSSProperties['marginBottom'];
+  /**
+   * margin-inline
+   */
+  marginInline?: CSSProperties['marginInline'];
+  /**
+   * margin-left
+   */
+  marginLeft?: CSSProperties['marginLeft'];
+  /**
+   * margin-right
+   */
+  marginRight?: CSSProperties['marginRight'];
+  /**
+   * margin-top
+   */
+  marginTop?: CSSProperties['marginTop'];
+}
+
+interface PaddinProps {
+  /**
+   * padding
+   */
+  padding?: CSSProperties['padding'];
+  /**
+   * padding-block
+   */
+  paddingBlock?: CSSProperties['paddingBlock'];
+  /**
+   * padding-bottom
+   */
+  paddingBottom?: CSSProperties['paddingBottom'];
+  /**
+   * padding-inline
+   */
+  paddingInline?: CSSProperties['paddingInline'];
+  /**
+   * padding-left
+   */
+  paddingLeft?: CSSProperties['paddingLeft'];
+  /**
+   * padding-right
+   */
+  paddingRight?: CSSProperties['paddingRight'];
+  /**
+   * padding-top
+   */
+  paddingTop?: CSSProperties['paddingTop'];
+}
+
+interface SizeProps {
   /**
    * height
    */
@@ -258,95 +321,27 @@ export interface BaseProps {
    */
   minHeight?: CSSProperties['minHeight'];
   /**
-   * margin
+   * width
    */
-  margin?: CSSProperties['margin'];
+  width?: CSSProperties['width'];
   /**
-   * margin-block
+   * max-width
    */
-  marginBlock?: CSSProperties['marginBlock'];
+  maxWidth?: CSSProperties['maxWidth'];
   /**
-   * margin-block-end
+   * min-width
    */
-  marginBlockEnd?: CSSProperties['marginBlockEnd'];
+  minWidth?: CSSProperties['minWidth'];
   /**
-   * margin-block-start
+   * gap
    */
-  marginBlockStart?: CSSProperties['marginBlockStart'];
+  gap?: CSSProperties['gap'];
   /**
-   * margin-bottom
+   * row-gap
    */
-  marginBottom?: CSSProperties['marginBottom'];
+  rowGap?: CSSProperties['rowGap'];
   /**
-   * margin-inline
+   * column-gap
    */
-  marginInline?: CSSProperties['marginInline'];
-  /**
-   * margin-inline-end
-   */
-  marginInlineEnd?: CSSProperties['marginInlineEnd'];
-  /**
-   * margin-inline-start
-   */
-  marginInlineStart?: CSSProperties['marginInlineStart'];
-  /**
-   * margin-left
-   */
-  marginLeft?: CSSProperties['marginLeft'];
-  /**
-   * margin-right
-   */
-  marginRight?: CSSProperties['marginRight'];
-  /**
-   * margin-top
-   */
-  marginTop?: CSSProperties['marginTop'];
-  /**
-   * margin-trim
-   */
-  marginTrim?: CSSProperties['marginTrim'];
-  /**
-   * padding
-   */
-  padding?: CSSProperties['padding'];
-  /**
-   * padding-block
-   */
-  paddingBlock?: CSSProperties['paddingBlock'];
-  /**
-   * padding-block-end
-   */
-  paddingBlockEnd?: CSSProperties['paddingBlockEnd'];
-  /**
-   * padding-block-start
-   */
-  paddingBlockStart?: CSSProperties['paddingBlockStart'];
-  /**
-   * padding-bottom
-   */
-  paddingBottom?: CSSProperties['paddingBottom'];
-  /**
-   * padding-inline
-   */
-  paddingInline?: CSSProperties['paddingInline'];
-  /**
-   * padding-inline-rnd
-   */
-  paddingInlineEnd?: CSSProperties['paddingInlineEnd'];
-  /**
-   * padding-inline-start
-   */
-  paddingInlineStart?: CSSProperties['paddingInlineStart'];
-  /**
-   * padding-left
-   */
-  paddingLeft?: CSSProperties['paddingLeft'];
-  /**
-   * padding-right
-   */
-  paddingRight?: CSSProperties['paddingRight'];
-  /**
-   * padding-top
-   */
-  paddingTop?: CSSProperties['paddingTop'];
+  columnGap?: CSSProperties['columnGap'];
 }

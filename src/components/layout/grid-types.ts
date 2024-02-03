@@ -8,57 +8,57 @@ export interface GridProps {
   /**
    * grid-area
    */
-  gridArea?: CSSProperties['gridArea'];
+  area?: CSSProperties['gridArea'];
   /**
    * grid-auto-columns
    */
-  gridAutoColumns?: CSSProperties['gridAutoColumns'];
+  autoColumns?: CSSProperties['gridAutoColumns'];
   /**
    * grid-auto-flow
    */
-  gridAutoFlow?: CSSProperties['gridAutoFlow'];
+  autoFlow?: CSSProperties['gridAutoFlow'];
   /**
    * grid-auto-rows
    */
-  gridAutoRows?: CSSProperties['gridAutoRows'];
+  autoRows?: CSSProperties['gridAutoRows'];
   /**
    * grid-column
    */
-  gridColumn?: CSSProperties['gridColumn'];
+  column?: CSSProperties['gridColumn'];
   /**
    * grid-column-end
    */
-  gridColumnEnd?: CSSProperties['gridColumnEnd'];
+  columnEnd?: CSSProperties['gridColumnEnd'];
   /**
    * grid-column-start
    */
-  gridColumnStart?: CSSProperties['gridColumnStart'];
+  columnStart?: CSSProperties['gridColumnStart'];
   /**
    * grid-row
    */
-  gridRow?: CSSProperties['gridRow'];
+  row?: CSSProperties['gridRow'];
   /**
    * grid-row-end
    */
-  gridRowEnd?: CSSProperties['gridRowEnd'];
+  rowEnd?: CSSProperties['gridRowEnd'];
   /**
    * grid-row-start
    */
-  gridRowStart?: CSSProperties['gridRowStart'];
+  rowStart?: CSSProperties['gridRowStart'];
   /**
    * grid-template
    */
-  gridTemplate?: CSSProperties['gridTemplate'];
+  template?: CSSProperties['gridTemplate'];
   /**
    * grid-template-areas
    */
-  gridTemplateAreas?: CSSProperties['gridTemplateAreas'];
+  templateAreas?: CSSProperties['gridTemplateAreas'];
   /**
    * grid-template-columns
    */
-  gridTemplateColumns?: CSSProperties['gridTemplateColumns'];
+  templateColumns?: CSSProperties['gridTemplateColumns'];
   /**
    * grid-template-rows
    */
-  gridTemplateRows?: CSSProperties['gridTemplateRows'];
+  templateRows?: CSSProperties['gridTemplateRows'];
 }

@@ -6,6 +6,7 @@ export default function Sidebar(){
         <li><a href="/icon">Icon</a></li>
         <li><a href="/input">Input</a></li>
         <li><a href="/text">Text</a></li>
+        <li><a href="/overlay">Overlay</a></li>
       </ul>
     </div>
   )

@@ -1,54 +1,8 @@
 import { SVGProps } from "react";
+import icons from "./lib";
 
 export type IconComponent = (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
 
 export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | number;
 
-export type IconName =
-  | 'android'
-  | 'apple'
-  | 'arrow-2-ccw'
-  | 'arrow-2-cw'
-  | 'arrow-ccw'
-  | 'arrow-cw'
-  | 'arrow-from-shape-right'
-  | 'arrow-from-shape-top'
-  | 'arrow-left'
-  | 'arrow-right'
-  | 'arrow-shape-turn-left'
-  | 'arrow-shape-turn-right'
-  | 'arrow-to-shape-down'
-  | 'arrow-to-shape-right'
-  | 'chevron-down'
-  | 'chevron-down-double'
-  | 'chevron-down-left'
-  | 'chevron-down-right'
-  | 'chevron-left'
-  | 'chevron-left-double'
-  | 'chevron-right'
-  | 'chevron-right-double'
-  | 'chevron-selector-horizontal'
-  | 'chevron-selector-vertical'
-  | 'chevron-up'
-  | 'chevron-up-double'
-  | 'chevron-up-left'
-  | 'chevron-up-right'
-  | 'copy'
-  | 'discord'
-  | 'facebook'
-  | 'filter'
-  | 'filter-close'
-  | 'github'
-  | 'google'
-  | 'home'
-  | 'linkedin'
-  | 'moon'
-  | 'pix'
-  | 'reddit'
-  | 'sun'
-  | 'trash'
-  | 'twitter'
-  | 'wallet'
-  | 'whatsapp'
-  | 'youtube'
-  ;
+export type IconName = keyof typeof icons;

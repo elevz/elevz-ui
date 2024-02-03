@@ -20,6 +20,7 @@ const StyledButton = styled.button.withConfig({
   font-weight: 500;
   font-size: 1rem;
   padding-inline: ${theme.sizes.space_md};
+  width: fit-content;
 
   ${(props) => getApperance(props)}
   ${(props) => getSize(props)}
