@@ -1,1 +1,2 @@
-export * from "./styles"
+export * from "./string";
+export * from "./styles";
