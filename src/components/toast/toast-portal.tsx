@@ -47,6 +47,14 @@ const ToastPortal = styled.div`
   width: 100%;
 `;
 
+export default function (props: { children?: ReactNode }) {
+  return ReactDOM.createPortal((
+    <ToastPortal>
+      {props.children}
+    </ToastPortal>
+  ), document.body);
+}
+
 export const ToastContainer = styled.div.withConfig({
   shouldForwardProp: (prop: string) => !['position'].includes(prop)
 }) <{ position: ToastPosition }>`
@@ -59,10 +67,3 @@ export const ToastContainer = styled.div.withConfig({
   ${(props) => positions[props.position]}
 `;
 
-export default (props: { children?: ReactNode }) => {
-  return ReactDOM.createPortal((
-    <ToastPortal>
-      {props.children}
-    </ToastPortal>
-  ), document.body);
-}
