@@ -1,0 +1,1 @@
+export type SchemeType = 'primary' | 'secondary' | 'success' | 'danger' | 'info' | 'warning';
