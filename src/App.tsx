@@ -1,9 +1,13 @@
 import { PropsWithChildren } from 'react';
-import { Button } from '../lib';
+import { Button, Input } from '../lib';
 
 function App() {
   return (
     <div className="flex flex-col items-center justify-center h-dvh gap-4">
+      <Input
+        label="Input"
+        helperText="Helper text"
+      />
       <Row>
         <Button
           label="Primary"
