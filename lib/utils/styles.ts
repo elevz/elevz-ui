@@ -29,3 +29,26 @@ export function combineClassName(...classes: Array<string | { [key: string]: any
 
   return className.trim();
 }
+
+export function setCSSVariable(variable: string, value: string) {
+  const root = document.documentElement;
+  root.style.setProperty(variable, value);
+}
+
+export function generateCSSFile(colors: Record<string, any>) {
+  let cssVariables = '';
+  for (const [key, value] of Object.entries(colors)) {
+    const cssVar = `--ez-${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
+    cssVariables += `  ${cssVar}: ${value};\n`;
+  }
+  return cssVariables;
+}
+
+export function generateCSSVariables(colors: Record<string, any>) {
+  const styleSheet = document.createElement('style');
+  styleSheet.setAttribute('data-ez-css-variables', 'true');
+  styleSheet.setAttribute('type', 'text/css');
+  document.head.appendChild(styleSheet);
+
+  styleSheet.innerText = `*{\n ${generateCSSFile(colors)} }`
+}

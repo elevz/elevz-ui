@@ -9,33 +9,33 @@ export const sizesMap: Record<SizeType, string> = {
 
 export const stylesMap: Record<SchemeType, Record<VariantType, string>> = {
   primary: {
-    solid: 'border text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700',
-    outline: 'border text-primary-500 border-primary-500 hover:bg-primary-50 active:bg-primary-100',
-    ghost: 'text-primary-500 hover:bg-primary-50 active:bg-primary-100',
+    solid: 'border text-primary-surface bg-primary hover:bg-primary-dark active:bg-primary-darkest',
+    outline: 'border text-primary border-primary hover:bg-primary-lightest active:bg-primary-light',
+    ghost: 'text-primary hover:bg-primary-lightest active:bg-primary-light',
   },
   secondary: {
-    solid: 'border text-white bg-secondary-500 hover:bg-secondary-600 active:bg-secondary-700',
-    outline: 'border text-secondary-500 border-secondary-500 hover:bg-secondary-50 active:bg-secondary-100',
-    ghost: 'text-secondary-500 hover:bg-secondary-50 active:bg-secondary-100',
+    solid: 'border text-secondary-surface bg-secondary hover:bg-secondary-dark active:bg-secondary-darkest',
+    outline: 'border text-secondary border-secondary hover:bg-secondary-lightest active:bg-secondary-light',
+    ghost: 'text-secondary hover:bg-secondary-lightest active:bg-secondary-light',
   },
   success: {
-    solid: 'border text-white bg-success-500 hover:bg-success-600 active:bg-success-700',
-    outline: 'border text-success-500 border-success-500 hover:bg-success-50 active:bg-success-100',
-    ghost: 'text-success-500 hover:bg-success-50 active:bg-success-100',
+    solid: 'border text-success-surface bg-success hover:bg-success-dark active:bg-success-darkest',
+    outline: 'border text-success border-success hover:bg-success-lightest active:bg-success-light',
+    ghost: 'text-success hover:bg-success-lightest active:bg-success-light',
   },
   danger: {
-    solid: 'border text-white bg-danger-500 hover:bg-danger-600 active:bg-danger-700',
-    outline: 'border text-danger-500 border-danger-500 hover:bg-danger-50 active:bg-danger-100',
-    ghost: 'text-danger-500 hover:bg-danger-50 active:bg-danger-100',
+    solid: 'border text-danger-surface bg-danger hover:bg-danger-dark active:bg-danger-darkest',
+    outline: 'border text-danger border-danger hover:bg-danger-lightest active:bg-danger-light',
+    ghost: 'text-danger hover:bg-danger-lightest active:bg-danger-light',
   },
   info: {
-    solid: 'border text-white bg-info-500 hover:bg-info-600 active:bg-info-700',
-    outline: 'border text-info-500 border-info-500 hover:bg-info-50 active:bg-info-100',
-    ghost: 'text-info-500 hover:bg-info-50 active:bg-info-100',
+    solid: 'border text-info-surface bg-info hover:bg-info-dark active:bg-info-darkest',
+    outline: 'border text-info border-info hover:bg-info-lightest active:bg-info-light',
+    ghost: 'text-info hover:bg-info-lightest active:bg-info-light',
   },
   warning: {
-    solid: 'border text-white bg-warning-500 hover:bg-warning-600 active:bg-warning-700',
-    outline: 'border text-warning-500 border-warning-500 hover:bg-warning-50 active:bg-warning-100',
-    ghost: 'text-warning-500 hover:bg-warning-50 active:bg-warning-100',
+    solid: 'border text-warning-surface bg-warning hover:bg-warning-dark active:bg-warning-darkest',
+    outline: 'border text-warning border-warning hover:bg-warning-lightest active:bg-warning-light',
+    ghost: 'text-warning hover:bg-warning-lightest active:bg-warning-light',
   }
 }
