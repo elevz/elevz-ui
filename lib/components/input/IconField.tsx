@@ -1,14 +1,14 @@
 import { combineClassName } from "@lib/utils";
 import Icon, { IconName, IconProps } from "elevz-icon";
-import { ReactNode } from "react";
+import React, { ReactElement } from "react";
 
-export interface IconFieldProps extends React.HTMLAttributes<HTMLDivElement> {
-  children?: ReactNode;
+export interface IconFieldProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
+  children?: ReactElement;
   rightIcon?: IconName;
-  rightIconProps?: IconProps;
+  rightIconProps?: Omit<IconProps, 'name'>;
   rightIconContainerProps?: React.HTMLAttributes<HTMLSpanElement>;
   leftIcon?: IconName;
-  leftIconProps?: IconProps;
+  leftIconProps?: Omit<IconProps, 'name'>;
   leftIconContainerProps?: React.HTMLAttributes<HTMLSpanElement>;
 }
 
@@ -24,17 +24,12 @@ export const IconField: React.FC<IconFieldProps> = ({
   return (
     <div
       {...props}
-      className={combineClassName(
-        "relative",
-        [Boolean(leftIcon), "[&>input]:pl-9"],
-        [Boolean(rightIcon), "[&>input]:pr-9"],
-        props.className
-      )}
+      className={combineClassName("relative", props.className)}
     >
       {Boolean(leftIcon) &&
         <span
           {...leftIconContainerProps}
-          className={combineClassName("text-neutral-800 absolute top-1/2 translate-y-[-50%] left-2", leftIconProps?.className)}
+          className={combineClassName("z-10 text-neutral-800 absolute top-1/2 translate-y-[-50%] left-2", leftIconProps?.className)}
         >
           <Icon
             name={leftIcon!}
@@ -44,12 +39,21 @@ export const IconField: React.FC<IconFieldProps> = ({
         </span>
       }
 
-      {props.children}
+      {React.Children.map(props.children, (child: any) => {
+        const elm = React.cloneElement(child, {
+          className: combineClassName(
+            child.props.className,
+            [Boolean(leftIcon), 'pl-9'],
+            [Boolean(rightIcon), 'pr-9']
+          )
+        });
+        return elm;
+      })}
 
       {Boolean(rightIcon) &&
         <span
           {...rightIconContainerProps}
-          className={combineClassName("text-neutral-800 absolute top-1/2 translate-y-[-50%] right-2", rightIconProps?.className)}
+          className={combineClassName("z-10 text-neutral-800 absolute top-1/2 translate-y-[-50%] right-2", rightIconProps?.className)}
         >
           <Icon
             name={rightIcon!}

@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "elevz-icon": "^0.0.9",
+    "elevz-icon": "latest",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

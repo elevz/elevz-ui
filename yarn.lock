@@ -970,10 +970,10 @@ electron-to-chromium@^1.4.796:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.818.tgz#7762c8bfd15a07c3833b7f5deed990e9e5a4c24f"
   integrity sha512-eGvIk2V0dGImV9gWLq8fDfTTsCAeMDwZqEPMr+jMInxZdnp9Us8UpovYpRCf9NQ7VOFgrN2doNSgvISbsbNpxA==
 
-elevz-icon@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/elevz-icon/-/elevz-icon-0.0.9.tgz#53a8dfeaaae802b323a3ca1fee49510e698ebe81"
-  integrity sha512-QjhhRKUSesmzSLY6GzMNmVLsDAlGT2RdqDBbwayUqLg8D/KjZX8AzM6QuWO6eYfD2r+vKF9L34F9WQEWlLnyTg==
+elevz-icon@latest:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/elevz-icon/-/elevz-icon-0.0.11.tgz#aa3a42daba3ffe7da7e74e1e7b0d96421b9411a4"
+  integrity sha512-N58X6eJhgHTUp/9K6+Pu3qTLEGAr2NPwqAv6uKBHl8IukwDlpdCehkIIftmQifeopt+7ZSTPJplagRfZ415q6A==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -1888,6 +1888,7 @@ source-map-js@^1.2.0:
   integrity sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
