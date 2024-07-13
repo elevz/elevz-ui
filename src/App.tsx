@@ -1,8 +1,21 @@
 import { useState } from 'react';
 import { Button, Input, Toast } from '../lib';
+import useToast from '@lib/hooks/useToast';
+import { getRandomNumber } from '@lib/utils/helpers';
+import { ToastPosition } from '@lib/components/toast/types';
 
 function App() {
   const [v, sv] = useState(false);
+  const showToast = useToast();
+
+  function addToast(pos: ToastPosition){
+    showToast({
+      position: pos,
+      message: 'Toast',
+      scheme: getRandomNumber() === 1 ? 'success' : 'danger',
+      indicator: true
+    })
+  }
 
   return (
     <div className="flex flex-col items-center justify-center h-dvh gap-4">
@@ -12,40 +25,25 @@ function App() {
       />
       <Button label={v ? 'Close' : 'Show'} onClick={() => sv(!v)} />
 
+      <Button
+        label="Bottom Center"
+        onClick={() => addToast('bottom-center')}
+      />
+      
+      <Button
+        label="Top Center"
+        onClick={() => addToast('top-center')}
+      />
+
       <Toast
         autoClose
-        indicator
         scheme="success"
         message="Toast message"
         onClose={() => sv(false)}
         visible={v}
         position='top-center'
+        indicator
       />
-
-      <Toast
-        scheme="success"
-        message="Toast message"
-        visible
-      />
-
-      <Toast
-        scheme="info"
-        message="Toast message"
-        visible
-      />
-
-      <Toast
-        scheme="danger"
-        message="Toast message"
-        visible
-      />
-
-      <Toast
-        scheme="warning"
-        message="Toast message"
-        visible
-      />
-
     </div>
   )
 }
