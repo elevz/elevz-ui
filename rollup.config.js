@@ -16,9 +16,6 @@ export default {
   plugins: [
     peerDepsExternal(),
     postcss({
-      config: {
-        path: "./postcss.config.js",
-      },
       extract: true,
       minimize: true,
       sourceMap: true,
