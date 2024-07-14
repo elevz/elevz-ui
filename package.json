@@ -1,7 +1,7 @@
 {
   "name": "elevz-ui",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.2",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "peerDependencies": {
     "elevz-icon": "latest",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -37,7 +37,9 @@
     "postcss": "^8.4.39",
     "rollup": "^4.18.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "tailwindcss": "^3.4.4",
+    "tslib": "^2.6.3",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
   }
