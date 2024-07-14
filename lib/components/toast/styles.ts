@@ -4,34 +4,41 @@ import { ToastPosition } from "./types";
 
 export const stylesMap: Record<SchemeType, {
   container: string;
+  shadow: string;
   text: string;
   icon?: IconName;
 }> = {
   primary: {
-    container: 'bg-primary text-primary shadow-primary-light',
+    container: 'bg-primary text-primary',
+    shadow: 'shadow-primary-light',
     text: 'text-primary-surface',
   },
   secondary: {
-    container: 'bg-secondary text-secondary shadow-secondary-light',
+    container: 'bg-secondary text-secondary',
+    shadow: 'shadow-secondary-light',
     text: 'text-secondary-surface',
   },
   success: {
-    container: 'bg-success text-success shadow-success-light',
+    container: 'bg-success text-success',
+    shadow: 'shadow-success-light',
     text: 'text-success-surface',
     icon: 'check',
   },
   danger: {
-    container: 'bg-danger text-danger shadow-danger-light',
+    container: 'bg-danger text-danger',
+    shadow: 'shadow-danger-light',
     text: 'text-danger-surface',
     icon: 'alert-triangle',
   },
   info: {
-    container: 'bg-info text-info shadow-info-light',
+    container: 'bg-info text-info',
+    shadow: 'shadow-info-light',
     text: 'text-info-surface',
     icon: 'info-circle',
   },
   warning: {
-    container: 'bg-warning text-warning shadow-warning-light',
+    container: 'bg-warning text-warning',
+    shadow: 'shadow-warning-light',
     text: 'text-warning-surface',
     icon: 'alert-circle',
   }

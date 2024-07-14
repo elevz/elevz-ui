@@ -11,6 +11,7 @@ export const Toast: React.FC<ToastProps> = ({
   scheme = 'success',
   duration = 2500,
   message,
+  shadow = true,
   ...props
 }) => {
   const config = stylesMap[scheme];
@@ -42,6 +43,7 @@ export const Toast: React.FC<ToastProps> = ({
         className={combineClassName(
           "relative flex items-center rounded-md px-2 gap-2 w-60 h-11 shadow-lg overflow-hidden",
           config.container,
+          [shadow, config.shadow]
         )}
       >
         {(config.icon || leftIcon) &&

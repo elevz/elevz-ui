@@ -15,6 +15,7 @@ export interface ToastContextProps {
 export const ToastContext = createContext<ToastContextProps | undefined>(undefined);
 
 export const ToastProvider = (props: PropsWithChildren) => {
+  const portal = document.getElementById('ez-toast') || document.body;
   const [toastList, setToastList] = useState<Record<ToastPosition, IToast[]>>();
 
   const toastValue: ToastContextProps = {
@@ -70,7 +71,6 @@ export const ToastProvider = (props: PropsWithChildren) => {
     });
   }
 
-
   return (
     <ToastContext.Provider value={toastValue}>
       {props.children}
@@ -91,7 +91,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
             </div>
           )}
         </>,
-        document.body)
+        portal)
       }
     </ToastContext.Provider>
   )

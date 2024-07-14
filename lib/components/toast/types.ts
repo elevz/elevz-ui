@@ -27,5 +27,6 @@ export interface ToastProps {
   message?: string;
   onClose?: () => void;
   onCloseClick?: () => void;
+  shadow?: boolean;
   visible?: boolean;
 }
