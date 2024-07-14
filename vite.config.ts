@@ -35,7 +35,10 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [tailwindcss],
-    }
+    },
   },
-  plugins: [react(), dts({ tsconfigPath: './tsconfig.build.json' })]
+  plugins: [
+    react(),
+    dts({ tsconfigPath: './tsconfig.build.json' }),
+  ]
 });
