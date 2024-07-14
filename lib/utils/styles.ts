@@ -26,19 +26,13 @@ export function combineClassName(...classes: Array<string | { [key: string]: any
     }
   });
 
-
   return className.trim();
-}
-
-export function setCSSVariable(variable: string, value: string) {
-  const root = document.documentElement;
-  root.style.setProperty(variable, value);
 }
 
 export function generateCSSFile(colors: Record<string, any>) {
   let cssVariables = '';
   for (const [key, value] of Object.entries(colors)) {
-    const cssVar = `--ez-${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
+    const cssVar = `--ez-${key.replace('_', '-')}`;
     cssVariables += `  ${cssVar}: ${value};\n`;
   }
   return cssVariables;

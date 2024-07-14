@@ -22,7 +22,7 @@ export default {
     }),
     resolve(),
     commonjs(),
-    typescript({ tsconfig: './tsconfig-build.json' }),
+    typescript({ tsconfig: './tsconfig.build.json' }),
     terser(),
   ],
   external: ['react', 'react-dom'],

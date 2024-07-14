@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Button, Input, Modal } from '../lib';
+import { Input, Modal } from '../lib';
 import useToast from '@lib/hooks/useToast';
+import {Button} from "../dist";
 
 function App() {
   const [v, sv] = useState(false);
@@ -26,6 +27,10 @@ function App() {
             message: 'Hello from toast',
             scheme: 'primary'
           })} />
+
+          <Button 
+            scheme='danger'
+          />
         </div>
       </Modal>
     </div>
