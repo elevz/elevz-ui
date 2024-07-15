@@ -1,7 +1,7 @@
 import { ToastContext } from "@lib/context/ToastContext";
 import { useContext } from "react";
 
-export default function useToast(){
+export function useToast(){
   const context = useContext(ToastContext);
 
   if(!context){
