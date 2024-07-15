@@ -8,12 +8,10 @@ export const Modal: React.FC<ModalProps> = ({
   visible,
   ...props
 }) => {
-  const portal = document.getElementById('ez-modal') || document.body; 
-  
   return visible ? createPortal(
     <div
       {...props}
-      className={combineClassName("fixed inset-0 z-10", props.className)}
+      className={combineClassName("absolute inset-0 z-10", props.className)}
     >
       <div
         onClick={onBackdropClick}
@@ -23,6 +21,6 @@ export const Modal: React.FC<ModalProps> = ({
 
       {props.children}
     </div>,
-    portal
+    document.body
   ) : null;
 }
