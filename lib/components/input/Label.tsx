@@ -13,17 +13,17 @@ export const Label: React.FC<LabelProps> = ({
   ...props
 }) => {
   return Boolean(value || props.children) ? (
-    <label {...props} className="flex gap-1 text-sm font-body text-neutral-800">
+    <label {...props} className="ez-flex ez-gap-1 ez-text-sm ez-font-body ez-text-neutral-800">
       <span>{value || props.children}</span>
 
       {Boolean(optional) &&
-        <span className="text-neutral-500">
+        <span className="ez-text-neutral-500">
           ({optionalText || 'opcional'})
         </span>
       }
 
       {Boolean(required) &&
-        <span className="text-danger-500">*</span>
+        <span className="ez-text-danger-500">*</span>
       }
     </label>
   ) : null

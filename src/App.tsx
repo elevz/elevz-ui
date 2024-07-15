@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Input, Modal } from '../lib';
-import useToast from '@lib/hooks/useToast';
-import {Button} from "../dist";
+import { Button, Input, Modal } from '../lib';
+import { useToast } from '@lib/hooks';
 
 function App() {
   const [v, sv] = useState(false);
@@ -28,7 +27,7 @@ function App() {
             scheme: 'primary'
           })} />
 
-          <Button 
+          <Button
             scheme='danger'
           />
         </div>

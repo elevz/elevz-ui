@@ -41,7 +41,7 @@ export const Toast: React.FC<ToastProps> = ({
     >
       <div
         className={combineClassName(
-          "relative flex items-center rounded-md px-2 gap-2 w-60 h-11 shadow-lg overflow-hidden",
+          "ez-relative ez-flex ez-items-center ez-rounded-md ez-px-2 ez-gap-2 ez-w-60 ez-h-11 ez-shadow-lg ez-overflow-hidden",
           config.container,
           [shadow, config.shadow]
         )}
@@ -54,7 +54,7 @@ export const Toast: React.FC<ToastProps> = ({
           />
         }
 
-        <p className={combineClassName('text-sm', config.text)}>
+        <p className={combineClassName('ez-text-sm', config.text)}>
           {message}
         </p>
 
@@ -68,14 +68,14 @@ export const Toast: React.FC<ToastProps> = ({
 
         {(props.autoClose && props.indicator) &&
           <div
-            className="absolute w-full h-0.5 bg-white left-0 bottom-0 animate-empty"
+            className="ez-absolute ez-w-full ez-h-0.5 ez-bg-white ez-left-0 ez-bottom-0 ez-animate-empty"
             style={{ animationDuration: `${duration}ms` }}
           />
         }
 
         {props.onCloseClick &&
           <span
-            className="absolute top-1 right-1"
+            className="ez-absolute ez-top-1 ez-right-1"
             onClick={props.onCloseClick}
           >
             <Icon
