@@ -1,3 +1,3 @@
 import { PropsWithChildren } from "react";
 
-export default (props: PropsWithChildren) => <div className='flex items-center gap-2' {...props} />
+export default (props: PropsWithChildren) => <div className='ez-flex ez-items-center ez-gap-2' {...props} />
