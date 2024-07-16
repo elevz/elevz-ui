@@ -4,9 +4,7 @@ import { getPosition } from "@lib/components/toast/styles";
 import { combineClassName, generateId } from "@lib/utils";
 import { createPortal } from "react-dom";
 
-export interface IToast extends ToastProps {
-  position: ToastPosition;
-}
+export interface IToast extends ToastProps { }
 
 export interface ToastContextProps {
   showToast: (props: IToast) => void;
@@ -21,7 +19,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
     showToast: addToast
   }
 
-  function addToast({ position, ...props }: IToast) {
+  function addToast({ position = 'top-center', ...props }: IToast) {
     let id = generateId();
 
     const item: ToastProps = {
@@ -80,7 +78,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
               key={i}
               className={combineClassName(
                 getPosition(position as ToastPosition),
-                'ez-flex ez-gap-2',
+                'ez-flex ez-gap-2 ez-z-50',
                 position.includes('top') ? 'ez-flex-col-reverse' : 'ez-flex-col'
               )}
             >

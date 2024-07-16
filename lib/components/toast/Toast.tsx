@@ -10,9 +10,9 @@ export const Toast: React.FC<ToastProps> = ({
   leftIcon,
   rightIcon,
   scheme = 'success',
-  duration = 1500,
+  duration = 2000,
   message,
-  shadow = true,
+  shadow,
   ...props
 }) => {
   const config = stylesMap[scheme];

@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   prefix: 'ez-',
   content: [
-    "./lib/**/*.{js,ts,jsx,tsx}"
+    "./lib/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -75,6 +77,9 @@ export default {
       animation: {
         empty: 'empty 1s linear forwards',
       },
+      boxShadow: {
+        around: '0px 0px 4px 2px #00000020'
+      }
     },
   },
   plugins: [],
