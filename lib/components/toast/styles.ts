@@ -60,5 +60,5 @@ export function getPosition(position: ToastPosition) {
 
   const str = position.split('-');
 
-  return 'ez-absolute ez-z-10 ' + positions[str[0] as keyof typeof positions] + ' ' + positions[str[1] as keyof typeof positions]
+  return 'ez-fixed ez-z-10 ' + positions[str[0] as keyof typeof positions] + ' ' + positions[str[1] as keyof typeof positions]
 }

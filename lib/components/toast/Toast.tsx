@@ -4,12 +4,13 @@ import { combineClassName } from "@lib/utils";
 import { getPosition, stylesMap } from "./styles";
 import { ToastProps } from "./types";
 import { createPortal } from "react-dom";
+import { IconField } from "../IconField";
 
 export const Toast: React.FC<ToastProps> = ({
   leftIcon,
   rightIcon,
   scheme = 'success',
-  duration = 2500,
+  duration = 1500,
   message,
   shadow = true,
   ...props
@@ -39,39 +40,25 @@ export const Toast: React.FC<ToastProps> = ({
       id={props.id}
       className={combineClassName([props.position, getPosition(props.position!)])}
     >
-      <div
+      <IconField
         className={combineClassName(
-          "ez-relative ez-flex ez-items-center ez-rounded-md ez-px-2 ez-gap-2 ez-w-60 ez-h-11 ez-shadow-lg ez-overflow-hidden",
+          "ez-relative ez-flex ez-items-center ez-rounded-md ez-px-2 ez-py-1 ez-gap-2 ez-min-w-60 ez-min-h-11 ez-shadow-lg ez-overflow-hidden",
+          "ez-max-w-80",
           config.container,
           [shadow, config.shadow]
         )}
+        leftIcon={config.icon || leftIcon}
+        leftIconProps={{
+          className: config.text
+        }}
+        rightIcon={rightIcon}
+        rightIconProps={{
+          className: config.text
+        }}
       >
-        {(config.icon || leftIcon) &&
-          <Icon
-            name={(config.icon || leftIcon)!}
-            className={config.text}
-            size={20}
-          />
-        }
-
         <p className={combineClassName('ez-text-sm', config.text)}>
           {message}
         </p>
-
-        {rightIcon &&
-          <Icon
-            name={rightIcon}
-            className={config.text}
-            size={20}
-          />
-        }
-
-        {(props.autoClose && props.indicator) &&
-          <div
-            className="ez-absolute ez-w-full ez-h-0.5 ez-bg-white ez-left-0 ez-bottom-0 ez-animate-empty"
-            style={{ animationDuration: `${duration}ms` }}
-          />
-        }
 
         {props.onCloseClick &&
           <span
@@ -85,8 +72,15 @@ export const Toast: React.FC<ToastProps> = ({
             />
           </span>
         }
-      </div>
-    </div>
+
+        {(props.autoClose && props.indicator) &&
+          <div
+            className="ez-absolute ez-w-full ez-h-0.5 ez-bg-white ez-left-0 ez-bottom-0 ez-animate-empty"
+            style={{ animationDuration: `${duration}ms` }}
+          />
+        }
+      </IconField>
+    </div >
   )
 
   return (visible ?
