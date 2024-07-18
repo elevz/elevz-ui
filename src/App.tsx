@@ -1,37 +1,39 @@
-import { useState } from 'react';
-import { Button, Input, Modal } from '../lib';
-import { useToast } from '@lib/hooks';
+import { Button, Dropdown, Input } from "@lib/components";
+import Row from "./components/Row";
 
 function App() {
-  const [v, sv] = useState(false);
-  const showToast = useToast();
-
   return (
-    <div className="flex flex-col items-center justify-center h-dvh gap-4">
-      <Input
-        leftIcon="alert-circle"
-      />
+    <div className="ez-bg-background ez-flex ez-flex-col ez-items-center ez-justify-center ez-h-screen">
+      <div className="ez-flex ez-flex-col ez-justify-between ez-h-3/4 ez-border ez-p-4 ez-gap-3">
+        <Input label="Input" />
+        <Dropdown
+          label="Dropdown"
 
-      <Button label={v ? 'Close' : 'Show'} onClick={() => sv(!v)} />
+        />
+        <Dropdown
+          label="Dropdown"
+        />
 
-      <Modal
-        visible={v}
-        className='flex items-center justify-center'
-        onBackdropClick={() => sv(false)}
-      >
-        <div className='bg-white p-2 rounded-md size-32'>
-          <span>Modal</span>
-          <Button label='Toast' onClick={() => showToast({
-            position: 'bottom-center',
-            message: 'Hello from toast',
-            scheme: 'primary'
-          })} />
+        <Button
+          label="Button"
+        />
+        <Button
+          label="Button"
+          variant="outline"
+        />
+        <Button
+          label="Button"
+          variant="ghost"
+        />
 
-          <Button
-            scheme='danger'
-          />
-        </div>
-      </Modal>
+        <Row>
+          <div className='ez-rounded-sm ez-h-10 ez-w-10 ez-bg-primary-hover' />
+          <div className='ez-rounded-sm ez-h-10 ez-w-10 ez-bg-primary-light' />
+          <div className='ez-rounded-sm ez-h-10 ez-w-10 ez-bg-primary' />
+          <div className='ez-rounded-sm ez-h-10 ez-w-10 ez-bg-primary-dark' />
+          <div className='ez-rounded-sm ez-h-10 ez-w-10 ez-bg-primary-darker' />
+        </Row>
+      </div>
     </div>
   )
 }

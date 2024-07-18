@@ -29,7 +29,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldProps>(({
       {Boolean(leftIcon) &&
         <span
           {...leftIconContainerProps}
-          className={combineClassName("ez-text-neutral-800 ez-size-5", leftIconProps?.className)}
+          className={combineClassName("ez-text-neutral-800 ez-size-5 dark:ez-text-white", leftIconProps?.className)}
         >
           <Icon
             name={leftIcon!}
@@ -44,7 +44,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldProps>(({
       {Boolean(rightIcon) &&
         <span
           {...rightIconContainerProps}
-          className={combineClassName("ez-text-neutral-800 ez-size-5", rightIconProps?.className)}
+          className={combineClassName("ez-text-neutral-800 ez-size-5 dark:ez-text-white", rightIconProps?.className)}
         >
           <Icon
             name={rightIcon!}

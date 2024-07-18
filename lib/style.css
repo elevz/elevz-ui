@@ -3,52 +3,83 @@
 @tailwind utilities;
 
 :root {
-  /* primary -  teal */
-  --ez-primary: #14b8a6;
-  --ez-primary-light: #5eead4;
-  --ez-primary-lighter: #ccfbf1;
-  --ez-primary-dark: #0d9488;
-  --ez-primary-darker: #0f766e;
-  --ez-primary-hover: #f0fdfa;
+  /* background */
+  --ez-background: #f9fafb;
+  /* border */
+  --ez-border: #d4d4d4;
+  /* surface */
+  --ez-surface: #ffffff;
+  /* text */
+  --ez-text: #1e2837;
+  /* primary */
+  --ez-primary: rgb(20, 184, 166);
+  --ez-primary-light: color-mix(in srgb, var(--ez-primary) 50%, white);
+  --ez-primary-dark: color-mix(in srgb, var(--ez-primary) 90%, black);
+  --ez-primary-darker: color-mix(in srgb, var(--ez-primary) 70%, black);
+  --ez-primary-hover: color-mix(in srgb, var(--ez-primary) 5%, white);
   --ez-primary-surface: #FFFFFF;
-  /* secondary - violet */
+  /* secondary */
   --ez-secondary: #8b5cf6;
-  --ez-secondary-light: #c4b5fd;
-  --ez-secondary-lighter: #ede9fe;
-  --ez-secondary-dark: #7c3aed;
-  --ez-secondary-darker: #6d28d9;
-  --ez-secondary-hover: #f5f3ff;
+  --ez-secondary-light: color-mix(in srgb, var(--ez-primary) 50%, white);
+  --ez-secondary-dark: color-mix(in srgb, var(--ez-primary) 90%, black);
+  --ez-secondary-darker: color-mix(in srgb, var(--ez-primary) 70%, black);
+  --ez-secondary-hover: color-mix(in srgb, var(--ez-primary) 5%, white);
   --ez-secondary-surface: #FFFFFF;
-  /* success - Green */
+  /* success */
   --ez-success: #22c55e;
-  --ez-success-light: #86efac;
-  --ez-success-lighter: #dcfce7;
-  --ez-success-dark: #16a34a;
+  --ez-success-light: color-mix(in srgb, var(--ez-success) 50%, white);
+  --ez-success-dark: color-mix(in srgb, var(--ez-success) 90%, black);
+  --ez-success-darker: color-mix(in srgb, var(--ez-success) 70%, black);
+  --ez-success-hover: color-mix(in srgb, var(--ez-success) 5%, white);
   --ez-success-surface: #FFFFFF;
-  --ez-success-hover: #f0fdf4;
-  --ez-success-darker: #15803d;
-  /* danger - Red */
+  /* danger */
   --ez-danger: #ef4444;
-  --ez-danger-light: #fca5a5;
-  --ez-danger-lighter: #fee2e2;
-  --ez-danger-dark: #dc2626;
-  --ez-danger-darker: #b91c1c;
-  --ez-danger-hover: #fef2f2;
+  --ez-danger-light: color-mix(in srgb, var(--ez-danger) 50%, white);
+  --ez-danger-dark: color-mix(in srgb, var(--ez-danger) 90%, black);
+  --ez-danger-darker: color-mix(in srgb, var(--ez-danger) 70%, black);
+  --ez-danger-hover: color-mix(in srgb, var(--ez-danger) 5%, white);
   --ez-danger-surface: #FFFFFF;
-  /* info - Sky */
+  /* info */
   --ez-info: #0ea5e9;
-  --ez-info-light: #7dd3fc;
-  --ez-info-lighter: #e0f2fe;
-  --ez-info-dark: #0284c7;
-  --ez-info-darker: #0369a1;
-  --ez-info-hover: #f0f9ff;
+  --ez-info-light: color-mix(in srgb, var(--ez-info) 50%, white);
+  --ez-info-dark: color-mix(in srgb, var(--ez-info) 90%, black);
+  --ez-info-darker: color-mix(in srgb, var(--ez-info) 70%, black);
+  --ez-info-hover: color-mix(in srgb, var(--ez-info) 5%, white);
   --ez-info-surface: #FFFFFF;
-  /* warning - Yellow */
+  /* warning */
   --ez-warning: #eab308;
-  --ez-warning-light: #fde047;
-  --ez-warning-lighter: #fef9c3;
-  --ez-warning-dark: #ca8a04;
-  --ez-warning-darker: #a16207;
-  --ez-warning-hover: #fefce8;
+  --ez-warning-light: color-mix(in srgb, var(--ez-warning) 50%, white);
+  --ez-warning-dark: color-mix(in srgb, var(--ez-warning) 90%, black);
+  --ez-warning-darker: color-mix(in srgb, var(--ez-warning) 70%, black);
+  --ez-warning-hover: color-mix(in srgb, var(--ez-warning) 5%, white);
   --ez-warning-surface: #FFFFFF;
+}
+
+.ez-dark {
+  /* background */
+  --ez-background: #131621;
+  /* border */
+  --ez-border: #6b7280;
+  /* surface */
+  --ez-surface: #1e2837;
+  /* text */
+  --ez-text: #ffffff;
+  /* primary */
+  --ez-primary-light: color-mix(in srgb, var(--ez-primary) 15%, transparent);
+  --ez-primary-hover: color-mix(in srgb, var(--ez-primary) 5%, transparent);
+  /* secondary */
+  --ez-secondary-light: color-mix(in srgb, var(--ez-secondary) 15%, transparent);
+  --ez-secondary-hover: color-mix(in srgb, var(--ez-secondary) 5%, transparent);
+  /* success */
+  --ez-success-light: color-mix(in srgb, var(--ez-success) 15%, transparent);
+  --ez-success-hover: color-mix(in srgb, var(--ez-success) 5%, transparent);
+  /* danger */
+  --ez-danger-light: color-mix(in srgb, var(--ez-danger) 15%, transparent);
+  --ez-danger-hover: color-mix(in srgb, var(--ez-danger) 5%, transparent);
+  /* info */
+  --ez-info-light: color-mix(in srgb, var(--ez-info) 15%, transparent);
+  --ez-info-hover: color-mix(in srgb, var(--ez-info) 5%, transparent);
+  /* warning */
+  --ez-warning-light: color-mix(in srgb, var(--ez-warning) 15%, transparent);
+  --ez-warning-hover: color-mix(in srgb, var(--ez-warning) 5%, transparent);
 }
