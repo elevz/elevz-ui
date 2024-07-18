@@ -17,7 +17,7 @@ function App() {
         <Button label="Theme" size="sm" onClick={toggleClass} />
       </div>
       <div className="ez-flex ez-flex-col ez-justify-between ez-size-3/4 ez-border ez-p-4 ez-gap-3 ez-m-auto ez-bg-surface ez-rounded-md">
-        <Input label="Input" />
+        <Input label="Input" helperText="Helper text"/>
         <Dropdown
           label="Dropdown"
           options={Array.from({ length: 32 }).map((_, i) => ({ label: 'Item ' + (i + 1), value: 'value-' + (i + 1) }))}

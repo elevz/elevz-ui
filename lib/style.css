@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  color: var(--ez-text);
-}
-
 :root {
   /* background */
   --ez-background: #f9fafb;
@@ -15,6 +11,7 @@
   --ez-surface: #ffffff;
   /* text */
   --ez-text: #1e2837;
+  --ez-text-alternative: #64748b;
   /* hover */
   --ez-hover: #f3f4f6;
   /* primary */
@@ -65,11 +62,12 @@
   /* background */
   --ez-background: #131621;
   /* border */
-  --ez-border: #6b7280;
+  --ez-border: #475569;
   /* surface */
   --ez-surface: #1e2837;
   /* text */
   --ez-text: #ffffff;
+  --ez-text-alternative: #94a3b8;
   /* hover */
   --ez-hover: #334155;
   /* primary */

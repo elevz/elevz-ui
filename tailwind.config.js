@@ -85,6 +85,10 @@ export default {
       },
       borderColor: {
         DEFAULT: 'var(--ez-border)'
+      },
+      textColor: {
+        DEFAULT: 'var(--ez-text)',
+        alternative: 'var(--ez-text-alternative)'
       }
     },
   },

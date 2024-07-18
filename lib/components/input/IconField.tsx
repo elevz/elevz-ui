@@ -29,7 +29,7 @@ export const IconField: React.FC<IconFieldProps> = ({
       {Boolean(leftIcon) &&
         <span
           {...leftIconContainerProps}
-          className={combineClassName("ez-z-10 ez-text-neutral-800 ez-absolute ez-top-1/2 ez-translate-y-[-50%] ez-left-2", leftIconProps?.className)}
+          className={combineClassName("ez-z-10 ez-text ez-absolute ez-top-1/2 ez-translate-y-[-50%] ez-left-2", leftIconProps?.className)}
         >
           <Icon
             name={leftIcon!}
@@ -53,7 +53,7 @@ export const IconField: React.FC<IconFieldProps> = ({
       {Boolean(rightIcon) &&
         <span
           {...rightIconContainerProps}
-          className={combineClassName("ez-z-10 ez-text-neutral-800 ez-absolute ez-top-1/2 ez-translate-y-[-50%] ez-right-2", rightIconProps?.className)}
+          className={combineClassName("ez-z-10 ez-text ez-absolute ez-top-1/2 ez-translate-y-[-50%] ez-right-2", rightIconProps?.className)}
         >
           <Icon
             name={rightIcon!}

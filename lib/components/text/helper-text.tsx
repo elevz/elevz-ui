@@ -10,7 +10,7 @@ export const HelperText: React.FC<HelperTextProps> = ({
   ...props
 }) => {
   return Boolean(value || props.children) ? (
-    <small {...props} className={combineClassName("ez-text-neutral-500 ez-text-xs ez-font-body")}>
+    <small {...props} className={combineClassName("ez-text-alternative ez-text-xs")}>
       {value || props.children}
     </small>
   ) : null

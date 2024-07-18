@@ -106,7 +106,7 @@ export function Dropdown<T extends OptionType>({
           className={combineClassName("ez-border ez-bg-surface ez-rounded-md ez-h-10 ez-px-2 ez-outline-primary-500 ez-w-full ez-cursor-pointer", [visible, "ez-border-primary ez-outline-primary ez-outline"])}
           onClick={() => setVisible(!visible)}
         >
-          <span className="ez-w-full">
+          <span className="ez-w-full ez-text">
             {value}
           </span>
         </IconField>
@@ -125,7 +125,7 @@ export function Dropdown<T extends OptionType>({
                 return (
                   <li
                     key={i}
-                    className="hover:ez-bg-hover ez-cursor-pointer ez-px-2 ez-py-1 ez-text-base"
+                    className="ez-text hover:ez-bg-hover ez-cursor-pointer ez-px-2 ez-py-1 ez-text-base"
                     onClick={() => {
                       setValue(label);
                       onSelect?.(item)
