@@ -4,7 +4,7 @@ import { combineClassName } from "@lib/utils";
 import { getPosition, stylesMap } from "./styles";
 import { ToastProps } from "./types";
 import { createPortal } from "react-dom";
-import { IconField } from "../IconField";
+import { IconField } from "@lib/components/IconField";
 
 export const Toast: React.FC<ToastProps> = ({
   leftIcon,
@@ -42,7 +42,7 @@ export const Toast: React.FC<ToastProps> = ({
     >
       <IconField
         className={combineClassName(
-          "ez-relative ez-flex ez-items-center ez-rounded-md ez-px-2 ez-py-1 ez-gap-2 ez-min-w-60 ez-min-h-11 ez-shadow-lg ez-overflow-hidden",
+          "ez-relative ez-flex ez-items-center ez-rounded-md ez-px-2 ez-py-1 ez-gap-2 ez-min-w-80 ez-min-h-11 ez-overflow-hidden",
           "ez-max-w-80",
           config.container,
           [shadow, config.shadow]

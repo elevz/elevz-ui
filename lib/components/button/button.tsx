@@ -1,7 +1,7 @@
 import { combineClassName } from "@lib/utils"
 import { sizesMap, stylesMap } from "./styles"
 import { ButtonProps } from "./types"
-import { Spinner } from "../Spinner"
+import { Spinner } from "../feedback/spinner"
 
 export const Button: React.FC<ButtonProps> = ({
   size = 'md',

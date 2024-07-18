@@ -10,35 +10,35 @@ export const stylesMap: Record<SchemeType, {
 }> = {
   primary: {
     container: 'ez-bg-primary ez-text-primary',
-    shadow: 'ez-shadow-primary-light',
+    shadow: 'ez-shadow-md ez-shadow-primary-light',
     text: 'ez-text-primary-surface',
   },
   secondary: {
     container: 'ez-bg-secondary ez-text-secondary',
-    shadow: 'ez-shadow-secondary-light',
+    shadow: 'ez-shadow-md ez-shadow-secondary-light',
     text: 'ez-text-secondary-surface',
   },
   success: {
     container: 'ez-bg-success ez-text-success',
-    shadow: 'ez-shadow-success-light',
+    shadow: 'ez-shadow-md ez-shadow-success-light',
     text: 'ez-text-success-surface',
     icon: 'check',
   },
   danger: {
     container: 'ez-bg-danger ez-text-danger',
-    shadow: 'ez-shadow-danger-light',
+    shadow: 'ez-shadow-md ez-shadow-danger-light',
     text: 'ez-text-danger-surface',
     icon: 'alert-triangle',
   },
   info: {
     container: 'ez-bg-info ez-text-info',
-    shadow: 'ez-shadow-info-light',
+    shadow: 'ez-shadow-md ez-shadow-info-light',
     text: 'ez-text-info-surface',
     icon: 'info-circle',
   },
   warning: {
     container: 'ez-bg-warning ez-text-warning',
-    shadow: 'ez-shadow-warning-light',
+    shadow: 'ez-shadow-md ez-shadow-warning-light',
     text: 'ez-text-warning-surface',
     icon: 'alert-circle',
   },

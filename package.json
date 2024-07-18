@@ -1,7 +1,7 @@
 {
   "name": "elevz-ui",
   "private": false,
-  "version": "0.1.12",
+  "version": "0.1.13",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
       "require": "./dist/index.umd.js",
       "types": "./dist/index.d.ts"
     },
-    "./style.css":  "./dist/style.css"
+    "./style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
@@ -43,5 +43,8 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vite-plugin-dts": "^3.9.1"
+  },
+  "dependencies": {
+    "elevz-icon": "^0.0.11"
   }
 }

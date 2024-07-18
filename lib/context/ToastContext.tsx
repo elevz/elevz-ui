@@ -1,10 +1,10 @@
 import { createContext, PropsWithChildren, useState } from "react";
 import { Toast, ToastPosition, ToastProps } from "@lib/components";
-import { getPosition } from "@lib/components/toast/styles";
 import { combineClassName, generateId } from "@lib/utils";
 import { createPortal } from "react-dom";
+import { getPosition } from "@lib/components/feedback/toast/styles";
 
-export interface IToast extends ToastProps { }
+export interface IToast extends Omit<ToastProps, 'autoClose'> { }
 
 export interface ToastContextProps {
   showToast: (props: IToast) => void;
@@ -23,6 +23,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
     let id = generateId();
 
     const item: ToastProps = {
+      scheme: 'success',
       ...props,
       id,
       autoClose: true,

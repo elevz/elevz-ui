@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  color: var(--ez-text);
+}
+
 :root {
   /* background */
   --ez-background: #f9fafb;
@@ -11,6 +15,8 @@
   --ez-surface: #ffffff;
   /* text */
   --ez-text: #1e2837;
+  /* hover */
+  --ez-hover: #f3f4f6;
   /* primary */
   --ez-primary: rgb(20, 184, 166);
   --ez-primary-light: color-mix(in srgb, var(--ez-primary) 50%, white);
@@ -64,6 +70,8 @@
   --ez-surface: #1e2837;
   /* text */
   --ez-text: #ffffff;
+  /* hover */
+  --ez-hover: #334155;
   /* primary */
   --ez-primary-light: color-mix(in srgb, var(--ez-primary) 15%, transparent);
   --ez-primary-hover: color-mix(in srgb, var(--ez-primary) 5%, transparent);

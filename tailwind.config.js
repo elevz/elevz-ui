@@ -12,14 +12,11 @@ export default {
         background: {
           DEFAULT: 'var(--ez-background)',
         },
-        border: {
-          DEFAULT: 'var(--ez-border)'
-        },
         surface: {
           DEFAULT: 'var(--ez-surface)',
         },
-        text: {
-          DEFAULT: 'var(--ez-text)',
+        hover: {
+          DEFAULT: 'var(--ez-hover)',
         },
         primary: {
           DEFAULT: 'var(--ez-primary)',
@@ -84,7 +81,10 @@ export default {
         empty: 'empty 1s linear forwards',
       },
       boxShadow: {
-        around: '0px 0px 4px 2px #00000020'
+        around: '0px 0px 4px 4px #00000020'
+      },
+      borderColor: {
+        DEFAULT: 'var(--ez-border)'
       }
     },
   },

@@ -1,8 +1,7 @@
 import { Container, ContainerProps } from "./Container";
 import { IconField, IconFieldProps } from "./IconField";
-import { HelperText, HelperTextProps } from "./HelperText";
-import { Label, LabelProps } from "./Label";
 import { TextInput, TextInputProps } from "./TextInput";
+import { Label, LabelProps,  HelperText, HelperTextProps } from "../text";
 
 export interface InputProps extends TextInputProps, Pick<IconFieldProps, 'leftIcon' | 'rightIcon'>, Pick<LabelProps, 'optional' | 'optionalText'> {
   containerProps?: ContainerProps;
