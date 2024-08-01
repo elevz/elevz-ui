@@ -29,6 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
         'ez-rounded-md',
         stylesMap[scheme][variant],
         sizesMap[size],
+        props.className
       )}
     >
       {loading ?
