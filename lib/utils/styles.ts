@@ -1,4 +1,4 @@
-export function combineClassName(...classes: Array<string | { [key: string]: any } | [boolean, string] | undefined>): string {
+export function combineClassName(...classes: Array<string | { [key: string]: any } | [boolean, string, string] | undefined>): string {
   let className = '';
 
   classes.forEach((item) => {
@@ -11,10 +11,11 @@ export function combineClassName(...classes: Array<string | { [key: string]: any
     }
 
     if (item.constructor.name === 'Array') {
-      if (!item[0]) {
+      if (!item[0] && !item[2]) {
         return;
       }
-      return className += ' ' + item[1];
+      
+      return className += ' ' + (item[0] ? item[1] : item[2]);
     }
 
     if (item.constructor.name === 'Object') {

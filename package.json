@@ -1,7 +1,7 @@
 {
   "name": "elevz-ui",
   "private": false,
-  "version": "0.1.14",
+  "version": "0.1.15",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,8 +22,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "peerDependencies": {
-    "elevz-icon": "0.0.11",
+  "dependencies": {
+    "elevz-icon": "^0.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -43,9 +43,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vite-plugin-dts": "^3.9.1"
-  },
-  "dependencies": {
-    "elevz-icon": "^0.0.11",
-    "elevz-ui": "^0.1.13"
   }
 }

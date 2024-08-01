@@ -16,11 +16,17 @@ function App() {
       <div className="ez-absolute ez-top-1 ez-right-1">
         <Button label="Theme" size="sm" onClick={toggleClass} />
       </div>
-      <div className="ez-flex ez-flex-col ez-justify-between ez-size-3/4 ez-border ez-p-4 ez-gap-3 ez-m-auto ez-bg-surface ez-rounded-md">
-        <Input label="Input" helperText="Helper text"/>
+      <div className="ez-flex ez-flex-col ez-justify-between ez-h-3/4 ez-w-80 ez-border ez-p-4 ez-gap-3 ez-m-auto ez-bg-surface ez-rounded-md">
+        <Input label="Input" helperText="Helper text" />
         <Dropdown
           label="Dropdown"
           options={Array.from({ length: 32 }).map((_, i) => ({ label: 'Item ' + (i + 1), value: 'value-' + (i + 1) }))}
+        />
+
+        <Button
+          leftIcon="alert-circle"
+          label="Left"
+          // loading
         />
 
         <Dropdown

@@ -71,12 +71,14 @@
   /* hover */
   --ez-hover: #334155;
   /* primary */
+  --ez-primary: #0d7569;
   --ez-primary-light: color-mix(in srgb, var(--ez-primary) 15%, transparent);
   --ez-primary-hover: color-mix(in srgb, var(--ez-primary) 5%, transparent);
   /* secondary */
   --ez-secondary-light: color-mix(in srgb, var(--ez-secondary) 15%, transparent);
   --ez-secondary-hover: color-mix(in srgb, var(--ez-secondary) 5%, transparent);
   /* success */
+  --ez-success: #16a34a;
   --ez-success-light: color-mix(in srgb, var(--ez-success) 15%, transparent);
   --ez-success-hover: color-mix(in srgb, var(--ez-success) 5%, transparent);
   /* danger */
