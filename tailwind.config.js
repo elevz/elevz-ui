@@ -88,7 +88,7 @@ export default {
       },
       textColor: {
         DEFAULT: 'var(--ez-text)',
-        alternative: 'var(--ez-text-alternative)'
+        disabled: 'var(--ez-text-disabled)'
       }
     },
   },

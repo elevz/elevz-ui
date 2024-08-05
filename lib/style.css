@@ -11,7 +11,7 @@
   --ez-surface: #ffffff;
   /* text */
   --ez-text: #1e2837;
-  --ez-text-alternative: #64748b;
+  --ez-text-disabled: #9ca3af;
   /* hover */
   --ez-hover: #f3f4f6;
   /* primary */
@@ -67,7 +67,7 @@
   --ez-surface: #1e2837;
   /* text */
   --ez-text: #ffffff;
-  --ez-text-alternative: #94a3b8;
+  --ez-text-disabled: #9ca3af;
   /* hover */
   --ez-hover: #334155;
   /* primary */

@@ -10,6 +10,7 @@ type OptionType = string | number | Record<string, any>;
 export interface DropdownProps<T> extends Pick<LabelProps, 'optional' | 'optionalText'> {
   label?: string;
   labelProps?: LabelProps;
+  placeholder?: string;
   onSelect?: (option: T) => void;
   optionLabelKey?: keyof T;
   required?: boolean;
@@ -17,6 +18,7 @@ export interface DropdownProps<T> extends Pick<LabelProps, 'optional' | 'optiona
 }
 
 export function Dropdown<T extends OptionType>({
+  placeholder,
   optional,
   optionalText,
   label,
@@ -103,11 +105,14 @@ export function Dropdown<T extends OptionType>({
         <IconField
           ref={fieldRef}
           rightIcon="chevron-down"
-          className={combineClassName("ez-border ez-bg-surface ez-rounded-md ez-h-10 ez-px-2 ez-outline-primary-500 ez-w-full ez-cursor-pointer", [visible, "ez-border-primary ez-outline-primary ez-outline ez-outline-1"])}
-          onClick={() => setVisible(!visible)}
+          className={combineClassName(
+            "ez-border ez-bg-surface ez-rounded-md ez-h-10 ez-px-2 ez-outline-primary-500 ez-w-full ez-cursor-pointer",
+            [visible, "ez-border-primary ez-outline-primary ez-outline ez-outline-1"],
+          )}
+          onClick={() => !!options ? setVisible(!visible) : null}
         >
           <span className="ez-w-full ez-text">
-            {value}
+            {value || <span className="ez-text-disabled">placeholder</span>}
           </span>
         </IconField>
       </Container>

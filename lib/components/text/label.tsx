@@ -19,6 +19,7 @@ export const Label: React.FC<LabelProps> = ({
       {...props}
       className={combineClassName(
         "ez-flex ez-gap-1 ez-text-sm ez-font-body ez-text ez-pl-1",
+        props.className
       )}
     >
       {value || props.children}
