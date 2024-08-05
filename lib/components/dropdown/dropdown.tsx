@@ -1,13 +1,16 @@
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { Label, LabelProps } from "../text"
-import { Container } from "../input/Container";
-import { IconField } from "../IconField";
+import { Container, ContainerProps } from "../input/Container";
+import { IconField, IconFieldProps } from "../IconField";
 import { createPortal } from "react-dom";
 import { combineClassName } from "@lib/utils";
 
 type OptionType = string | number | Record<string, any>;
 
 export interface DropdownProps<T> extends Pick<LabelProps, 'optional' | 'optionalText'> {
+  className?: string;
+  containerProps?: ContainerProps;
+  iconFieldProps?: IconFieldProps;
   label?: string;
   labelProps?: LabelProps;
   placeholder?: string;
@@ -15,9 +18,13 @@ export interface DropdownProps<T> extends Pick<LabelProps, 'optional' | 'optiona
   optionLabelKey?: keyof T;
   required?: boolean;
   options?: T[];
+  optionProps?: Pick<React.LiHTMLAttributes<HTMLLIElement>, 'className' | 'style'>;
+  value?: string;
 }
 
 export function Dropdown<T extends OptionType>({
+  containerProps,
+  iconFieldProps,
   placeholder,
   optional,
   optionalText,
@@ -26,6 +33,7 @@ export function Dropdown<T extends OptionType>({
   onSelect,
   options,
   optionLabelKey,
+  optionProps,
   ...props
 }: DropdownProps<T>) {
   const fieldRef = useRef<HTMLDivElement>(null);
@@ -34,7 +42,13 @@ export function Dropdown<T extends OptionType>({
   const [value, setValue] = useState<string>();
 
   const [visible, setVisible] = useState(false);
-  const [position, setPosition] = useState<CSSProperties>()
+  const [position, setPosition] = useState<CSSProperties>();
+
+  useEffect(() => {
+    if (value !== props.value) {
+      setValue(props.value);
+    }
+  }, [props.value])
 
   useEffect(() => {
     if (visible) {
@@ -94,7 +108,7 @@ export function Dropdown<T extends OptionType>({
 
   return (
     <>
-      <Container>
+      <Container  {...containerProps}>
         <Label
           required={props.required}
           optional={optional}
@@ -103,16 +117,18 @@ export function Dropdown<T extends OptionType>({
           {...labelProps}
         />
         <IconField
-          ref={fieldRef}
           rightIcon="chevron-down"
+          {...iconFieldProps}
           className={combineClassName(
             "ez-border ez-bg-surface ez-rounded-md ez-h-10 ez-px-2 ez-outline-primary-500 ez-w-full ez-cursor-pointer",
             [visible, "ez-border-primary ez-outline-primary ez-outline ez-outline-1"],
+            props.className
           )}
+          ref={fieldRef}
           onClick={() => !!options ? setVisible(!visible) : null}
         >
           <span className="ez-w-full ez-text">
-            {value || <span className="ez-text-disabled">placeholder</span>}
+            {value || <span className="ez-text-disabled">{placeholder}</span>}
           </span>
         </IconField>
       </Container>
@@ -129,8 +145,9 @@ export function Dropdown<T extends OptionType>({
                 const label = getItemLabel(item, optionLabelKey);
                 return (
                   <li
+                    {...optionProps}
                     key={i}
-                    className="ez-text hover:ez-bg-hover ez-cursor-pointer ez-px-2 ez-py-1 ez-text-base"
+                    className={combineClassName("ez-text hover:ez-bg-hover ez-cursor-pointer ez-px-2 ez-py-1 ez-text-base", optionProps?.className)}
                     onClick={() => {
                       setValue(label);
                       onSelect?.(item)
