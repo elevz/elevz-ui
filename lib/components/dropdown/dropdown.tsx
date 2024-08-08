@@ -120,7 +120,7 @@ export function Dropdown<T extends OptionType>({
           rightIcon="chevron-down"
           {...iconFieldProps}
           className={combineClassName(
-            "ez-border ez-bg-surface ez-rounded-md ez-h-10 ez-px-2 ez-outline-primary-500 ez-w-full ez-cursor-pointer",
+            "ez-border ez-bg-surface ez-rounded ez-h-10 ez-px-2 ez-outline-primary-500 ez-w-full ez-cursor-pointer",
             [visible, "ez-border-primary ez-outline-primary ez-outline ez-outline-1"],
             props.className
           )}
@@ -137,7 +137,7 @@ export function Dropdown<T extends OptionType>({
         createPortal(
           <div
             ref={listRef}
-            className="ez-absolute ez-bg-surface ez-border ez-rounded-md ez-overflow-auto ez-shadow-md ez-max-h-80"
+            className="ez-absolute ez-bg-surface ez-border ez-rounded ez-overflow-auto ez-shadow-md ez-max-h-80"
             style={position}
           >
             <ul className="ez-flex ez-flex-col">

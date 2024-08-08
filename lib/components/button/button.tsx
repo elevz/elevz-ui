@@ -26,9 +26,10 @@ export const Button: React.FC<ButtonProps> = ({
       leftIcon={leftIcon}
       rightIcon={rightIcon}
       className={combineClassName(
-        'ez-rounded-md',
+        'ez-rounded',
         stylesMap[scheme][variant],
         sizesMap[size],
+        [props.disabled, 'ez-cursor-not-allowed'],
         props.className
       )}
     >

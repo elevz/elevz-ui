@@ -42,7 +42,7 @@ export const Toast: React.FC<ToastProps> = ({
     >
       <IconField
         className={combineClassName(
-          "ez-relative ez-flex ez-items-center ez-rounded-md ez-px-2 ez-py-1 ez-gap-2 ez-min-w-80 ez-min-h-11 ez-overflow-hidden",
+          "ez-relative ez-flex ez-items-center ez-rounded ez-px-2 ez-py-1 ez-gap-2 ez-min-w-80 ez-min-h-11 ez-overflow-hidden",
           "ez-max-w-80",
           config.container,
           [shadow, config.shadow]

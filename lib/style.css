@@ -91,3 +91,7 @@
   --ez-warning-light: color-mix(in srgb, var(--ez-warning) 15%, transparent);
   --ez-warning-hover: color-mix(in srgb, var(--ez-warning) 5%, transparent);
 }
+
+:root {
+  --rounded: 0.375rem;
+}

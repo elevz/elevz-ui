@@ -89,6 +89,9 @@ export default {
       textColor: {
         DEFAULT: 'var(--ez-text)',
         disabled: 'var(--ez-text-disabled)'
+      },
+      borderRadius: {
+        'DEFAULT': 'var(--rounded, 0.375rem)'
       }
     },
   },

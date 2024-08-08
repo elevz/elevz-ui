@@ -14,7 +14,7 @@ export function combineClassName(...classes: Array<string | { [key: string]: any
       if (!item[0] && !item[2]) {
         return;
       }
-      
+
       return className += ' ' + (item[0] ? item[1] : item[2]);
     }
 
@@ -46,4 +46,14 @@ export function generateCSSVariables(colors: Record<string, any>) {
   document.head.appendChild(styleSheet);
 
   styleSheet.innerText = `*{\n ${generateCSSFile(colors)} }`
+}
+
+export function toggleTheme() {
+  const htmlElement = document.documentElement;
+
+  if (htmlElement.classList.contains('ez-dark')) {
+    htmlElement.classList.remove('ez-dark');
+  } else {
+    htmlElement.classList.add('ez-dark');
+  }
 }

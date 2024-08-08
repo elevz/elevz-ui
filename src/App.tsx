@@ -20,14 +20,15 @@ function App() {
         <Input label="Input" helperText="Helper text" />
         <Dropdown
           label="Dropdown"
-          // options={Array.from({ length: 32 }).map((_, i) => ({ label: 'Item ' + (i + 1), value: 'value-' + (i + 1) }))}
           placeholder="Dropdown"
         />
 
         <Button
           leftIcon="alert-circle"
           label="Left"
-          // loading
+          disabled
+          onClick={() => console.log('clicked')}
+          variant="outline"
         />
 
         <Dropdown
