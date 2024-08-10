@@ -1,4 +1,13 @@
-import { Button, Container, Layout, NavGroup, NavLink, Sidebar } from "@lib/components";
+import {
+  Button,
+  Card,
+  Container,
+  Dropdown,
+  Layout,
+  NavGroup,
+  NavLink,
+  Sidebar
+} from "@lib/components";
 import { setTheme } from "@lib/utils";
 import { useEffect } from "react";
 
@@ -30,9 +39,17 @@ function App() {
         </NavGroup>
       </Sidebar>
       <Container>
-        <Button
-          label="Button"
-        />
+        <Card>
+          <Card.Body>
+            <Button
+              label="Button"
+            />
+
+            <Dropdown
+              placeholder="Pick an item"
+            />
+          </Card.Body>
+        </Card>
       </Container>
     </Layout>
   )
