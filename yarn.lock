@@ -1148,10 +1148,10 @@ electron-to-chromium@^1.4.796:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.816.tgz"
   integrity sha512-EKH5X5oqC6hLmiS7/vYtZHZFTNdhsYG5NVPRN6Yn0kQHNBlT59+xSM8HBy66P5fxWpKgZbPqb+diC64ng295Jw==
 
-elevz-icon@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.npmjs.org/elevz-icon/-/elevz-icon-0.0.11.tgz"
-  integrity sha512-N58X6eJhgHTUp/9K6+Pu3qTLEGAr2NPwqAv6uKBHl8IukwDlpdCehkIIftmQifeopt+7ZSTPJplagRfZ415q6A==
+elevz-icon@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/elevz-icon/-/elevz-icon-0.3.0.tgz#c8f1ca91caa48490bf058dfb01c4ec0b7f5046ff"
+  integrity sha512-JNbSeeAJGdxH67TueC4V8Da6erdsuKc08nXIjQFJd8gACJ0LctLrbYbreNseAv3NJ4SDrxXh3ThuTTU91myYIg==
 
 emoji-regex@^8.0.0:
   version "8.0.0"

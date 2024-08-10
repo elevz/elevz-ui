@@ -1,79 +1,52 @@
-import React, { PropsWithChildren, useEffect, useState } from "react"
-import { IconField, IconFieldProps } from "../IconField";
+import React, { useEffect, useState } from "react"
 import { combineClassName } from "@lib/utils";
+import { createPortal } from "react-dom";
 
-export const Sidebar = (props: PropsWithChildren) => {
-  return (
-    <div className="ez-flex ez-flex-col ez-bg-surface ez-min-w-64 ez-h-full ez-p-4 ez-gap-1">
-      {props.children}
-    </div>
-  )
-}
-
-interface NavLinkProps extends IconFieldProps, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  active?: boolean;
-  label?: string;
-  className?: string;
-}
-
-export const NavLink: React.FC<NavLinkProps> = ({
-  active,
-  label,
-  ...props
-}) => {
-  return (
-    <IconField
-      {...props}
-      justify="start"
-      className={combineClassName(
-        "ez-p-3 ez-gap-3 hover:ez-bg-hover ez-rounded ez-cursor-pointer",
-        [active, "ez-bg-hover"],
-        props.className
-      )}
-    >
-      <span className="ez-w-full">
-        {label}
-      </span>
-    </IconField>
-  )
-}
-
-interface NavGroupProps extends NavLinkProps {
-  groupClassName?: string;
+interface SidebarProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  onBackdropClick?: () => void;
   visible?: boolean;
 }
 
-export const NavGroup: React.FC<PropsWithChildren<NavGroupProps>> = ({
-  active,
-  visible,
-  label,
-  children,
+function useIsMobile(): boolean {
+  const [windowSize, setWindowSize] = useState<number>(0);
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize <= 430;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({
+  visible = !useIsMobile(),
+  onBackdropClick,
   ...props
 }) => {
-  const [_visible, setVisible] = useState<boolean>(false);
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    if (typeof visible === 'boolean' && visible !== visible) {
-      setVisible(visible)
-    }
-  }, [visible])
+  const Backdrop = (
+    <div className="ez-text ez-fixed ez-bg-black/40 ez-inset-0 ez-z-0" onClick={onBackdropClick}></div>
+  )
 
   return (
     <>
-      <NavLink
-        rightIcon={_visible ? "chevron-up" : "chevron-down"}
+      <div
         {...props}
-        justify="start"
         className={combineClassName(
-          "ez-p-3 ez-gap-3 ez-rounded ez-cursor-pointer",
-          [active, "ez-bg-hover"],
+          "ez-flex-col ez-bg-surface ez-h-full ez-p-4 ez-gap-1 ez-z-10",
+          [isMobile, "ez-fixed"],
+          [visible, "ez-flex", "ez-hidden"],
           props.className
         )}
-        onClick={() => { setVisible(!_visible) }}
-        label={label}
-      />
-
-      {_visible && children}
+      >
+        {props.children}
+      </div>
+      {(isMobile && visible) &&
+        createPortal(Backdrop, document.body)
+      }
     </>
   )
 }
