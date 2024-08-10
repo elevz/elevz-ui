@@ -3,6 +3,10 @@ import Icon, { IconName, IconProps } from "elevz-icon";
 import React, { forwardRef } from "react";
 
 export interface IconFieldProps {
+  /**
+   * justify-content
+   */
+  justify?: 'start' | 'center' | 'end';
   rightIcon?: IconName;
   rightIconProps?: Omit<IconProps, 'name'>;
   rightIconContainerProps?: React.HTMLAttributes<HTMLSpanElement>;
@@ -25,18 +29,26 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
   rightIcon,
   rightIconContainerProps,
   rightIconProps,
+  justify = 'center',
   ...props
 }, ref) => {
+  const justifyContent = {
+    'start': 'ez-justify-start',
+    'center': 'ez-justify-center',
+    'end': 'ez-justify-end'
+  }
+
   return (
     <Component
       {...props}
       ref={ref}
       className={combineClassName(
-        "ez-text ez-flex ez-items-center ez-relative ez-px-2 ez-gap-2 ez-justify-center",
+        "ez-text ez-flex ez-items-center ez-relative",
+        justifyContent[justify],
         [absolute, 'relative'],
-        [absolute && leftIcon, "ez-pl-9"],
-        [absolute && leftIcon, "ez-pr-9"],
-        props.className
+        [absolute && leftIcon, "!ez-pl-9"],
+        [absolute && leftIcon, "!ez-pr-9"],
+        props.className,
       )}
     >
       {Boolean(leftIcon) &&

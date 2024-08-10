@@ -26,18 +26,20 @@ export const Button: React.FC<ButtonProps> = ({
       leftIcon={leftIcon}
       rightIcon={rightIcon}
       className={combineClassName(
-        'ez-rounded',
+        'ez-rounded ez-px-2 ez-gap-2',
         stylesMap[scheme][variant],
         sizesMap[size],
         [props.disabled, 'ez-cursor-not-allowed'],
         props.className
       )}
+      onClick={loading ? undefined : props.onClick}
     >
-      {loading ?
-        <Spinner className="ez-size-6" />
-        :
-        props.children || props.label
+      {
+        loading ?
+          <Spinner className="ez-size-6" />
+          :
+          props.children || props.label
       }
-    </IconField>
+    </IconField >
   )
 }

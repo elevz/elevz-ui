@@ -48,12 +48,14 @@ export function generateCSSVariables(colors: Record<string, any>) {
   styleSheet.innerText = `*{\n ${generateCSSFile(colors)} }`
 }
 
-export function toggleTheme() {
+export function setTheme(theme: 'dark' | 'light') {
   const htmlElement = document.documentElement;
 
-  if (htmlElement.classList.contains('ez-dark')) {
+  if(theme === 'dark'){
+    if(!htmlElement.classList.contains('ez-dark')){
+      htmlElement.classList.add('ez-dark');
+    }
+  }else{
     htmlElement.classList.remove('ez-dark');
-  } else {
-    htmlElement.classList.add('ez-dark');
   }
 }

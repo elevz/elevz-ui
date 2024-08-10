@@ -14,6 +14,7 @@ export default {
         },
         surface: {
           DEFAULT: 'var(--ez-surface)',
+          light: ''
         },
         hover: {
           DEFAULT: 'var(--ez-hover)',

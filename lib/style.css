@@ -60,11 +60,11 @@
 
 .ez-dark {
   /* background */
-  --ez-background: #131621;
+  --ez-background: #0f172a;
+  /* surface */
+  --ez-surface: #1e293b;
   /* border */
   --ez-border: #475569;
-  /* surface */
-  --ez-surface: #1e2837;
   /* text */
   --ez-text: #ffffff;
   --ez-text-disabled: #9ca3af;
