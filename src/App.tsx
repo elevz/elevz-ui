@@ -13,14 +13,19 @@ import Icon from "elevz-icon";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [visible, setVisible] = useState<boolean>(false);
+  const [visible, setVisible] = useState<boolean>(true);
+
   useEffect(() => {
     setTheme('dark');
   }, []);
 
   return (
     <Layout>
-      <Sidebar className="ez-min-w-72" onBackdropClick={() => setVisible(false)} visible={visible}>
+      <Sidebar
+        className="ez-min-w-72"
+        onBackdropClick={() => setVisible(false)}
+        visible={visible}
+      >
         <NavLink
           active
           label="Home"
@@ -43,12 +48,12 @@ function App() {
       <Container>
         <span onClick={() => setVisible(!visible)} className="ez-cursor-pointer">
           <Icon
-            color="white"
+            className="ez-text"
             name="bars"
           />
         </span>
 
-        <Card>
+        <Card className="ez-w-fit">
           <Card.Body>
             <Button
               label="Button"

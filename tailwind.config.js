@@ -10,11 +10,10 @@ export default {
     extend: {
       colors: {
         background: {
-          DEFAULT: 'var(--ez-background)',
+          DEFAULT: 'var(--ez-background, #f9fafb)',
         },
         surface: {
-          DEFAULT: 'var(--ez-surface)',
-          light: ''
+          DEFAULT: 'var(--ez-surface, #ffffff)',
         },
         hover: {
           DEFAULT: 'var(--ez-hover)',
@@ -73,26 +72,22 @@ export default {
           '0%': { width: '100%' },
           '100%': { width: '0%' }
         },
-        wiggle: {
-          '0%100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        }
       },
       animation: {
-        empty: 'empty 1s linear forwards',
+        empty: 'empty 1s linear forwards'
       },
       boxShadow: {
         around: '0px 0px 4px 4px #00000020'
       },
       borderColor: {
-        DEFAULT: 'var(--ez-border)'
+        DEFAULT: 'var(--ez-border, #d4d4d4)'
       },
       textColor: {
-        DEFAULT: 'var(--ez-text)',
-        disabled: 'var(--ez-text-disabled)'
+        DEFAULT: 'var(--ez-text, #1e2837)',
+        disabled: 'var(--ez-text-disabled, #9ca3af)'
       },
       borderRadius: {
-        'DEFAULT': 'var(--rounded, 0.375rem)'
+        'DEFAULT': 'var(--ez-rounded, 0.375rem)'
       }
     },
   },
