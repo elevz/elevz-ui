@@ -36,8 +36,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div
         {...props}
         className={combineClassName(
-          "ez-flex ez-flex-col ez-bg-surface ez-h-full ez-p-4 ez-gap-1 ez-z-10",
-          [isMobile, visible ? "ez-fixed" : "ez-hidden"],
+          "ez-h-full ez-z-10",
+          [isMobile, "ez-fixed"],
           props.className
         )}
       >
