@@ -22,7 +22,7 @@ function App() {
   return (
     <Layout>
       <Sidebar
-        className="ez-min-w-72"
+        className="ez-w-80"
         onBackdropClick={() => setVisible(false)}
         visible={visible}
       >
