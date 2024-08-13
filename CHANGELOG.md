@@ -1,3 +1,12 @@
+## [0.1.26](https://github.com/elevz/elevz-ui/compare/v0.1.25...v0.1.26) (2024-08-13)
+
+
+### Bug Fixes
+
+* remove sidebar styles ([13e6b87](https://github.com/elevz/elevz-ui/commit/13e6b87ea06aa0e324c00f338ecda9f1c34dffb9))
+
+
+
 ## [0.1.25](https://github.com/elevz/elevz-ui/compare/v0.1.24...v0.1.25) (2024-08-13)
 
 
