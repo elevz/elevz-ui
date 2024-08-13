@@ -1,3 +1,12 @@
+## [0.1.25](https://github.com/elevz/elevz-ui/compare/v0.1.24...v0.1.25) (2024-08-13)
+
+
+### Bug Fixes
+
+* sidebar visibility ([9ed2b41](https://github.com/elevz/elevz-ui/commit/9ed2b41c08ecb13fe0ab8cea452cf87d400bfe14))
+
+
+
 ## [0.1.24](https://github.com/elevz/elevz-ui/compare/v0.1.23...v0.1.24) (2024-08-12)
 
 
