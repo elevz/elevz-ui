@@ -11,6 +11,7 @@ import {
 import { setTheme } from "@lib/utils";
 import Icon from "elevz-icon";
 import { useEffect, useState } from "react";
+import Buttons from "./pages/Buttons";
 
 function App() {
   const [visible, setVisible] = useState<boolean>(true);
@@ -22,7 +23,7 @@ function App() {
   return (
     <Layout>
       <Sidebar
-        className="ez-w-80"
+        className="ez-w-80 ez-p-5"
         onBackdropClick={() => setVisible(false)}
         visible={visible}
       >
@@ -64,6 +65,8 @@ function App() {
             />
           </Card.Body>
         </Card>
+
+        <Buttons />
       </Container>
     </Layout>
   )

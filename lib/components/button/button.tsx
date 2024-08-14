@@ -1,5 +1,5 @@
 import { combineClassName } from "@lib/utils"
-import { sizesMap, stylesMap } from "./styles"
+import { getButtonStyles, sizesMap } from "./styles"
 import { ButtonProps } from "./types"
 import { Spinner } from "../feedback/spinner"
 import { IconField } from "../IconField"
@@ -27,9 +27,8 @@ export const Button: React.FC<ButtonProps> = ({
       rightIcon={rightIcon}
       className={combineClassName(
         'ez-rounded ez-px-2 ez-gap-2',
-        stylesMap[scheme][variant],
+        getButtonStyles(scheme, variant),
         sizesMap[size],
-        [props.disabled, 'ez-cursor-not-allowed'],
         props.className
       )}
       onClick={loading ? undefined : props.onClick}

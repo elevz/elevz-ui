@@ -1,9 +1,9 @@
 import { Button } from "@lib/components";
-import Row from "src/components/Row";
+import Row from "../components/Row";
 
 export default function () {
   return (
-    <div>
+    <div className="ez-flex ez-flex-col ez-gap-4">
       <Row>
         <Button
           label="Primary"

@@ -28,10 +28,10 @@ export default {
         },
         secondary: {
           DEFAULT: 'var(--ez-secondary)',
-          light: 'var(--ez-secondary)',
-          dark: 'var(--ez-secondary)',
-          darker: 'var(--ez-secondary)',
-          hover: 'var(--ez-secondary)',
+          light: 'var(--ez-secondary-light)',
+          dark: 'var(--ez-secondary-dark)',
+          darker: 'var(--ez-secondary-darker)',
+          hover: 'var(--ez-secondary-hover)',
           surface: 'var(--ez-secondary-surface)',
         },
         success: {
