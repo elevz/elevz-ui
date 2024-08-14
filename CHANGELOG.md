@@ -1,3 +1,12 @@
+## [0.1.27](https://github.com/elevz/elevz-ui/compare/v0.1.26...v0.1.27) (2024-08-14)
+
+
+### Bug Fixes
+
+* update components ([4f1baf1](https://github.com/elevz/elevz-ui/commit/4f1baf13cd7f48ea92bb6ec3daf7ba1fdba54548))
+
+
+
 ## [0.1.26](https://github.com/elevz/elevz-ui/compare/v0.1.25...v0.1.26) (2024-08-13)
 
 
