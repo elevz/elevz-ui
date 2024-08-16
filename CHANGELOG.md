@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/elevz/elevz-ui/compare/v0.1.28...v0.2.0) (2024-08-16)
+
+
+### Features
+
+* improve toast component ([d2afc11](https://github.com/elevz/elevz-ui/commit/d2afc119870871add7b71da556b0ad99054c0790))
+
+
+
 ## [0.1.28](https://github.com/elevz/elevz-ui/compare/v0.1.27...v0.1.28) (2024-08-16)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * sidebar visibility ([9ed2b41](https://github.com/elevz/elevz-ui/commit/9ed2b41c08ecb13fe0ab8cea452cf87d400bfe14))
-
-
-
-## [0.1.24](https://github.com/elevz/elevz-ui/compare/v0.1.23...v0.1.24) (2024-08-12)
-
-
-### Bug Fixes
-
-* container, card and border var ([f5e2ef9](https://github.com/elevz/elevz-ui/commit/f5e2ef9fd31269104a88fe895cc66081794b5a39))
 
 
 
