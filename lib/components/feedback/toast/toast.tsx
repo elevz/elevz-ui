@@ -40,19 +40,20 @@ export const Toast: React.FC<ToastProps> = ({
       className={combineClassName([props.position, getPosition(props.position!)])}
     >
       <IconField
-        absolute
         className={combineClassName(
-          "rounded p-2 gap-2 w-80 min-h-12 overflow-hidden",
+          "rounded p-2 gap-2 w-80 min-h-12 overflow-hidden shadow-lg",
           config.container,
           [props.onClick, 'cursor-pointer']
         )}
         leftIcon={config.icon || leftIcon}
         leftIconProps={{
-          className: config.text
+          className: config.text,
+          size: 24
         }}
         rightIcon={rightIcon}
         rightIconProps={{
-          className: config.text
+          className: config.text,
+          size: 24
         }}
         onClick={props.onClick}
       >

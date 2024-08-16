@@ -9,7 +9,7 @@ import {
   Sidebar,
   Toast
 } from "@lib/components";
-import { setTheme } from "@lib/utils";
+import { combineClassName, setTheme } from "@lib/utils";
 import { useEffect, useState } from "react";
 import Icon from "elevz-icon";
 import Buttons from "./pages/Buttons";
@@ -26,7 +26,7 @@ function App() {
   return (
     <Layout>
       <Sidebar
-        className="w-80 p-5"
+        className={combineClassName("w-80 p-5", [!visible, "hidden"])}
         onBackdropClick={() => setVisible(false)}
         visible={visible}
       >
@@ -49,13 +49,18 @@ function App() {
           />
         </NavGroup>
       </Sidebar>
+
       <Container className="gap-4">
-        <span onClick={() => setVisible(!visible)} className="cursor-pointer">
+        <span onClick={() => {
+          setVisible(!visible); console.log("clicked");
+        }} className="cursor-pointer">
           <Icon
             className="text"
             name="bars"
           />
         </span>
+
+        <Buttons />
 
         <Card className="w-fit shadow">
           <Card.Body>
@@ -69,6 +74,7 @@ function App() {
 
             <Dropdown
               placeholder="Pick an item"
+              options={Array.from({ length: 8 }).map((_, i) => "Item " + (i + 1))}
             />
           </Card.Body>
         </Card>
@@ -76,11 +82,9 @@ function App() {
         <Toast
           message="Hello from Toast"
           position="top-center"
-          onCloseClick={() => {}}
+          onCloseClick={() => { }}
           visible
         />
-
-        <Buttons />
       </Container>
     </Layout>
   )

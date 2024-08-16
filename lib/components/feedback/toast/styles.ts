@@ -4,41 +4,34 @@ import { ToastPosition } from "./types";
 
 export const stylesMap: Record<SchemeType, {
   container: string;
-  shadow: string;
   text: string;
   icon?: IconName;
 }> = {
   primary: {
-    container: 'bg-primary text-primary',
-    shadow: 'shadow-md shadow-primary-light',
+    container: 'bg-primary text-primary shadow-primary-light',
     text: 'text-primary-surface',
   },
   secondary: {
-    container: 'bg-secondary text-secondary',
-    shadow: 'shadow-md shadow-secondary-light',
+    container: 'bg-secondary text-secondary shadow-secondary-light',
     text: 'text-secondary-surface',
   },
   success: {
-    container: 'bg-success text-success',
-    shadow: 'shadow-md shadow-success-light',
+    container: 'bg-success text-success shadow-success-light',
     text: 'text-success-surface',
     icon: 'check',
   },
   danger: {
-    container: 'bg-danger text-danger',
-    shadow: 'shadow-md shadow-danger-light',
+    container: 'bg-danger text-danger shadow-danger-light',
     text: 'text-danger-surface',
     icon: 'alert-triangle',
   },
   info: {
-    container: 'bg-info text-info',
-    shadow: 'shadow-md shadow-info-light',
+    container: 'bg-info text-info shadow-info-light',
     text: 'text-info-surface',
     icon: 'info-circle',
   },
   warning: {
-    container: 'bg-warning text-warning',
-    shadow: 'shadow-md shadow-warning-light',
+    container: 'bg-warning text-warning shadow-warning-light',
     text: 'text-warning-surface',
     icon: 'alert-circle',
   },
@@ -54,7 +47,7 @@ export const positions = {
 }
 
 export function getPosition(position: ToastPosition) {
-  if(!position){
+  if (!position) {
     return '';
   }
 

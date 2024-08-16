@@ -43,7 +43,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {...props}
       ref={ref}
       className={combineClassName(
-        "flex items-center",
+        "flex items-center text",
         justifyContent[justify],
         [absolute, 'relative'],
         [absolute && leftIcon, "!pl-9"],
@@ -54,7 +54,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {Boolean(leftIcon) &&
         <span
           {...leftIconContainerProps}
-          className={combineClassName("size-5", [absolute, 'absolute left-2'], leftIconProps?.className)}
+          className={combineClassName([absolute, 'absolute left-2'], leftIconProps?.className)}
         >
           <Icon
             name={leftIcon!}
@@ -69,7 +69,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {Boolean(rightIcon) &&
         <span
           {...rightIconContainerProps}
-          className={combineClassName("size-5", [absolute, 'absolute right-2'], rightIconProps?.className)}
+          className={combineClassName([absolute, 'absolute right-2'], rightIconProps?.className)}
         >
           <Icon
             name={rightIcon!}
