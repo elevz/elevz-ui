@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/elevz/elevz-ui/compare/v0.2.0...v0.2.1) (2024-08-16)
+
+
+### Bug Fixes
+
+* toast styles ([4284735](https://github.com/elevz/elevz-ui/commit/428473597fc6a970ace000412d3450b7459b0a31))
+
+
+
 # [0.2.0](https://github.com/elevz/elevz-ui/compare/v0.1.28...v0.2.0) (2024-08-16)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove sidebar styles ([13e6b87](https://github.com/elevz/elevz-ui/commit/13e6b87ea06aa0e324c00f338ecda9f1c34dffb9))
-
-
-
-## [0.1.25](https://github.com/elevz/elevz-ui/compare/v0.1.24...v0.1.25) (2024-08-13)
-
-
-### Bug Fixes
-
-* sidebar visibility ([9ed2b41](https://github.com/elevz/elevz-ui/commit/9ed2b41c08ecb13fe0ab8cea452cf87d400bfe14))
 
 
 
