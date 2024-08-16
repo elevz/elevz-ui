@@ -3,7 +3,7 @@ import Row from "../components/Row";
 
 export default function () {
   return (
-    <div className="ez-flex ez-flex-col ez-gap-4">
+    <div className="flex flex-col gap-4">
       <Row>
         <Button
           label="Primary"

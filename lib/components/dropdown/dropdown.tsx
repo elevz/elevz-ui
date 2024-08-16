@@ -120,15 +120,15 @@ export function Dropdown<T extends OptionType>({
           rightIcon="chevron-down"
           {...iconFieldProps}
           className={combineClassName(
-            "ez-border ez-bg-surface ez-rounded ez-h-10 ez-px-2 ez-outline-primary-500 ez-w-full ez-cursor-pointer",
-            [visible, "ez-border-primary ez-outline-primary ez-outline ez-outline-1"],
+            "border bg-surface rounded h-10 px-2 outline-primary-500 w-full cursor-pointer",
+            [visible, "border-primary outline-primary outline outline-1"],
             props.className
           )}
           ref={fieldRef}
           onClick={() => !!options ? setVisible(!visible) : null}
         >
-          <span className="ez-w-full ez-text">
-            {value || <span className="ez-text-disabled">{placeholder}</span>}
+          <span className="w-full text">
+            {value || <span className="text-disabled">{placeholder}</span>}
           </span>
         </IconField>
       </Container>
@@ -137,17 +137,17 @@ export function Dropdown<T extends OptionType>({
         createPortal(
           <div
             ref={listRef}
-            className="ez-absolute ez-bg-surface ez-border ez-rounded ez-overflow-auto ez-shadow-md ez-max-h-80"
+            className="absolute bg-surface border rounded overflow-auto shadow-md max-h-80"
             style={position}
           >
-            <ul className="ez-flex ez-flex-col">
+            <ul className="flex flex-col">
               {options?.map((item, i) => {
                 const label = getItemLabel(item, optionLabelKey);
                 return (
                   <li
                     {...optionProps}
                     key={i}
-                    className={combineClassName("ez-text hover:ez-bg-hover ez-cursor-pointer ez-px-2 ez-py-1 ez-text-base", optionProps?.className)}
+                    className={combineClassName("text hover:bg-hover cursor-pointer px-2 py-1 text-base", optionProps?.className)}
                     onClick={() => {
                       setValue(label);
                       onSelect?.(item)

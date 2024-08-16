@@ -18,20 +18,20 @@ export const Label: React.FC<LabelProps> = ({
     <label
       {...props}
       className={combineClassName(
-        "ez-flex ez-gap-1 ez-text-sm ez-font-body ez-text ez-pl-1",
+        "flex gap-1 text-sm font-body text pl-1",
         props.className
       )}
     >
       {value || props.children}
 
       {Boolean(optional) &&
-        <span className="ez-text-alternative">
+        <span className="text-alternative">
           ({optionalText || 'opcional'})
         </span>
       }
 
       {Boolean(required) &&
-        <span className="ez-text-danger">*</span>
+        <span className="text-danger">*</span>
       }
     </label>
   ) : null

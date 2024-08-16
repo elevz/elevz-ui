@@ -5,7 +5,7 @@ interface CardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDiv
 
 const Container: React.FC<CardProps> = (props) => {
   return (
-    <div {...props} className={combineClassName("ez-bg-surface ez-p-4 ez-rounded", props.className)}>
+    <div {...props} className={combineClassName("bg-surface p-4 rounded", props.className)}>
       {props.children}
     </div>
   )
@@ -15,7 +15,7 @@ interface CardBodyProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTM
 
 const Body: React.FC<CardBodyProps> = (props) => {
   return (
-    <div {...props} className={combineClassName("ez-flex ez-flex-col ez-gap-4", props.className)}>
+    <div {...props} className={combineClassName("flex flex-col gap-4", props.className)}>
       {props.children}
     </div>
   )

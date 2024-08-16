@@ -29,8 +29,8 @@ export const NavGroup: React.FC<PropsWithChildren<NavGroupProps>> = ({
         {...props}
         justify="start"
         className={combineClassName(
-          "ez-p-3 ez-gap-3 ez-rounded ez-cursor-pointer",
-          [active, "ez-bg-hover"],
+          "p-3 gap-3 rounded cursor-pointer",
+          [active, "bg-hover"],
           props.className
         )}
         onClick={() => { setVisible(!_visible) }}

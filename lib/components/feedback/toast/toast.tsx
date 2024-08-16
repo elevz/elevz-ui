@@ -42,8 +42,8 @@ export const Toast: React.FC<ToastProps> = ({
     >
       <IconField
         className={combineClassName(
-          "ez-relative ez-flex ez-items-center ez-rounded ez-px-2 ez-py-1 ez-gap-2 ez-min-w-80 ez-min-h-11 ez-overflow-hidden",
-          "ez-max-w-80",
+          "relative flex items-center rounded px-2 py-1 gap-2 min-w-80 min-h-11 overflow-hidden",
+          "max-w-80",
           config.container,
           [shadow, config.shadow]
         )}
@@ -56,13 +56,13 @@ export const Toast: React.FC<ToastProps> = ({
           className: config.text
         }}
       >
-        <p className={combineClassName('ez-text-sm', config.text)}>
+        <p className={combineClassName('text-sm', config.text)}>
           {message}
         </p>
 
         {props.onCloseClick &&
           <span
-            className="ez-absolute ez-top-1 ez-right-1"
+            className="absolute top-1 right-1"
             onClick={props.onCloseClick}
           >
             <Icon
@@ -75,7 +75,7 @@ export const Toast: React.FC<ToastProps> = ({
 
         {(props.autoClose && props.indicator) &&
           <div
-            className="ez-absolute ez-w-full ez-h-0.5 ez-bg-white ez-left-0 ez-bottom-0 ez-animate-empty"
+            className="absolute w-full h-0.5 bg-white left-0 bottom-0 animate-empty"
             style={{ animationDuration: `${duration}ms` }}
           />
         }

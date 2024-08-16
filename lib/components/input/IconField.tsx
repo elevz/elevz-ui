@@ -24,12 +24,12 @@ export const IconField: React.FC<IconFieldProps> = ({
   return (
     <div
       {...props}
-      className={combineClassName("ez-relative", props.className)}
+      className={combineClassName("relative", props.className)}
     >
       {Boolean(leftIcon) &&
         <span
           {...leftIconContainerProps}
-          className={combineClassName("ez-z-10 ez-text ez-absolute ez-top-1/2 ez-translate-y-[-50%] ez-left-2", leftIconProps?.className)}
+          className={combineClassName("z-10 text absolute top-1/2 translate-y-[-50%] left-2", leftIconProps?.className)}
         >
           <Icon
             name={leftIcon!}
@@ -43,8 +43,8 @@ export const IconField: React.FC<IconFieldProps> = ({
         const elm = React.cloneElement(child, {
           className: combineClassName(
             child.props.className,
-            [Boolean(leftIcon), 'ez-pl-9'],
-            [Boolean(rightIcon), 'ez-pr-9']
+            [Boolean(leftIcon), 'pl-9'],
+            [Boolean(rightIcon), 'pr-9']
           )
         });
         return elm;
@@ -53,7 +53,7 @@ export const IconField: React.FC<IconFieldProps> = ({
       {Boolean(rightIcon) &&
         <span
           {...rightIconContainerProps}
-          className={combineClassName("ez-z-10 ez-text ez-absolute ez-top-1/2 ez-translate-y-[-50%] ez-right-2", rightIconProps?.className)}
+          className={combineClassName("z-10 text absolute top-1/2 translate-y-[-50%] right-2", rightIconProps?.className)}
         >
           <Icon
             name={rightIcon!}

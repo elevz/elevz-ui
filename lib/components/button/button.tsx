@@ -26,7 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
       leftIcon={leftIcon}
       rightIcon={rightIcon}
       className={combineClassName(
-        'ez-rounded ez-px-2 ez-gap-2',
+        'rounded px-2 gap-2',
         getButtonStyles(scheme, variant),
         sizesMap[size],
         props.className
@@ -35,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
     >
       {
         loading ?
-          <Spinner className="ez-size-6" />
+          <Spinner className="size-6" />
           :
           props.children || props.label
       }

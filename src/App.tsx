@@ -23,7 +23,7 @@ function App() {
   return (
     <Layout>
       <Sidebar
-        className="ez-w-80 ez-p-5"
+        className="w-80 p-5"
         onBackdropClick={() => setVisible(false)}
         visible={visible}
       >
@@ -47,14 +47,14 @@ function App() {
         </NavGroup>
       </Sidebar>
       <Container>
-        <span onClick={() => setVisible(!visible)} className="ez-cursor-pointer">
+        <span onClick={() => setVisible(!visible)} className="cursor-pointer">
           <Icon
-            className="ez-text"
+            className="text"
             name="bars"
           />
         </span>
 
-        <Card className="ez-w-fit">
+        <Card className="w-fit">
           <Card.Body>
             <Button
               label="Button"

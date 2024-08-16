@@ -28,7 +28,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const isMobile = useIsMobile();
 
   const Backdrop = (
-    <div className="ez-text ez-fixed ez-bg-black/40 ez-inset-0 ez-z-0" onClick={onBackdropClick}></div>
+    <div className="text fixed bg-black/40 inset-0 z-0" onClick={onBackdropClick}></div>
   )
 
   return (
@@ -36,8 +36,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div
         {...props}
         className={combineClassName(
-          "ez-h-full ez-z-10",
-          [isMobile, "ez-fixed"],
+          "h-full z-10",
+          [isMobile, "fixed"],
           props.className
         )}
       >

@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
-  prefix: 'ez-',
   content: [
     "./lib/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}"
@@ -75,19 +74,6 @@ export default {
       },
       animation: {
         empty: 'empty 1s linear forwards'
-      },
-      boxShadow: {
-        around: '0px 0px 4px 4px #00000020'
-      },
-      borderColor: {
-        DEFAULT: 'var(--ez-border, #d4d4d4)'
-      },
-      textColor: {
-        DEFAULT: 'var(--ez-text, #1e2837)',
-        disabled: 'var(--ez-text-disabled, #9ca3af)'
-      },
-      borderRadius: {
-        'DEFAULT': 'var(--ez-rounded, 0.375rem)'
       }
     },
   },

@@ -12,9 +12,9 @@ export const TextInput: React.FC<TextInputProps> = ({
     <input
       {...props}
       className={combineClassName(
-        "ez-text ez-border ez-rounded ez-h-10 ez-px-2 ez-text-base ez-w-full",
-        "ez-outline-primary focus:ez-outline focus:ez-border-primary",
-        [!outline, "ez-bg-surface"],
+        "text border rounded h-10 px-2 text-base w-full",
+        "outline-primary focus:outline focus:border-primary",
+        [!outline, "bg-surface"],
         props.className
       )}
     />

@@ -33,7 +33,7 @@ export function combineClassName(...classes: Array<string | { [key: string]: any
 export function generateCSSFile(colors: Record<string, any>) {
   let cssVariables = '';
   for (const [key, value] of Object.entries(colors)) {
-    const cssVar = `--ez-${key.replace('_', '-')}`;
+    const cssVar = `--${key.replace('_', '-')}`;
     cssVariables += `  ${cssVar}: ${value};\n`;
   }
   return cssVariables;
@@ -41,7 +41,7 @@ export function generateCSSFile(colors: Record<string, any>) {
 
 export function generateCSSVariables(colors: Record<string, any>) {
   const styleSheet = document.createElement('style');
-  styleSheet.setAttribute('data-ez-css-variables', 'true');
+  styleSheet.setAttribute('data-css-variables', 'true');
   styleSheet.setAttribute('type', 'text/css');
   document.head.appendChild(styleSheet);
 
@@ -52,10 +52,10 @@ export function setTheme(theme: 'dark' | 'light') {
   const htmlElement = document.documentElement;
 
   if(theme === 'dark'){
-    if(!htmlElement.classList.contains('ez-dark')){
-      htmlElement.classList.add('ez-dark');
+    if(!htmlElement.classList.contains('dark')){
+      htmlElement.classList.add('dark');
     }
   }else{
-    htmlElement.classList.remove('ez-dark');
+    htmlElement.classList.remove('dark');
   }
 }

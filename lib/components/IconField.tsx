@@ -33,9 +33,9 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
   ...props
 }, ref) => {
   const justifyContent = {
-    'start': 'ez-justify-start',
-    'center': 'ez-justify-center',
-    'end': 'ez-justify-end'
+    'start': 'justify-start',
+    'center': 'justify-center',
+    'end': 'justify-end'
   }
 
   return (
@@ -43,18 +43,18 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {...props}
       ref={ref}
       className={combineClassName(
-        "ez-text ez-flex ez-items-center ez-relative",
+        "flex items-center",
         justifyContent[justify],
         [absolute, 'relative'],
-        [absolute && leftIcon, "!ez-pl-9"],
-        [absolute && leftIcon, "!ez-pr-9"],
+        [absolute && leftIcon, "!pl-9"],
+        [absolute && leftIcon, "!pr-9"],
         props.className,
       )}
     >
       {Boolean(leftIcon) &&
         <span
           {...leftIconContainerProps}
-          className={combineClassName("ez-size-5", [absolute, 'ez-absolute ez-left-2'], leftIconProps?.className)}
+          className={combineClassName("size-5", [absolute, 'absolute left-2'], leftIconProps?.className)}
         >
           <Icon
             name={leftIcon!}
@@ -69,7 +69,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {Boolean(rightIcon) &&
         <span
           {...rightIconContainerProps}
-          className={combineClassName("ez-size-5", [absolute, 'ez-absolute ez-right-2'], rightIconProps?.className)}
+          className={combineClassName("size-5", [absolute, 'absolute right-2'], rightIconProps?.className)}
         >
           <Icon
             name={rightIcon!}

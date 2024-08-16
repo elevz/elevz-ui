@@ -79,8 +79,8 @@ export const ToastProvider = (props: PropsWithChildren) => {
               key={i}
               className={combineClassName(
                 getPosition(position as ToastPosition),
-                'ez-flex ez-gap-2 ez-z-50',
-                position.includes('top') ? 'ez-flex-col-reverse' : 'ez-flex-col'
+                'flex gap-2 z-50',
+                position.includes('top') ? 'flex-col-reverse' : 'flex-col'
               )}
             >
               {toasts.map((props) =>

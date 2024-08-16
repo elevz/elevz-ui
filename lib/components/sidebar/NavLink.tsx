@@ -17,12 +17,12 @@ export const NavLink: React.FC<NavLinkProps> = ({
       {...props}
       justify="start"
       className={combineClassName(
-        "ez-p-3 ez-gap-3 hover:ez-bg-hover ez-rounded ez-cursor-pointer",
-        [active, "ez-bg-hover"],
+        "p-3 gap-3 hover:bg-hover rounded cursor-pointer",
+        [active, "bg-hover"],
         props.className
       )}
     >
-      <span className="ez-w-full">
+      <span className="w-full">
         {label}
       </span>
     </IconField>
