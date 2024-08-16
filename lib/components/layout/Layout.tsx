@@ -1,8 +1,10 @@
-import { PropsWithChildren } from "react"
+import { combineClassName } from "@lib/utils"
 
-export const Layout = (props: PropsWithChildren) => {
+interface LayoutProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> { }
+
+export const Layout = (props: LayoutProps) => {
   return (
-    <div className="flex flex-row bg-background h-dvh w-full">
+    <div {...props} className={combineClassName("flex flex-row bg-background h-dvh w-full", props.className)}>
       {props.children}
     </div>
   )

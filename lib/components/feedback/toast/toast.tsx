@@ -10,9 +10,8 @@ export const Toast: React.FC<ToastProps> = ({
   leftIcon,
   rightIcon,
   scheme = 'success',
-  duration = 2000,
+  duration = 1500,
   message,
-  shadow,
   ...props
 }) => {
   const config = stylesMap[scheme];
@@ -41,11 +40,11 @@ export const Toast: React.FC<ToastProps> = ({
       className={combineClassName([props.position, getPosition(props.position!)])}
     >
       <IconField
+        absolute
         className={combineClassName(
-          "relative flex items-center rounded px-2 py-1 gap-2 min-w-80 min-h-11 overflow-hidden",
-          "max-w-80",
+          "rounded p-2 gap-2 w-80 min-h-12 overflow-hidden",
           config.container,
-          [shadow, config.shadow]
+          [props.onClick, 'cursor-pointer']
         )}
         leftIcon={config.icon || leftIcon}
         leftIconProps={{
@@ -55,8 +54,9 @@ export const Toast: React.FC<ToastProps> = ({
         rightIconProps={{
           className: config.text
         }}
+        onClick={props.onClick}
       >
-        <p className={combineClassName('text-sm', config.text)}>
+        <p className={combineClassName('text-left line-clamp-2 w-full', config.text)}>
           {message}
         </p>
 
@@ -66,7 +66,7 @@ export const Toast: React.FC<ToastProps> = ({
             onClick={props.onCloseClick}
           >
             <Icon
-              name="circle-xmark"
+              name="xmark"
               size={16}
               className={config.text}
             />
@@ -83,9 +83,8 @@ export const Toast: React.FC<ToastProps> = ({
     </div >
   )
 
-  return (visible ?
-    props.position ? createPortal(Component, document.body) : Component
-    :
-    null
+  return ((visible && props.position) ?
+    createPortal(Component, document.body) :
+    Component
   )
 }

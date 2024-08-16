@@ -16,6 +16,12 @@ export interface ToastProps {
   id?: string;
   autoClose?: boolean;
   indicator?: boolean;
+  onClick?: () => void;
+  /**
+   * position on screen
+   * 
+   * necessary use with visible prop
+   */
   position?: ToastPosition;
   leftIcon?: IconName;
   rightIcon?: IconName;
@@ -27,6 +33,8 @@ export interface ToastProps {
   message?: string;
   onClose?: () => void;
   onCloseClick?: () => void;
-  shadow?: boolean;
+  /**
+   * necessary if position is set
+   */
   visible?: boolean;
 }

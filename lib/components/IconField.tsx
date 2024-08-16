@@ -47,7 +47,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
         justifyContent[justify],
         [absolute, 'relative'],
         [absolute && leftIcon, "!pl-9"],
-        [absolute && leftIcon, "!pr-9"],
+        [absolute && rightIcon, "!pr-9"],
         props.className,
       )}
     >
