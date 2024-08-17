@@ -137,7 +137,7 @@ export function Dropdown<T extends OptionType>({
         createPortal(
           <div
             ref={listRef}
-            className="absolute bg-surface border rounded overflow-auto shadow-md max-h-80"
+            className="absolute bg-surface border rounded overflow-auto shadow-md max-h-80 z-10"
             style={position}
           >
             <ul className="flex flex-col">

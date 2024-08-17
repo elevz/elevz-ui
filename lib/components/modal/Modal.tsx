@@ -11,7 +11,7 @@ export const Modal: React.FC<ModalProps> = ({
   return visible ? createPortal(
     <div
       {...props}
-      className={combineClassName("absolute inset-0 z-10", props.className)}
+      className={combineClassName("fixed inset-0 z-10", props.className)}
     >
       <div
         onClick={onBackdropClick}
