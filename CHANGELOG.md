@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/elevz/elevz-ui/compare/v0.2.1...v0.2.2) (2024-08-17)
+
+
+### Bug Fixes
+
+* dropdown styles ([ba5563a](https://github.com/elevz/elevz-ui/commit/ba5563ad4785103b909953ad5e30f536123c1f04))
+
+
+
 ## [0.2.1](https://github.com/elevz/elevz-ui/compare/v0.2.0...v0.2.1) (2024-08-16)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * update components ([4f1baf1](https://github.com/elevz/elevz-ui/commit/4f1baf13cd7f48ea92bb6ec3daf7ba1fdba54548))
-
-
-
-## [0.1.26](https://github.com/elevz/elevz-ui/compare/v0.1.25...v0.1.26) (2024-08-13)
-
-
-### Bug Fixes
-
-* remove sidebar styles ([13e6b87](https://github.com/elevz/elevz-ui/commit/13e6b87ea06aa0e324c00f338ecda9f1c34dffb9))
 
 
 
