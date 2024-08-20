@@ -17,8 +17,8 @@ export const NavLink: React.FC<NavLinkProps> = ({
       {...props}
       justify="start"
       className={combineClassName(
-        "p-3 gap-3 hover:bg-hover rounded cursor-pointer",
-        [active, "bg-hover"],
+        "p-3 gap-3 rounded cursor-pointer",
+        [active, "bg-hover", "hover:bg-hover"],
         props.className
       )}
     >

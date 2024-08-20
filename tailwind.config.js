@@ -9,13 +9,13 @@ export default {
     extend: {
       colors: {
         background: {
-          DEFAULT: 'var(--ez-background, #f9fafb)',
+          DEFAULT: 'var(--background, #f9fafb)',
         },
         surface: {
-          DEFAULT: 'var(--ez-surface, #ffffff)',
+          DEFAULT: 'var(--surface, #ffffff)',
         },
         hover: {
-          DEFAULT: 'var(--ez-hover)',
+          DEFAULT: 'var(--hover, #f3f4f6)',
         },
         primary: {
           DEFAULT: 'var(--ez-primary)',
@@ -74,6 +74,9 @@ export default {
       },
       animation: {
         empty: 'empty 1s linear forwards'
+      },
+      textColor: {
+        'disabled': 'var(--text-disabled, #9ca3af)'
       }
     },
   },
