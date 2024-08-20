@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/elevz/elevz-ui/compare/v0.2.2...v0.3.0) (2024-08-20)
+
+
+### Features
+
+* update colors ([81e4402](https://github.com/elevz/elevz-ui/commit/81e44025899965b9709b3484bbadaf5f4f129352))
+
+
+
 ## [0.2.2](https://github.com/elevz/elevz-ui/compare/v0.2.1...v0.2.2) (2024-08-17)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * update release ([6651986](https://github.com/elevz/elevz-ui/commit/6651986b6d862f081fd6dbcc15f2fb708b296de5))
-
-
-
-## [0.1.27](https://github.com/elevz/elevz-ui/compare/v0.1.26...v0.1.27) (2024-08-14)
-
-
-### Bug Fixes
-
-* update components ([4f1baf1](https://github.com/elevz/elevz-ui/commit/4f1baf13cd7f48ea92bb6ec3daf7ba1fdba54548))
 
 
 
