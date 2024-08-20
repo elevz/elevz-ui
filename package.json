@@ -23,7 +23,7 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "elevz-icon": "^0.9.1",
+    "elevz-icon": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
