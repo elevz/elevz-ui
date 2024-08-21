@@ -5,7 +5,7 @@ interface ContainerProps extends React.DetailedHTMLProps<React.HTMLAttributes<HT
 
 export const Container: React.FC<ContainerProps> = (props) => {
   return (
-    <div {...props} className={combineClassName("bg-background flex flex-col p-5 h-dvh w-full", props.className)}>
+    <div {...props} className={combineClassName("bg-background flex flex-col p-5 h-full w-full", props.className)}>
       {props.children}
     </div>
   )

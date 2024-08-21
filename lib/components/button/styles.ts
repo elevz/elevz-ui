@@ -18,12 +18,12 @@ const solid: Record<SchemeType, string> = {
 }
 
 const outline: Record<SchemeType, string> = {
-  primary: 'text-primary border-primary hover:bg-primary-hover active:bg-primary-light',
-  secondary: 'text-secondary border-secondary hover:bg-secondary-hover active:bg-secondary-light',
-  success: 'text-success border-success hover:bg-success-hover active:bg-success-light',
-  danger: 'text-danger border-danger hover:bg-danger-hover active:bg-danger-light',
-  info: 'text-info border-info hover:bg-info-hover active:bg-info-light',
-  warning: 'text-warning border-warning hover:bg-warning-hover active:bg-warning-light',
+  primary: 'text-primary hover:bg-primary-hover active:bg-primary-light',
+  secondary: 'text-secondary hover:bg-secondary-hover active:bg-secondary-light',
+  success: 'text-success hover:bg-success-hover active:bg-success-light',
+  danger: 'text-danger hover:bg-danger-hover active:bg-danger-light',
+  info: 'text-info hover:bg-info-hover active:bg-info-light',
+  warning: 'text-warning hover:bg-warning-hover active:bg-warning-light',
 }
 
 const ghost: Record<SchemeType, string> = {

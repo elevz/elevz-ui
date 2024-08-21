@@ -1,27 +1,17 @@
 import {
-  Button,
-  Card,
   Container,
-  Dropdown,
   Layout,
-  NavGroup,
   NavLink,
   Sidebar,
-  Toast
 } from "@lib/components";
-import { combineClassName, setTheme } from "@lib/utils";
-import { useEffect, useState } from "react";
+import { combineClassName } from "@lib/utils";
+import { useState } from "react";
 import Icon from "elevz-icon";
-import Buttons from "./pages/Buttons";
-import { useToast } from "@lib/hooks";
+import * as pages from "./pages";
 
 function App() {
-  const toast = useToast();
+  const [page, setPage] = useState<number>(0)
   const [visible, setVisible] = useState<boolean>(true);
-
-  useEffect(() => {
-    setTheme('dark');
-  }, []);
 
   return (
     <Layout>
@@ -30,24 +20,13 @@ function App() {
         onBackdropClick={() => setVisible(false)}
         visible={visible}
       >
-        <NavLink
-          active
-          label="Home"
-          leftIcon="home"
-        />
-        <NavLink
-          label="Settings"
-          leftIcon="settings"
-        />
-
-        <NavGroup leftIcon="calendar" label="Scheduler">
+        {Object.keys(pages).map((name, i) =>
           <NavLink
-            label="Create"
+            active={i === page}
+            label={name}
+            onClick={() => setPage(i)}
           />
-          <NavLink
-            label="Update"
-          />
-        </NavGroup>
+        )}
       </Sidebar>
 
       <Container className="gap-4">
@@ -60,31 +39,7 @@ function App() {
           />
         </span>
 
-        <Buttons />
-
-        <Card className="w-fit shadow">
-          <Card.Body>
-            <Button
-              label="Show Toast"
-              onClick={() => toast({
-                message: 'Hello from toast',
-                indicator: true
-              })}
-            />
-
-            <Dropdown
-              placeholder="Pick an item"
-              options={Array.from({ length: 8 }).map((_, i) => "Item " + (i + 1))}
-            />
-          </Card.Body>
-        </Card>
-
-        <Toast
-          message="Hello from Toast"
-          position="top-center"
-          onCloseClick={() => { }}
-          visible
-        />
+        {Object.keys(pages).map((name, i) => i === page ? pages[name as keyof typeof pages]() : null)}
       </Container>
     </Layout>
   )

@@ -48,21 +48,14 @@
 }
 
 .dark {
-  /*  --background: #0f172a;
-  --surface: #1e293b;
-  --border: #475569;
-  --text: #ffffff;
-  --text-disabled: #9ca3af;
-  --hover: var(--hover, #334155); */
   /* primary */
-  --ez-primary: var(--primary, #0d7569);
   --ez-primary-light: color-mix(in srgb, var(--ez-primary) 20%, transparent);
   --ez-primary-hover: color-mix(in srgb, var(--ez-primary) 10%, transparent);
   /* secondary */
   --ez-secondary-light: color-mix(in srgb, var(--ez-secondary) 20%, transparent);
   --ez-secondary-hover: color-mix(in srgb, var(--ez-secondary) 10%, transparent);
   /* success */
-  --ez-success: var(--success, #16a34a);
+  /* --ez-success: var(--success, #16a34a); */
   --ez-success-light: color-mix(in srgb, var(--ez-success) 20%, transparent);
   --ez-success-hover: color-mix(in srgb, var(--ez-success) 10%, transparent);
   /* danger */
@@ -74,10 +67,4 @@
   /* warning */
   --ez-warning-light: color-mix(in srgb, var(--ez-warning) 20%, transparent);
   --ez-warning-hover: color-mix(in srgb, var(--ez-warning) 10%, transparent);
-}
-
-@layer base {
-  html {
-    @apply bg-background;
-  }
 }
