@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/elevz/elevz-ui/compare/v0.3.1...v0.4.0) (2024-08-21)
+
+
+### Features
+
+* update buttons and container ([8b57268](https://github.com/elevz/elevz-ui/commit/8b57268547f4e9f6192b2fdf40d045f9c91718c5))
+
+
+
 ## [0.3.1](https://github.com/elevz/elevz-ui/compare/v0.3.0...v0.3.1) (2024-08-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * toast styles ([4284735](https://github.com/elevz/elevz-ui/commit/428473597fc6a970ace000412d3450b7459b0a31))
-
-
-
-# [0.2.0](https://github.com/elevz/elevz-ui/compare/v0.1.28...v0.2.0) (2024-08-16)
-
-
-### Features
-
-* improve toast component ([d2afc11](https://github.com/elevz/elevz-ui/commit/d2afc119870871add7b71da556b0ad99054c0790))
 
 
 
