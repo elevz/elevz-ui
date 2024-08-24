@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/elevz/elevz-ui/compare/v0.4.0...v0.4.1) (2024-08-24)
+
+
+### Bug Fixes
+
+* update sidebar styles, change nav button ([41d6989](https://github.com/elevz/elevz-ui/commit/41d6989b269941b478d2ae0c471a81d74954524d))
+
+
+
 # [0.4.0](https://github.com/elevz/elevz-ui/compare/v0.3.1...v0.4.0) (2024-08-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * dropdown styles ([ba5563a](https://github.com/elevz/elevz-ui/commit/ba5563ad4785103b909953ad5e30f536123c1f04))
-
-
-
-## [0.2.1](https://github.com/elevz/elevz-ui/compare/v0.2.0...v0.2.1) (2024-08-16)
-
-
-### Bug Fixes
-
-* toast styles ([4284735](https://github.com/elevz/elevz-ui/commit/428473597fc6a970ace000412d3450b7459b0a31))
 
 
 
