@@ -1,3 +1,3 @@
 export * from "./NavGroup";
-export * from "./NavLink";
+export * from "./NavButton";
 export * from "./Sidebar";

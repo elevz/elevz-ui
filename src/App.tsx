@@ -1,7 +1,7 @@
 import {
   Container,
   Layout,
-  NavLink,
+  NavButton,
   Sidebar,
 } from "@lib/components";
 import { combineClassName } from "@lib/utils";
@@ -21,7 +21,7 @@ function App() {
         visible={visible}
       >
         {Object.keys(pages).map((name, i) =>
-          <NavLink
+          <NavButton
             active={i === page}
             label={name}
             onClick={() => setPage(i)}

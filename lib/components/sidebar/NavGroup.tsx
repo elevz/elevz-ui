@@ -1,8 +1,8 @@
 import { combineClassName } from "@lib/utils";
 import { PropsWithChildren, useEffect, useState } from "react";
-import { NavLink, NavLinkProps } from "./NavLink";
+import { NavButton, NavButtonProps } from "./NavButton";
 
-interface NavGroupProps extends NavLinkProps {
+interface NavGroupProps extends NavButtonProps {
   groupClassName?: string;
   visible?: boolean;
 }
@@ -24,7 +24,7 @@ export const NavGroup: React.FC<PropsWithChildren<NavGroupProps>> = ({
 
   return (
     <>
-      <NavLink
+      <NavButton
         rightIcon={_visible ? "chevron-up" : "chevron-down"}
         {...props}
         justify="start"

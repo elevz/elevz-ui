@@ -1,13 +1,13 @@
 import { combineClassName } from "@lib/utils";
 import { IconField, IconFieldProps } from "../IconField";
 
-export interface NavLinkProps extends IconFieldProps, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface NavButtonProps extends IconFieldProps, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   active?: boolean;
   label?: string;
   className?: string;
 }
 
-export const NavLink: React.FC<NavLinkProps> = ({
+export const NavButton: React.FC<NavButtonProps> = ({
   active,
   label,
   ...props

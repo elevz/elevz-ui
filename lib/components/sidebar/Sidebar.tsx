@@ -3,6 +3,7 @@ import { combineClassName } from "@lib/utils";
 import { createPortal } from "react-dom";
 
 interface SidebarProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  showBackdrop?: boolean;
   onBackdropClick?: () => void;
   visible?: boolean;
 }
@@ -22,11 +23,10 @@ function useIsMobile(): boolean {
 
 export const Sidebar: React.FC<SidebarProps> = ({
   visible = !useIsMobile(),
+  showBackdrop = useIsMobile(),
   onBackdropClick,
   ...props
 }) => {
-  const isMobile = useIsMobile();
-
   const Backdrop = (
     <div className="text fixed bg-black/40 inset-0 z-0" onClick={onBackdropClick}></div>
   )
@@ -37,13 +37,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {...props}
         className={combineClassName(
           "bg-background h-full z-10",
-          [isMobile, "fixed"],
           props.className
         )}
       >
         {props.children}
       </div>
-      {(isMobile && visible) &&
+      {(showBackdrop && visible) &&
         createPortal(Backdrop, document.body)
       }
     </>
