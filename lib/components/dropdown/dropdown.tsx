@@ -70,7 +70,7 @@ export function Dropdown<T>({
       >
         {searchable ?
           <input
-            className="w-full outline-none"
+            className="w-full outline-none bg-transparent"
             onChange={({ target }) => {
               handleSearch(target.value);
             }}
