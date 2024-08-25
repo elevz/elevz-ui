@@ -1,3 +1,12 @@
+## [0.5.1](https://github.com/elevz/elevz-ui/compare/v0.5.0...v0.5.1) (2024-08-25)
+
+
+### Bug Fixes
+
+* dropdown input search ([f3981ff](https://github.com/elevz/elevz-ui/commit/f3981ff7486539ee0b9afebbdea86b6aa4c7f38c))
+
+
+
 # [0.5.0](https://github.com/elevz/elevz-ui/compare/v0.4.1...v0.5.0) (2024-08-25)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * change icon dependency version ([1f187a1](https://github.com/elevz/elevz-ui/commit/1f187a19ab2f799ad697c029c13986cc23423731))
-
-
-
-# [0.3.0](https://github.com/elevz/elevz-ui/compare/v0.2.2...v0.3.0) (2024-08-20)
-
-
-### Features
-
-* update colors ([81e4402](https://github.com/elevz/elevz-ui/commit/81e44025899965b9709b3484bbadaf5f4f129352))
 
 
 
