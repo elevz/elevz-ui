@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/elevz/elevz-ui/compare/v0.4.1...v0.5.0) (2024-08-25)
+
+
+### Features
+
+* add searchable dropdown ([07bb379](https://github.com/elevz/elevz-ui/commit/07bb379ca69bed38ad611937c635cf13ff862522))
+
+
+
 ## [0.4.1](https://github.com/elevz/elevz-ui/compare/v0.4.0...v0.4.1) (2024-08-24)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * update colors ([81e4402](https://github.com/elevz/elevz-ui/commit/81e44025899965b9709b3484bbadaf5f4f129352))
-
-
-
-## [0.2.2](https://github.com/elevz/elevz-ui/compare/v0.2.1...v0.2.2) (2024-08-17)
-
-
-### Bug Fixes
-
-* dropdown styles ([ba5563a](https://github.com/elevz/elevz-ui/commit/ba5563ad4785103b909953ad5e30f536123c1f04))
 
 
 
