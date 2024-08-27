@@ -39,6 +39,6 @@ export const Button: React.FC<ButtonProps> = ({
           :
           props.children || props.label
       }
-    </IconField >
+    </IconField>
   )
 }

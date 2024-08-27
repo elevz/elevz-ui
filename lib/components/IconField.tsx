@@ -43,7 +43,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {...props}
       ref={ref}
       className={combineClassName(
-        "flex items-center text",
+        "flex items-center",
         justifyContent[justify],
         [absolute, 'relative'],
         [absolute && leftIcon, "!pl-9"],

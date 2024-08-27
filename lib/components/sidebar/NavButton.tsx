@@ -17,7 +17,7 @@ export const NavButton: React.FC<NavButtonProps> = ({
       {...props}
       justify="start"
       className={combineClassName(
-        "p-3 gap-3 rounded cursor-pointer",
+        "p-3 gap-3 rounded cursor-pointer text",
         [active, "bg-hover", "hover:bg-hover"],
         props.className
       )}

@@ -61,7 +61,7 @@ export function Dropdown<T>({
         rightIcon="chevron-down"
         {...iconFieldProps}
         className={combineClassName(
-          "border bg-surface rounded h-10 px-2 outline-primary-500 w-full cursor-pointer",
+          "border text bg-surface rounded h-10 px-2 outline-primary-500 w-full cursor-pointer",
           [visible, "border-primary outline-primary outline outline-1"],
           props.className
         )}
