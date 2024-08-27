@@ -35,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
     >
       {
         loading ?
-          <Spinner className="size-6" />
+          <Spinner className="h-2/4" />
           :
           props.children || props.label
       }
