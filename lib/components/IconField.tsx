@@ -54,7 +54,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {Boolean(leftIcon) &&
         <span
           {...leftIconContainerProps}
-          className={combineClassName([absolute, 'absolute left-2'], leftIconProps?.className)}
+          className={combineClassName([absolute, 'absolute left-2'], leftIconContainerProps?.className)}
         >
           <Icon
             name={leftIcon!}
@@ -69,7 +69,7 @@ export const IconField = forwardRef<HTMLDivElement, IconFieldElement>(({
       {Boolean(rightIcon) &&
         <span
           {...rightIconContainerProps}
-          className={combineClassName([absolute, 'absolute right-2'], rightIconProps?.className)}
+          className={combineClassName([absolute, 'absolute right-2'], rightIconContainerProps?.className)}
         >
           <Icon
             name={rightIcon!}
