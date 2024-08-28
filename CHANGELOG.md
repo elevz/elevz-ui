@@ -1,3 +1,12 @@
+## [0.5.5](https://github.com/elevz/elevz-ui/compare/v0.5.4...v0.5.5) (2024-08-28)
+
+
+### Bug Fixes
+
+* spinner size ([2e1d1d5](https://github.com/elevz/elevz-ui/commit/2e1d1d5aa12b2f55a684787ac0654181985a4be7))
+
+
+
 ## [0.5.4](https://github.com/elevz/elevz-ui/compare/v0.5.3...v0.5.4) (2024-08-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * dropdown input search ([f3981ff](https://github.com/elevz/elevz-ui/commit/f3981ff7486539ee0b9afebbdea86b6aa4c7f38c))
-
-
-
-# [0.5.0](https://github.com/elevz/elevz-ui/compare/v0.4.1...v0.5.0) (2024-08-25)
-
-
-### Features
-
-* add searchable dropdown ([07bb379](https://github.com/elevz/elevz-ui/commit/07bb379ca69bed38ad611937c635cf13ff862522))
 
 
 
