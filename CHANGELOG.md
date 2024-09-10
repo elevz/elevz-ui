@@ -1,3 +1,12 @@
+## [0.6.1](https://github.com/elevz/elevz-ui/compare/v0.6.0...v0.6.1) (2024-09-10)
+
+
+### Bug Fixes
+
+* label classes ([54e6f63](https://github.com/elevz/elevz-ui/commit/54e6f63fa93976f3cfc319db8ceec08e0996db16))
+
+
+
 # [0.6.0](https://github.com/elevz/elevz-ui/compare/v0.5.6...v0.6.0) (2024-09-10)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * spinner size ([b2cf57f](https://github.com/elevz/elevz-ui/commit/b2cf57f572b164436f9a5993c862d9779d79dd52))
-
-
-
-## [0.5.3](https://github.com/elevz/elevz-ui/compare/v0.5.2...v0.5.3) (2024-08-27)
-
-
-### Bug Fixes
-
-* button loading size ([668e8bd](https://github.com/elevz/elevz-ui/commit/668e8bd5f4224dd7cfc96f741e62b91bee7fd848))
 
 
 
