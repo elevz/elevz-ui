@@ -18,7 +18,7 @@ export const Label: React.FC<LabelProps> = ({
     <label
       {...props}
       className={combineClassName(
-        "flex gap-1 text-sm font-body text pl-1",
+        "flex gap-1 text-sm text pl-1",
         props.className
       )}
     >
