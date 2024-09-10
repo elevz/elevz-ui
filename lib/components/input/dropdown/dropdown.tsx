@@ -1,7 +1,7 @@
 import { CSSProperties, useEffect, useRef, useState } from "react";
-import { Label } from "../text"
-import { Container } from "../input/Container";
-import { IconField } from "../IconField";
+import { Label } from "../../text"
+import { Container } from "../Container";
+import { IconField } from "../../IconField";
 import { combineClassName } from "@lib/utils";
 import { Options } from "./Options";
 import { DropdownProps } from "./types";
@@ -36,7 +36,7 @@ export function Dropdown<T>({
     if (value !== props.value) {
       setValue(props.value);
     }
-  }, [props.value])
+  }, [props.value]);
 
   useEffect(() => {
     if (visible) {
@@ -72,6 +72,7 @@ export function Dropdown<T>({
           <input
             className="w-full outline-none bg-transparent"
             onChange={({ target }) => {
+              setValue(target.value);
               handleSearch(target.value);
             }}
             value={value}
@@ -89,7 +90,7 @@ export function Dropdown<T>({
         ref={listRef}
         style={position}
         labelKey={optionLabelKey}
-        onLiClick={(value, item) => {
+        onClick={(value, item) => {
           setValue(value);
           setList(options);
           onSelect?.(item)

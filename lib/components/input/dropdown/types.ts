@@ -1,6 +1,6 @@
-import { IconFieldProps } from "../IconField";
-import { ContainerProps } from "../input/Container";
-import { LabelProps } from "../text";
+import { IconFieldProps } from "../../IconField";
+import { LabelProps } from "../../text";
+import { ContainerProps } from "../Container";
 
 export interface DropdownProps<T> extends Pick<LabelProps, 'optional' | 'optionalText'> {
   className?: string;

@@ -1148,10 +1148,10 @@ electron-to-chromium@^1.4.796:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.816.tgz"
   integrity sha512-EKH5X5oqC6hLmiS7/vYtZHZFTNdhsYG5NVPRN6Yn0kQHNBlT59+xSM8HBy66P5fxWpKgZbPqb+diC64ng295Jw==
 
-elevz-icon@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/elevz-icon/-/elevz-icon-0.9.1.tgz#90cde9d84ef894912fd91c4c2d44ac12dc336dc9"
-  integrity sha512-zG2VSUsN2hgBDBugx0XF+RAhlOF2cgzsnRNLO4c84TPf/LK87jOIIjOAF8YBCC5rVJ+XkiF5DRK82U+WudVUCQ==
+elevz-icon@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/elevz-icon/-/elevz-icon-0.10.0.tgz#d744c38eb969880154e9a7ad91b5383637ef6263"
+  integrity sha512-yAGzePrBAFgxANDMxswY4CavlMWs55gCEKMNK/1ZN93ss8K88XAdRWX2XqhofAQUellI0wgPLc1AoTV9vr3v0w==
   dependencies:
     react "^18.3.1"
     react-dom "^18.3.1"

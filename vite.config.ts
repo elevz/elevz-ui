@@ -29,6 +29,9 @@ export default defineConfig({
       }
     }
   },
+  server: {
+    port: 3000
+  },
   plugins: [
     react(),
     dts({ tsconfigPath: './tsconfig.build.json' }),

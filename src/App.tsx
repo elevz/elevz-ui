@@ -7,6 +7,7 @@ import {
 import { combineClassName } from "@lib/utils";
 import { useState } from "react";
 import Icon from "elevz-icon";
+import DropdownPage from "./pages/DropdownPage";
 import * as pages from "./pages";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       >
         {Object.keys(pages).map((name, i) =>
           <NavButton
+            key={i}
             active={i === page}
             label={name}
             onClick={() => setPage(i)}
@@ -38,8 +40,7 @@ function App() {
             name="bars"
           />
         </span>
-
-        {Object.keys(pages).map((name, i) => i === page ? pages[name as keyof typeof pages]() : null)}
+        <DropdownPage />
       </Container>
     </Layout>
   )

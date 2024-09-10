@@ -1,16 +1,18 @@
 import { combineClassName } from "@lib/utils";
-import React from "react";
+import React, { useState } from "react";
 import { createPortal } from "react-dom";
 
 interface OptionsProps<T = any> {
   style?: React.CSSProperties;
   options?: T[];
   labelKey?: any;
-  onLiClick?: (value: any, item: T) => void;
+  onClick?: (value: any, item: T, index: number) => void;
   visible?: boolean;
 }
 
 export const Options = React.forwardRef<HTMLDivElement, OptionsProps>((props, ref) => {
+  const [currentIndex, setCurrentIndex] = useState<number>();
+  
   return props.visible ? createPortal(
     <div
       ref={ref}
@@ -23,8 +25,11 @@ export const Options = React.forwardRef<HTMLDivElement, OptionsProps>((props, re
           return (
             <li
               key={i}
-              className={combineClassName("text hover:bg-hover cursor-pointer px-2 py-1 text-base")}
-              onClick={() => props.onLiClick?.(label, item)}
+              className={combineClassName("text hover:bg-hover cursor-pointer px-2 py-1 text-base", [currentIndex === i, "bg-primary-hover hover:bg-primary-hover"])}
+              onClick={() => {
+                setCurrentIndex(i)
+                props.onClick?.(label, item, i)
+              }}
             >
               {label}
             </li>

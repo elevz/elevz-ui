@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dark {
+  --background: #22272e;
+  --surface: #2a3039;
+  --text: white;
+  --hover: #2a303950;
+}
