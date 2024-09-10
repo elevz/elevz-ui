@@ -1,3 +1,17 @@
+# [0.6.0](https://github.com/elevz/elevz-ui/compare/v0.5.6...v0.6.0) (2024-09-10)
+
+
+### Bug Fixes
+
+* add twMerge to resolve class conflicts ([940c45b](https://github.com/elevz/elevz-ui/commit/940c45b18e245d54c23e64c7987aa2b6015bc647))
+
+
+### Features
+
+* add select component, fix dropdown ([05dde3d](https://github.com/elevz/elevz-ui/commit/05dde3d5b283a629a1f72130a87a6ff465c3cbe8))
+
+
+
 ## [0.5.6](https://github.com/elevz/elevz-ui/compare/v0.5.5...v0.5.6) (2024-08-28)
 
 
@@ -31,15 +45,6 @@
 ### Bug Fixes
 
 * button loading size ([668e8bd](https://github.com/elevz/elevz-ui/commit/668e8bd5f4224dd7cfc96f741e62b91bee7fd848))
-
-
-
-## [0.5.2](https://github.com/elevz/elevz-ui/compare/v0.5.1...v0.5.2) (2024-08-27)
-
-
-### Bug Fixes
-
-* icon field text color ([888e159](https://github.com/elevz/elevz-ui/commit/888e159aa7d8736f4e01cdad1fc41f35f9949762))
 
 
 
