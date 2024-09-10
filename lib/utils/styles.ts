@@ -1,3 +1,5 @@
+import { twMerge } from 'tailwind-merge';
+
 export function combineClassName(...classes: Array<string | { [key: string]: any } | [boolean, string, string] | undefined>): string {
   let className = '';
 
@@ -27,7 +29,7 @@ export function combineClassName(...classes: Array<string | { [key: string]: any
     }
   });
 
-  return className.trim();
+  return twMerge(className.trim());
 }
 
 export function generateCSSFile(colors: Record<string, any>) {
