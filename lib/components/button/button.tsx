@@ -9,6 +9,17 @@ export const Button: React.FC<ButtonProps> = ({
   scheme = 'primary',
   variant = 'solid',
   loading,
+  //schemes
+  primary,
+  secondary,
+  success,
+  danger,
+  info,
+  warning,
+  //variant
+  solid,
+  outline,
+  ghost,
   ...props
 }) => {
   let leftIcon = props.leftIcon;
@@ -19,6 +30,23 @@ export const Button: React.FC<ButtonProps> = ({
     rightIcon = undefined;
   }
 
+  function getScheme(): any {
+    if (primary) return 'primary';
+    else if (secondary) return 'secondary';
+    else if (success) return 'success';
+    else if (danger) return 'danger';
+    else if (info) return 'info';
+    else if (warning) return 'warning';
+    return scheme;
+  }
+
+  function getVariant(): any {
+    if (solid) return 'solid';
+    else if (outline) return 'outline';
+    else if (ghost) return 'ghost';
+    return variant;
+  }
+
   return (
     <IconField
       component="button"
@@ -27,7 +55,7 @@ export const Button: React.FC<ButtonProps> = ({
       rightIcon={rightIcon}
       className={combineClassName(
         'rounded px-2 gap-2',
-        getButtonStyles(scheme, variant),
+        getButtonStyles(getScheme(), getVariant()),
         sizesMap[size],
         props.className
       )}

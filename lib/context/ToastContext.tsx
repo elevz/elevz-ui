@@ -4,22 +4,26 @@ import { combineClassName, generateId } from "@lib/utils";
 import { createPortal } from "react-dom";
 import { getPosition } from "@lib/components/feedback/toast/styles";
 
-export interface IToast extends Omit<ToastProps, 'autoClose'> { }
+interface ToastFnProps extends Omit<ToastProps, 'autoClose'> { }
+
+type ToastParams = Omit<ToastFnProps, 'id' | 'visible'>;
+
+type ToastSchemeProps = (message: string, props?: Omit<ToastParams, 'message' | 'scheme'>) => void;
 
 export interface ToastContextProps {
-  showToast: (props: IToast) => void;
+  show: {
+    (props: ToastParams): void;
+    success: ToastSchemeProps;
+    danger: ToastSchemeProps;
+  }
 }
 
 export const ToastContext = createContext<ToastContextProps | undefined>(undefined);
 
 export const ToastProvider = (props: PropsWithChildren) => {
-  const [toastList, setToastList] = useState<Record<ToastPosition, IToast[]>>();
+  const [toastList, setToastList] = useState<Record<ToastPosition, ToastFnProps[]>>();
 
-  const toastValue: ToastContextProps = {
-    showToast: addToast
-  }
-
-  function addToast({ position = 'top-center', ...props }: IToast) {
+  function addToast({ position = 'top-center', ...props }: ToastParams) {
     let id = generateId();
 
     const item: ToastProps = {
@@ -38,7 +42,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
         list[position] = [];
       }
 
-      if (list[position].find((elm: IToast) => elm.id === id)) {
+      if (list[position].find((elm: ToastFnProps) => elm.id === id)) {
         return list;
       }
 
@@ -48,6 +52,23 @@ export const ToastProvider = (props: PropsWithChildren) => {
     })
   }
 
+  const show = Object.assign(addToast, {
+    success: (message: string, props?: ToastParams) => {
+      addToast({
+        ...props,
+        scheme: 'success',
+        message,
+      })
+    },
+    danger: (message: string, props?: ToastParams) => {
+      addToast({
+        ...props,
+        scheme: 'danger',
+        message,
+      })
+    }
+  })
+
   function removeToast(position: ToastPosition, id: string) {
     setToastList((prev: any) => {
       const list = { ...prev };
@@ -56,7 +77,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
         return list;
       }
 
-      const index = list[position].findIndex((elm: IToast) => elm.id === id);
+      const index = list[position].findIndex((elm: ToastFnProps) => elm.id === id);
       if (index !== -1) {
         list[position].splice(index, 1);
       }
@@ -70,7 +91,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
   }
 
   return (
-    <ToastContext.Provider value={toastValue}>
+    <ToastContext.Provider value={{ show }}>
       {props.children}
       {createPortal(
         <>
