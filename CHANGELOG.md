@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/elevz/elevz-ui/compare/v0.6.1...v0.7.0) (2024-09-11)
+
+
+### Features
+
+* improv button and toast ([7345728](https://github.com/elevz/elevz-ui/commit/7345728a446fccd033d1eeec9167937256d04018))
+
+
+
 ## [0.6.1](https://github.com/elevz/elevz-ui/compare/v0.6.0...v0.6.1) (2024-09-10)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * spinner size ([2e1d1d5](https://github.com/elevz/elevz-ui/commit/2e1d1d5aa12b2f55a684787ac0654181985a4be7))
-
-
-
-## [0.5.4](https://github.com/elevz/elevz-ui/compare/v0.5.3...v0.5.4) (2024-08-27)
-
-
-### Bug Fixes
-
-* spinner size ([b2cf57f](https://github.com/elevz/elevz-ui/commit/b2cf57f572b164436f9a5993c862d9779d79dd52))
 
 
 
