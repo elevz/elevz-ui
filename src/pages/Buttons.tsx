@@ -1,7 +1,10 @@
 import { Button } from "@lib/components";
 import Row from "../components/Row";
+import { useToast } from "@lib/hooks";
 
 export default function () {
+  const toast = useToast();
+
   return (
     <div className="flex flex-col gap-4">
       <Row>
@@ -9,6 +12,7 @@ export default function () {
           label="Primary"
           scheme="primary"
           variant="solid"
+          onClick={() => toast({ message: 'hello', scheme: 'danger' })}
         />
         <Button
           label="Primary"

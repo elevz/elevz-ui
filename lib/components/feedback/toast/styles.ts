@@ -8,30 +8,30 @@ export const stylesMap: Record<SchemeType, {
   icon?: IconName;
 }> = {
   primary: {
-    container: 'bg-primary text-primary shadow-primary-light',
+    container: 'bg-primary text-primary',
     text: 'text-primary-surface',
   },
   secondary: {
-    container: 'bg-secondary text-secondary shadow-secondary-light',
+    container: 'bg-secondary text-secondary',
     text: 'text-secondary-surface',
   },
   success: {
-    container: 'bg-success text-success shadow-success-light',
+    container: 'bg-success text-success',
     text: 'text-success-surface',
     icon: 'check',
   },
   danger: {
-    container: 'bg-danger text-danger shadow-danger-light',
+    container: 'bg-danger text-danger',
     text: 'text-danger-surface',
     icon: 'alert-triangle',
   },
   info: {
-    container: 'bg-info text-info shadow-info-light',
+    container: 'bg-info text-info',
     text: 'text-info-surface',
     icon: 'info-circle',
   },
   warning: {
-    container: 'bg-warning text-warning shadow-warning-light',
+    container: 'bg-warning text-warning',
     text: 'text-warning-surface',
     icon: 'alert-circle',
   },

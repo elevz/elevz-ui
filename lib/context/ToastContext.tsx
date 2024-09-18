@@ -1,8 +1,9 @@
-import { createContext, PropsWithChildren, useState } from "react";
+import { createContext, PropsWithChildren } from "react";
 import { Toast, ToastPosition, ToastProps } from "@lib/components";
 import { combineClassName, generateId } from "@lib/utils";
 import { createPortal } from "react-dom";
 import { getPosition } from "@lib/components/feedback/toast/styles";
+import { useCreateReducer } from "@lib/hooks";
 
 interface ToastFnProps extends Omit<ToastProps, 'autoClose'> { }
 
@@ -21,7 +22,17 @@ export interface ToastContextProps {
 export const ToastContext = createContext<ToastContextProps | undefined>(undefined);
 
 export const ToastProvider = (props: PropsWithChildren) => {
-  const [toastList, setToastList] = useState<Record<ToastPosition, ToastFnProps[]>>();
+  const [state, dispatch] = useCreateReducer<Record<ToastPosition, ToastFnProps[]>>({
+    'bottom-center': [],
+    'bottom-left': [],
+    'bottom-right': [],
+    'middle-center': [],
+    'middle-left': [],
+    'middle-right': [],
+    'top-center': [],
+    'top-left': [],
+    'top-right': []
+  });
 
   function addToast({ position = 'top-center', ...props }: ToastParams) {
     let id = generateId();
@@ -35,68 +46,51 @@ export const ToastProvider = (props: PropsWithChildren) => {
       visible: true
     }
 
-    setToastList((prev: any) => {
-      const list = { ...(prev || {}) };
+    const arr = state[position];
 
-      if (typeof list[position] !== 'object') {
-        list[position] = [];
-      }
+    arr.push(item);
 
-      if (list[position].find((elm: ToastFnProps) => elm.id === id)) {
-        return list;
-      }
+    dispatch(position, arr);
+  }
 
-      list[position].push(item);
+  function removeToast(position: ToastPosition, id: string) {
+    const list = state[position];
 
-      return list;
+    const index = list.findIndex((elm: ToastFnProps) => elm.id === id);
+    if (index !== -1) {
+      list.splice(index, 1);
+    }
+
+    dispatch(position, list);
+  }
+
+  function show(props: ToastParams) {
+    addToast(props);
+  }
+
+  function success(message: string, props?: ToastParams) {
+    show({
+      ...props,
+      scheme: 'success',
+      message,
     })
   }
 
-  const show = Object.assign(addToast, {
-    success: (message: string, props?: ToastParams) => {
-      addToast({
-        ...props,
-        scheme: 'success',
-        message,
-      })
-    },
-    danger: (message: string, props?: ToastParams) => {
-      addToast({
-        ...props,
-        scheme: 'danger',
-        message,
-      })
-    }
-  })
-
-  function removeToast(position: ToastPosition, id: string) {
-    setToastList((prev: any) => {
-      const list = { ...prev };
-
-      if (typeof list[position] !== 'object') {
-        return list;
-      }
-
-      const index = list[position].findIndex((elm: ToastFnProps) => elm.id === id);
-      if (index !== -1) {
-        list[position].splice(index, 1);
-      }
-
-      if (list[position].length === 0) {
-        delete list[position];
-      }
-
-      return list;
-    });
+  function danger(message: string, props?: ToastParams) {
+    show({
+      ...props,
+      scheme: 'danger',
+      message,
+    })
   }
 
   return (
-    <ToastContext.Provider value={{ show }}>
+    <ToastContext.Provider value={{ show: Object.assign(show, { success, danger }) }}>
       {props.children}
       {createPortal(
         <>
-          {toastList && Object.entries(toastList).map(([position, toasts], i) =>
-            <div
+          {Object.entries(state).map(([position, toasts], i) =>
+            toasts.length > 0 ? <div
               key={i}
               className={combineClassName(
                 getPosition(position as ToastPosition),
@@ -107,7 +101,7 @@ export const ToastProvider = (props: PropsWithChildren) => {
               {toasts.map((props) =>
                 <Toast key={props.id} {...props} />
               )}
-            </div>
+            </div> : null
           )}
         </>,
         document.body)

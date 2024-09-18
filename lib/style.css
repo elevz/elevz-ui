@@ -5,44 +5,26 @@
 :root {
   /* primary */
   --ez-primary: var(--primary, #14b8a6);
-  --ez-primary-light: color-mix(in srgb, var(--ez-primary) 30%, white);
-  --ez-primary-dark: color-mix(in srgb, var(--ez-primary) 95%, black);
-  --ez-primary-darker: color-mix(in srgb, var(--ez-primary) 85%, black);
   --ez-primary-hover: color-mix(in srgb, var(--ez-primary) 15%, white);
   --ez-primary-surface: var(--primary-surface, #FFFFFF);
   /* secondary */
   --ez-secondary: var(--secondary, #777777);
-  --ez-secondary-light: color-mix(in srgb, var(--ez-secondary) 30%, white);
-  --ez-secondary-dark: color-mix(in srgb, var(--ez-secondary) 95%, black);
-  --ez-secondary-darker: color-mix(in srgb, var(--ez-secondary) 85%, black);
   --ez-secondary-hover: color-mix(in srgb, var(--ez-secondary) 15%, white);
   --ez-secondary-surface: var(--secondary-surface, #FFFFFF);
   /* success */
   --ez-success: var(--success, #22c55e);
-  --ez-success-light: color-mix(in srgb, var(--ez-success) 30%, white);
-  --ez-success-dark: color-mix(in srgb, var(--ez-success) 95%, black);
-  --ez-success-darker: color-mix(in srgb, var(--ez-success) 85%, black);
   --ez-success-hover: color-mix(in srgb, var(--ez-success) 15%, white);
   --ez-success-surface: var(--success-surface, #FFFFFF);
   /* danger */
   --ez-danger: var(--danger, #ef4444);
-  --ez-danger-light: color-mix(in srgb, var(--ez-danger) 30%, white);
-  --ez-danger-dark: color-mix(in srgb, var(--ez-danger) 95%, black);
-  --ez-danger-darker: color-mix(in srgb, var(--ez-danger) 85%, black);
   --ez-danger-hover: color-mix(in srgb, var(--ez-danger) 15%, white);
   --ez-danger-surface: var(--danger-surface, #FFFFFF);
   /* info */
   --ez-info: var(--info, #0ea5e9);
-  --ez-info-light: color-mix(in srgb, var(--ez-info) 30%, white);
-  --ez-info-dark: color-mix(in srgb, var(--ez-info) 95%, black);
-  --ez-info-darker: color-mix(in srgb, var(--ez-info) 85%, black);
   --ez-info-hover: color-mix(in srgb, var(--ez-info) 15%, white);
   --ez-info-surface: var(--info-surface, #FFFFFF);
   /* warning */
   --ez-warning: var(--warning, #eab308);
-  --ez-warning-light: color-mix(in srgb, var(--ez-warning) 30%, white);
-  --ez-warning-dark: color-mix(in srgb, var(--ez-warning) 95%, black);
-  --ez-warning-darker: color-mix(in srgb, var(--ez-warning) 85%, black);
   --ez-warning-hover: color-mix(in srgb, var(--ez-warning) 15%, white);
   --ez-warning-surface: var(--warning-surface, #FFFFFF);
 }
