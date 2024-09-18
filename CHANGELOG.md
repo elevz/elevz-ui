@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/elevz/elevz-ui/compare/v0.7.0...v0.8.0) (2024-09-18)
+
+
+### Features
+
+* improv components ([f65a170](https://github.com/elevz/elevz-ui/commit/f65a1701ed4a7ebe8d9129318ffc075943d98627))
+
+
+
 # [0.7.0](https://github.com/elevz/elevz-ui/compare/v0.6.1...v0.7.0) (2024-09-11)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * icon props ([eefd114](https://github.com/elevz/elevz-ui/commit/eefd114674b80929c2332ddba9060395b06ed479))
-
-
-
-## [0.5.5](https://github.com/elevz/elevz-ui/compare/v0.5.4...v0.5.5) (2024-08-28)
-
-
-### Bug Fixes
-
-* spinner size ([2e1d1d5](https://github.com/elevz/elevz-ui/commit/2e1d1d5aa12b2f55a684787ac0654181985a4be7))
 
 
 
