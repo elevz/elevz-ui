@@ -1,6 +1,6 @@
 import { Button } from "@lib/components";
-import Row from "../components/Row";
 import { useToast } from "@lib/hooks";
+import Row from "../components/Row";
 
 export default function () {
   const toast = useToast();
