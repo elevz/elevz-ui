@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/elevz/elevz-ui/compare/v0.8.0...v0.9.0) (2024-09-19)
+
+
+### Features
+
+* add new button variant ([3c0e205](https://github.com/elevz/elevz-ui/commit/3c0e205267639d9ecdd1fb12de86fecbe9ec05bf))
+
+
+
 # [0.8.0](https://github.com/elevz/elevz-ui/compare/v0.7.0...v0.8.0) (2024-09-18)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * add select component, fix dropdown ([05dde3d](https://github.com/elevz/elevz-ui/commit/05dde3d5b283a629a1f72130a87a6ff465c3cbe8))
-
-
-
-## [0.5.6](https://github.com/elevz/elevz-ui/compare/v0.5.5...v0.5.6) (2024-08-28)
-
-
-### Bug Fixes
-
-* icon props ([eefd114](https://github.com/elevz/elevz-ui/commit/eefd114674b80929c2332ddba9060395b06ed479))
 
 
 
