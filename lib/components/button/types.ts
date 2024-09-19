@@ -3,7 +3,7 @@ import { IconFieldProps } from "../IconField";
 
 export type SizeType = 'sm' | 'md' | 'lg';
 
-export type VariantType = 'solid' | 'outline' | 'ghost';
+export type VariantType = 'solid' | 'outline' | 'ghost' | 'link';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Partial<Record<SchemeType | VariantType, boolean>>, IconFieldProps {
   label?: string;

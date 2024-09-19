@@ -20,6 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   solid,
   outline,
   ghost,
+  link,
   ...props
 }) => {
   let leftIcon = props.leftIcon;
@@ -44,6 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
     if (solid) return 'solid';
     else if (outline) return 'outline';
     else if (ghost) return 'ghost';
+    else if (link) return 'link';
     return variant;
   }
 
@@ -55,8 +57,8 @@ export const Button: React.FC<ButtonProps> = ({
       rightIcon={rightIcon}
       className={combineClassName(
         'rounded px-2 gap-2',
-        getButtonStyles(getScheme(), getVariant()),
         sizesMap[size],
+        getButtonStyles(getScheme(), getVariant()),
         props.className
       )}
       onClick={loading ? undefined : props.onClick}

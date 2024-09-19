@@ -3,7 +3,7 @@ import { SizeType, VariantType } from "./types";
 import { combineClassName } from "@lib/utils";
 
 export const sizesMap: Record<SizeType, string> = {
-  sm: 'h-8',
+  sm: 'h-8 text-sm',
   md: 'h-10',
   lg: 'h-12'
 }
@@ -35,17 +35,28 @@ const ghost: Record<SchemeType, string> = {
   warning: 'text-warning hover:bg-warning-hover',
 }
 
+const link: Record<SchemeType, string> = {
+  primary: 'text-primary',
+  secondary: 'text-secondary',
+  success: 'text-success',
+  danger: 'text-danger',
+  info: 'text-info',
+  warning: 'text-warning',
+}
+
 export function getButtonStyles(scheme: SchemeType, variant: VariantType) {
   const base = {
     solid: 'disabled:opacity-60',
     outline: 'border bg-transparent disabled:opacity-60',
-    ghost: 'disabled:bg-transparent disabled:opacity-60'
+    ghost: 'disabled:bg-transparent disabled:opacity-60',
+    link: 'h-auto hover:underline'
   }
 
   const styles: Record<VariantType, Record<SchemeType, string>> = {
     solid,
     outline,
-    ghost
+    ghost,
+    link
   }
 
   return combineClassName(base[variant], styles[variant][scheme], 'disabled:cursor-not-allowed');

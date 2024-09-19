@@ -24,6 +24,26 @@ export default function () {
           scheme="primary"
           variant="ghost"
         />
+
+        <Button 
+          label="Link"
+          link
+        />
+      </Row>
+
+      <Row>
+        <Button
+          label="Large"
+          size="lg"
+        />
+        <Button
+          label="Medium"
+          size="md"
+        />
+        <Button
+          label="Small"
+          size="sm"
+        />
       </Row>
 
       <Row>
