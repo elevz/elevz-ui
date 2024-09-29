@@ -1,4 +1,4 @@
-import { Button } from "@lib/components";
+import { Button, Input } from "@lib/components";
 import { useToast } from "@lib/hooks";
 import Row from "../components/Row";
 
@@ -7,6 +7,11 @@ export default function () {
 
   return (
     <div className="flex flex-col gap-4">
+      <Input 
+        label="Input"
+        disabled
+        value={"Input Text"}
+      />
       <Row>
         <Button
           label="Primary"

@@ -6,7 +6,7 @@ export const Container: React.FC<ContainerProps> = (props) => {
   return (
     <div
       {...props}
-      className={combineClassName("flex flex-col gap-1 min-w-48", props.className)}
+      className={combineClassName("flex flex-col gap-1", props.className)}
     />
   )
 }

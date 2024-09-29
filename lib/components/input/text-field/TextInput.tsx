@@ -12,7 +12,7 @@ export const TextInput: React.FC<TextInputProps> = ({
     <input
       {...props}
       className={combineClassName(
-        "text border rounded h-10 px-2 text-base w-full",
+        "text border rounded h-10 px-2 text-base w-full disabled:bg-disabled disabled:text-disabled",
         "outline-primary focus:outline focus:border-primary",
         [!outline, "bg-surface"],
         props.className
