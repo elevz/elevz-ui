@@ -6,12 +6,13 @@ export const Modal: React.FC<ModalProps> = ({
   onBackdropClick,
   backdropProps,
   visible,
+  center,
   ...props
 }) => {
   return visible ? createPortal(
     <div
       {...props}
-      className={combineClassName("fixed inset-0 z-10", props.className)}
+      className={combineClassName("fixed inset-0 z-10", [center, 'flex flex-col items-center justify-center'], props.className)}
     >
       <div
         onClick={onBackdropClick}
