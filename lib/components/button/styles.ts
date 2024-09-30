@@ -9,12 +9,12 @@ export const sizesMap: Record<SizeType, string> = {
 }
 
 const solid: Record<SchemeType, string> = {
-  primary: 'text-primary-surface bg-primary',
-  secondary: 'text-secondary-surface bg-secondary',
-  success: 'text-success-surface bg-success',
-  danger: 'text-danger-surface bg-danger',
-  info: 'text-info-surface bg-info',
-  warning: 'text-warning-surface bg-warning',
+  primary: 'text-primary-surface bg-primary fill-primary',
+  secondary: 'text-secondary-surface bg-secondary fill-secondary',
+  success: 'text-success-surface bg-success fill-success',
+  danger: 'text-danger-surface bg-danger fill-danger',
+  info: 'text-info-surface bg-info fill-info',
+  warning: 'text-warning-surface bg-warning fill-warning',
 }
 
 const outline: Record<SchemeType, string> = {
@@ -60,4 +60,26 @@ export function getButtonStyles(scheme: SchemeType, variant: VariantType) {
   }
 
   return combineClassName(base[variant], styles[variant][scheme], 'disabled:cursor-not-allowed');
+}
+
+export function getSpinnerStyle(scheme: SchemeType, variant: VariantType): string {
+  if (variant === 'solid') {
+    return {
+      primary: 'border-primary-surface border-r-primary',
+      secondary: 'border-secondary-surface border-r-secondary',
+      success: 'border-success-surface border-r-success',
+      danger: 'border-danger-surface border-r-danger',
+      info: 'border-info-surface border-r-info',
+      warning: 'border-warning-surface border-r-warning',
+    }[scheme];
+  }
+
+  return {
+    primary: 'border-primary border-r-primary-surface',
+    secondary: 'border-secondary border-r-secondary-surface',
+    success: 'border-success border-r-success-surface',
+    danger: 'border-danger border-r-danger-surface',
+    info: 'border-info border-r-info-surface',
+    warning: 'border-warning border-r-warning-surface',
+  }[scheme];
 }

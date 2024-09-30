@@ -27,6 +27,7 @@ export default function () {
           scheme="primary"
           variant="solid"
           onClick={() => toast({ message: 'hello', scheme: 'danger' })}
+          loading
         />
         <Button
           label="Primary"
@@ -49,6 +50,7 @@ export default function () {
         <Button
           label="Large"
           size="lg"
+          
         />
         <Button
           label="Medium"
@@ -65,16 +67,19 @@ export default function () {
           label="Secondary"
           scheme="secondary"
           variant="solid"
+          loading
         />
         <Button
           label="Secondary"
           scheme="secondary"
           variant="outline"
+          loading
         />
         <Button
           label="Secondary"
           scheme="secondary"
           variant="ghost"
+          loading
         />
       </Row>
 

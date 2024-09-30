@@ -1,7 +1,6 @@
 import { combineClassName } from "@lib/utils"
-import { getButtonStyles, sizesMap } from "./styles"
+import { getButtonStyles, getSpinnerStyle, sizesMap } from "./styles"
 import { ButtonProps } from "./types"
-import { Spinner } from "../feedback/spinner"
 import { IconField } from "../IconField"
 
 export const Button: React.FC<ButtonProps> = ({
@@ -65,7 +64,11 @@ export const Button: React.FC<ButtonProps> = ({
     >
       {
         loading ?
-          <Spinner className="h-2/4" />
+          <div
+            className={combineClassName("h-2/4 aspect-square border-2 animate-spin rounded-full", getSpinnerStyle(getScheme(), getVariant()))}
+          >
+
+          </div>
           :
           props.children || props.label
       }
