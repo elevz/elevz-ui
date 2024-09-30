@@ -1,3 +1,12 @@
+# [0.11.0](https://github.com/elevz/elevz-ui/compare/v0.10.0...v0.11.0) (2024-09-30)
+
+
+### Features
+
+* update button spinner ([6ca740c](https://github.com/elevz/elevz-ui/commit/6ca740c1fef74d063525ae8fbb55e014168243c5))
+
+
+
 # [0.10.0](https://github.com/elevz/elevz-ui/compare/v0.9.0...v0.10.0) (2024-09-30)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * improv button and toast ([7345728](https://github.com/elevz/elevz-ui/commit/7345728a446fccd033d1eeec9167937256d04018))
-
-
-
-## [0.6.1](https://github.com/elevz/elevz-ui/compare/v0.6.0...v0.6.1) (2024-09-10)
-
-
-### Bug Fixes
-
-* label classes ([54e6f63](https://github.com/elevz/elevz-ui/commit/54e6f63fa93976f3cfc319db8ceec08e0996db16))
 
 
 
