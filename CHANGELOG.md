@@ -1,3 +1,12 @@
+# [0.12.0](https://github.com/elevz/elevz-ui/compare/v0.11.0...v0.12.0) (2024-09-30)
+
+
+### Features
+
+* add center prop modal component ([42f1e24](https://github.com/elevz/elevz-ui/commit/42f1e24068876e257f7c0eac442d5f72fe133acc))
+
+
+
 # [0.11.0](https://github.com/elevz/elevz-ui/compare/v0.10.0...v0.11.0) (2024-09-30)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * improv components ([f65a170](https://github.com/elevz/elevz-ui/commit/f65a1701ed4a7ebe8d9129318ffc075943d98627))
-
-
-
-# [0.7.0](https://github.com/elevz/elevz-ui/compare/v0.6.1...v0.7.0) (2024-09-11)
-
-
-### Features
-
-* improv button and toast ([7345728](https://github.com/elevz/elevz-ui/commit/7345728a446fccd033d1eeec9167937256d04018))
 
 
 
