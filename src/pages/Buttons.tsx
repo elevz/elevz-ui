@@ -1,4 +1,4 @@
-import { Button, Input } from "@lib/components";
+import { Button, Input, Select } from "@lib/components";
 import { useToast } from "@lib/hooks";
 import Row from "../components/Row";
 
@@ -11,6 +11,15 @@ export default function () {
         label="Input"
         disabled
         value={"Input Text"}
+      />
+      <Select 
+        label="Select"
+        placeholder="Select an Option"
+        options={[
+          'Options 1',
+          'Options 2',
+          'Options 3',
+        ]}
       />
       <Row>
         <Button
