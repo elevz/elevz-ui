@@ -27,7 +27,7 @@ export function Select<T>({
       />
       <IconField
         component="select"
-        value={props.value || 'placeholder'}
+        value={props.value}
         {...props as any}
         className={combineClassName(
           "border text bg-surface rounded h-10 px-2 outline-primary-500 w-full cursor-pointer focus:outline-primary",
@@ -35,7 +35,7 @@ export function Select<T>({
         )}
       >
         {placeholder &&
-          <option value={"placeholder"} disabled>
+          <option value={"placeholder"} disabled selected>
             {placeholder}
           </option>
         }
