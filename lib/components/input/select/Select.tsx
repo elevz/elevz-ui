@@ -33,9 +33,10 @@ export function Select<T>({
           "border text bg-surface rounded h-10 px-2 outline-primary-500 w-full cursor-pointer focus:outline-primary",
           props.className
         )}
+        defaultValue={'placeholder'}
       >
         {placeholder &&
-          <option value={"placeholder"} disabled selected>
+          <option value={"placeholder"} disabled>
             {placeholder}
           </option>
         }
