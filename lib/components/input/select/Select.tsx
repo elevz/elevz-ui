@@ -5,6 +5,7 @@ import { IconField } from "@lib/components/IconField";
 import { combineClassName } from "@lib/utils";
 
 export function Select<T>({
+  containerProps,
   label,
   labelProps,
   optional,
@@ -16,7 +17,7 @@ export function Select<T>({
   ...props
 }: SelectProps<T>) {
   return (
-    <Container>
+    <Container {...containerProps}>
       <Label
         required={props.required}
         optional={optional}
