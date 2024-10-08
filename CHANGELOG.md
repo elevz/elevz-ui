@@ -1,3 +1,12 @@
+## [0.12.1](https://github.com/elevz/elevz-ui/compare/v0.12.0...v0.12.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* select container props ([ad6873a](https://github.com/elevz/elevz-ui/commit/ad6873a0d8ca90671a0eafd45239bdf9618849e0))
+
+
+
 # [0.12.0](https://github.com/elevz/elevz-ui/compare/v0.11.0...v0.12.0) (2024-09-30)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * add new button variant ([3c0e205](https://github.com/elevz/elevz-ui/commit/3c0e205267639d9ecdd1fb12de86fecbe9ec05bf))
-
-
-
-# [0.8.0](https://github.com/elevz/elevz-ui/compare/v0.7.0...v0.8.0) (2024-09-18)
-
-
-### Features
-
-* improv components ([f65a170](https://github.com/elevz/elevz-ui/commit/f65a1701ed4a7ebe8d9129318ffc075943d98627))
 
 
 
