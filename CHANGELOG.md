@@ -1,3 +1,12 @@
+## [0.12.3](https://github.com/elevz/elevz-ui/compare/v0.12.2...v0.12.3) (2024-10-08)
+
+
+### Bug Fixes
+
+* select placeholder ([1198a48](https://github.com/elevz/elevz-ui/commit/1198a48cf699d3a26fa7b6df836a9d21ee6b6aa2))
+
+
+
 ## [0.12.2](https://github.com/elevz/elevz-ui/compare/v0.12.1...v0.12.2) (2024-10-08)
 
 
@@ -31,20 +40,6 @@
 ### Features
 
 * update button spinner ([6ca740c](https://github.com/elevz/elevz-ui/commit/6ca740c1fef74d063525ae8fbb55e014168243c5))
-
-
-
-# [0.10.0](https://github.com/elevz/elevz-ui/compare/v0.9.0...v0.10.0) (2024-09-30)
-
-
-### Bug Fixes
-
-* placeholder select component ([1e5c20e](https://github.com/elevz/elevz-ui/commit/1e5c20e5f4a9cdd28634d92108c03d203ea71908))
-
-
-### Features
-
-* update input styles ([97540c3](https://github.com/elevz/elevz-ui/commit/97540c39a98a84fef7b0710256dd469ac5c594c9))
 
 
 
