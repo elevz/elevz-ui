@@ -1,3 +1,12 @@
+## [0.12.2](https://github.com/elevz/elevz-ui/compare/v0.12.1...v0.12.2) (2024-10-08)
+
+
+### Bug Fixes
+
+* select placeholder ([750a117](https://github.com/elevz/elevz-ui/commit/750a1175a27e434c9c3e89ee919d58d1b45bb85c))
+
+
+
 ## [0.12.1](https://github.com/elevz/elevz-ui/compare/v0.12.0...v0.12.1) (2024-10-08)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * update input styles ([97540c3](https://github.com/elevz/elevz-ui/commit/97540c39a98a84fef7b0710256dd469ac5c594c9))
-
-
-
-# [0.9.0](https://github.com/elevz/elevz-ui/compare/v0.8.0...v0.9.0) (2024-09-19)
-
-
-### Features
-
-* add new button variant ([3c0e205](https://github.com/elevz/elevz-ui/commit/3c0e205267639d9ecdd1fb12de86fecbe9ec05bf))
 
 
 
