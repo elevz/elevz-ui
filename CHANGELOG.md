@@ -1,3 +1,12 @@
+## [0.12.4](https://github.com/elevz/elevz-ui/compare/v0.12.3...v0.12.4) (2024-10-15)
+
+
+### Bug Fixes
+
+* select placeholder ([2e4fd2a](https://github.com/elevz/elevz-ui/commit/2e4fd2aaeb7eb35901366abc7d188e3a1a6c737c))
+
+
+
 ## [0.12.3](https://github.com/elevz/elevz-ui/compare/v0.12.2...v0.12.3) (2024-10-08)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * add center prop modal component ([42f1e24](https://github.com/elevz/elevz-ui/commit/42f1e24068876e257f7c0eac442d5f72fe133acc))
-
-
-
-# [0.11.0](https://github.com/elevz/elevz-ui/compare/v0.10.0...v0.11.0) (2024-09-30)
-
-
-### Features
-
-* update button spinner ([6ca740c](https://github.com/elevz/elevz-ui/commit/6ca740c1fef74d063525ae8fbb55e014168243c5))
 
 
 
